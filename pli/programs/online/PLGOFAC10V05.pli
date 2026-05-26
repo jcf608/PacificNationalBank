@@ -1,0 +1,467 @@
+/*********************************************************************/
+/* PLGOFAC10V05 — PL/I OFAC Processing V5                                    */
+/* Pacific National Bank — PL/I Transaction Processing              */
+/*********************************************************************/
+
+PLGOFAC10V05: PROCEDURE OPTIONS(MAIN);
+
+  /* Standard includes */
+  %INCLUDE PNBACCT;
+  %INCLUDE PNBCUST;
+  %INCLUDE PNBTXN;
+  %INCLUDE PNBERR;
+
+  /* Module declarations */
+  DCL program_name  CHAR(12) INIT('PLGOFAC10V05');
+  DCL return_code   FIXED BIN(31) INIT(0);
+  DCL error_msg     CHAR(80) INIT('');
+  DCL records_read  FIXED BIN(31) INIT(0);
+  DCL records_ok    FIXED BIN(31) INIT(0);
+  DCL records_err   FIXED BIN(31) INIT(0);
+  DCL eof_flag      BIT(1) INIT('0'B);
+  DCL (ADDR, LENGTH, SUBSTR, INDEX, VERIFY, TRANSLATE,
+       DATETIME, TRIM, HIGH, LOW) BUILTIN;
+
+  DCL input_buffer   CHAR(400);
+  DCL output_buffer  CHAR(400);
+  DCL INFILE         FILE RECORD INPUT;
+  DCL OUTFILE        FILE RECORD OUTPUT;
+  DCL ERRFILE        FILE RECORD OUTPUT;
+  DCL txn_amount     FIXED DEC(15,2) INIT(0);
+  DCL running_total  FIXED DEC(17,2) INIT(0);
+  DCL daily_limit    FIXED DEC(13,2) INIT(50000.00);
+  DCL auth_code      CHAR(10);
+  DCL channel_code   CHAR(3);
+  DCL work_field_001 FIXED DEC(15,2);
+  DCL work_field_002 FIXED DEC(15,2);
+  DCL batch_var_0010  FIXED DEC(15,2) INIT(0);
+  DCL batch_str_0010  CHAR(40) INIT('');
+  DCL batch_var_0011  FIXED DEC(15,2) INIT(0);
+  DCL batch_str_0011  CHAR(40) INIT('');
+  DCL batch_var_0012  FIXED DEC(15,2) INIT(0);
+  DCL batch_str_0012  CHAR(40) INIT('');
+  DCL batch_var_0013  FIXED DEC(15,2) INIT(0);
+  DCL batch_str_0013  CHAR(40) INIT('');
+  DCL batch_var_0014  FIXED DEC(15,2) INIT(0);
+  DCL batch_str_0014  CHAR(40) INIT('');
+  DCL batch_var_0015  FIXED DEC(15,2) INIT(0);
+  DCL batch_str_0015  CHAR(40) INIT('');
+
+  /* Main processing logic */
+  CALL init_processing;
+  DO WHILE (^eof_flag);
+    CALL process_record;
+  END;
+  CALL finalize_processing;
+
+  /*---------------------------------------------------------------*/
+  /* process_record                                                    */
+  /*---------------------------------------------------------------*/
+  process_record: PROCEDURE;
+    records_read = records_read + 1;
+    CALL validate_ofac;
+    IF return_code = 0 THEN DO;
+      CALL authorize_ofac;
+      IF return_code = 0 THEN DO;
+        CALL post_ofac;
+        records_ok = records_ok + 1;
+      END;
+      ELSE DO;
+        CALL log_error('Authorization failed');
+        records_err = records_err + 1;
+      END;
+    END;
+    ELSE DO;
+      CALL log_error('Validation failed');
+      records_err = records_err + 1;
+    END;
+    READ FILE(INFILE) INTO(input_buffer);
+  END process_record;
+
+  /*---------------------------------------------------------------*/
+  /* validate_ofac                                                    */
+  /*---------------------------------------------------------------*/
+  validate_ofac: PROCEDURE;
+    return_code = 0;
+    IF txn_amount <= 0 THEN DO;
+      error_msg = 'Invalid amount';
+      return_code = 8;
+    END;
+    IF VERIFY(SUBSTR(input_buffer,1,16), '0123456789') > 0 THEN DO;
+      error_msg = 'Invalid account number';
+      return_code = 8;
+    END;
+  END validate_ofac;
+
+  /*---------------------------------------------------------------*/
+  /* authorize_ofac                                                    */
+  /*---------------------------------------------------------------*/
+  authorize_ofac: PROCEDURE;
+    return_code = 0;
+    IF txn_amount > daily_limit THEN DO;
+      error_msg = 'Exceeds daily limit';
+      return_code = 4;
+    END;
+    running_total = running_total + txn_amount;
+    auth_code = 'AUTH' || TRIM(CHAR(records_read));
+  END authorize_ofac;
+
+  /*---------------------------------------------------------------*/
+  /* post_ofac                                                    */
+  /*---------------------------------------------------------------*/
+  post_ofac: PROCEDURE;
+    output_buffer = input_buffer;
+    WRITE FILE(OUTFILE) FROM(output_buffer);
+    PUT SKIP LIST('OFAC posted: ' || txn_amount);
+  END post_ofac;
+
+  /*---------------------------------------------------------------*/
+  /* log_error                                                    */
+  /*---------------------------------------------------------------*/
+  log_error: PROCEDURE;
+    DCL msg CHAR(80);
+    WRITE FILE(ERRFILE) FROM(error_msg);
+  END log_error;
+
+  /*---------------------------------------------------------------*/
+  /* variant_05_step_00                                                    */
+  /*---------------------------------------------------------------*/
+  variant_05_step_00: PROCEDURE;
+    /* Variant 5 processing step 0 */
+    batch_var_0010 = batch_var_0010 + 1;
+    IF batch_var_0010 > 1000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 2;
+    IF batch_var_0010 > 2000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 3;
+    IF batch_var_0010 > 3000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 4;
+    IF batch_var_0010 > 4000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 5;
+    IF batch_var_0010 > 5000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 6;
+    IF batch_var_0010 > 6000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 7;
+    IF batch_var_0010 > 7000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 8;
+    IF batch_var_0010 > 8000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 9;
+    IF batch_var_0010 > 9000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 10;
+    IF batch_var_0010 > 10000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 11;
+    IF batch_var_0010 > 11000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 12;
+    IF batch_var_0010 > 12000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 13;
+    IF batch_var_0010 > 13000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 14;
+    IF batch_var_0010 > 14000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 15;
+    IF batch_var_0010 > 15000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 16;
+    IF batch_var_0010 > 16000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 17;
+    IF batch_var_0010 > 17000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 18;
+    IF batch_var_0010 > 18000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 19;
+    IF batch_var_0010 > 19000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 20;
+    IF batch_var_0010 > 20000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 21;
+    IF batch_var_0010 > 21000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 22;
+    IF batch_var_0010 > 22000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 23;
+    IF batch_var_0010 > 23000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 24;
+    IF batch_var_0010 > 24000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 25;
+    IF batch_var_0010 > 25000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+  END variant_05_step_00;
+
+  /*---------------------------------------------------------------*/
+  /* variant_05_step_01                                                    */
+  /*---------------------------------------------------------------*/
+  variant_05_step_01: PROCEDURE;
+    /* Variant 5 processing step 1 */
+    batch_var_0010 = batch_var_0010 + 1;
+    IF batch_var_0010 > 1000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 2;
+    IF batch_var_0010 > 2000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 3;
+    IF batch_var_0010 > 3000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 4;
+    IF batch_var_0010 > 4000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 5;
+    IF batch_var_0010 > 5000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 6;
+    IF batch_var_0010 > 6000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 7;
+    IF batch_var_0010 > 7000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 8;
+    IF batch_var_0010 > 8000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 9;
+    IF batch_var_0010 > 9000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 10;
+    IF batch_var_0010 > 10000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 11;
+    IF batch_var_0010 > 11000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 12;
+    IF batch_var_0010 > 12000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 13;
+    IF batch_var_0010 > 13000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 14;
+    IF batch_var_0010 > 14000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 15;
+    IF batch_var_0010 > 15000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 16;
+    IF batch_var_0010 > 16000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 17;
+    IF batch_var_0010 > 17000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 18;
+    IF batch_var_0010 > 18000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 19;
+    IF batch_var_0010 > 19000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 20;
+    IF batch_var_0010 > 20000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 21;
+    IF batch_var_0010 > 21000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 22;
+    IF batch_var_0010 > 22000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 23;
+    IF batch_var_0010 > 23000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 24;
+    IF batch_var_0010 > 24000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 25;
+    IF batch_var_0010 > 25000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+  END variant_05_step_01;
+
+  /*---------------------------------------------------------------*/
+  /* variant_05_step_02                                                    */
+  /*---------------------------------------------------------------*/
+  variant_05_step_02: PROCEDURE;
+    /* Variant 5 processing step 2 */
+    batch_var_0010 = batch_var_0010 + 1;
+    IF batch_var_0010 > 1000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 2;
+    IF batch_var_0010 > 2000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 3;
+    IF batch_var_0010 > 3000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 4;
+    IF batch_var_0010 > 4000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 5;
+    IF batch_var_0010 > 5000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 6;
+    IF batch_var_0010 > 6000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 7;
+    IF batch_var_0010 > 7000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 8;
+    IF batch_var_0010 > 8000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 9;
+    IF batch_var_0010 > 9000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 10;
+    IF batch_var_0010 > 10000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 11;
+    IF batch_var_0010 > 11000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 12;
+    IF batch_var_0010 > 12000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 13;
+    IF batch_var_0010 > 13000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 14;
+    IF batch_var_0010 > 14000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 15;
+    IF batch_var_0010 > 15000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 16;
+    IF batch_var_0010 > 16000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 17;
+    IF batch_var_0010 > 17000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 18;
+    IF batch_var_0010 > 18000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 19;
+    IF batch_var_0010 > 19000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 20;
+    IF batch_var_0010 > 20000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 21;
+    IF batch_var_0010 > 21000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 22;
+    IF batch_var_0010 > 22000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 23;
+    IF batch_var_0010 > 23000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 24;
+    IF batch_var_0010 > 24000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+    batch_var_0010 = batch_var_0010 + 25;
+    IF batch_var_0010 > 25000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0010);
+    END;
+  END variant_05_step_02;
+
+  init_processing: PROCEDURE;
+    PUT SKIP LIST(program_name || ' started at ' || DATETIME());
+    OPEN FILE(INFILE) INPUT;
+    OPEN FILE(OUTFILE) OUTPUT;
+    OPEN FILE(ERRFILE) OUTPUT;
+    ON ENDFILE(INFILE) eof_flag = '1'B;
+    READ FILE(INFILE) INTO(input_buffer);
+  END init_processing;
+
+  finalize_processing: PROCEDURE;
+    CLOSE FILE(INFILE);
+    CLOSE FILE(OUTFILE);
+    CLOSE FILE(ERRFILE);
+    PUT SKIP LIST(program_name || ' complete.');
+    PUT SKIP LIST('Records read:    ' || records_read);
+    PUT SKIP LIST('Records OK:      ' || records_ok);
+    PUT SKIP LIST('Records error:   ' || records_err);
+    IF records_err > 0 THEN return_code = 4;
+  END finalize_processing;
+
+END PLGOFAC10V05;
