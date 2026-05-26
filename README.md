@@ -1,104 +1,97 @@
-# Pacific National Bank — Enterprise Core Banking Platform
+# Pacific National Bank + Atlantic Commerce Bank
 
-> **PL/I · COBOL · IMS/DB · IMS/TM · Java · WebSphere Liberty on Linux**
+## Enterprise hybrid core banking suite
 
-## Overview
+This repository models a **post-merger universal bank** operating two legacy cores in parallel, each with an **Azure** modernisation track, unified by a **MuleSoft merger reconciliation** layer.
 
-Pacific National Bank (PNB) is a full-stack enterprise core banking system
-originally deployed on IBM z/OS mainframes and progressively modernised to run
-on Linux with open-source toolchains (GnuCOBOL, PL/I-to-C transpilation,
-OpenJDK, WebSphere Liberty containers).
+| Entity | Role | Legacy | Cloud (Azure) |
+|--------|------|--------|----------------|
+| **PNB** (Pacific National Bank) | Acquirer core | COBOL · IMS/TM · IMS/DB · DB2 | Spring Boot · Azure SQL · Service Bus |
+| **ACB** (Atlantic Commerce Bank) | Acquired core | PL/I · IMS/TM · IMS/DB · DB2 | Spring Boot · Azure SQL · Service Bus |
 
-The platform processes **retail and commercial banking** workloads:
+**Layout principle:** by **bank**, then **layer** (`legacy` / `azure`).
 
-| Domain | Technology | Artefacts |
-|---|---|---|
-| Core ledger & GL | COBOL batch + online | `cobol/programs/` |
-| Real-time transaction engine | PL/I + IMS/TM | `pli/programs/online/` |
-| Account & customer master | IMS/DB (DL/I) | `ims/dbdgen/`, `ims/psbgen/` |
-| Message formats | IMS/TM MFS | `ims/mfs/` |
-| Digital channels (ATM, web, mobile) | Java / JAX-RS | `java/pnb-channel-services/` |
-| Core banking services | Java / Spring | `java/pnb-core-banking/` |
-| Integration (payments, credit) | Java / JMS / MQ | `java/pnb-integration/` |
-| Runtime | WebSphere Liberty | `java/pnb-websphere/` |
-| Database | DB2 + IMS/DB | `db/` |
+## Repository map
 
-## Quick Start
+```
+├── pnb/
+│   ├── legacy/cobol/          # COBOL online + batch, copybooks, JCL
+│   ├── legacy/ims/            # DBD/PSB/MFS for PNB
+│   └── azure/                 # Spring services, Bicep, pipelines
+├── acb/
+│   ├── legacy/pli/            # PL/I mirror of PNB domains
+│   ├── legacy/ims/
+│   └── azure/
+├── platform/
+│   ├── mulesoft/              # Merger reconciliation (PNB ↔ ACB)
+│   └── shared/                # Domain catalog, event schemas, libraries
+├── db/pnb/ · db/acb/          # DB2 DDL, migrations, IMS defs
+├── docs/                      # Architecture & operations
+├── generators/                # Bulk code generators (optional expansion)
+├── scripts/                   # Bootstrap & tooling
+└── tests/integration/         # Cross-bank & MuleSoft contract tests
+```
+
+## Banking domain coverage (full mirror)
+
+All domains listed in `platform/shared/domains/DOMAIN_CATALOG.md` are implemented in:
+
+- `pnb/legacy/cobol/programs/online/PNB*.cbl`
+- `acb/legacy/pli/programs/online/ACB*.pli`
+- Azure service modules under each bank’s `azure/services/`
+- DB2 views/migrations under `db/pnb` and `db/acb`
+
+Domains include: deposits, lending, cards, ACH, wires, treasury, FX, trade finance, trust, escrow, compliance, risk, fraud, and more.
+
+## Merger reconciliation (MuleSoft)
+
+MuleSoft provides **customer dedup**, **account mapping**, and **dual-ledger reads** — not general channel APIs.
+
+- API contract: `platform/mulesoft/apis/merger-reconciliation/openapi.yaml`
+- Runtime app: `platform/mulesoft/apps/acb-pnb-reconciliation/`
+
+See `docs/architecture/merger-overview.md`.
+
+## Quick start
 
 ```bash
-# Prerequisites: Docker, Make, Python 3.10+, JDK 17+, GnuCOBOL 3.x
-make all            # compile COBOL, PL/I, build Java WARs, Docker images
-make test           # run unit + integration tests
-make generate       # run code generators to expand templates
+# Bootstrap directory layout (safe to re-run)
+make bootstrap
 
-# Or use the containerized build:
+# Build legacy + Azure modules
+make all
+
+# Unit & contract tests
+make test
+
+# Full stack (DB2, Azure SQL, deposits services, MuleSoft runtime)
 docker compose up --build
 ```
 
-## Repository Layout
+### Key local ports
 
-```
-PacificNationalBank/
-├── .github/workflows/       # GitHub Actions CI/CD
-├── cobol/                   # COBOL source (batch + online programs)
-│   ├── copybooks/           # Shared data structures (COPY members)
-│   ├── programs/batch/      # End-of-day, interest calc, statements
-│   ├── programs/online/     # Real-time teller transactions
-│   ├── jcl/                 # Job Control Language (batch scheduling)
-│   └── tests/               # COBOL unit tests
-├── pli/                     # PL/I source
-│   ├── includes/            # %INCLUDE members
-│   ├── programs/batch/      # Risk analytics, regulatory reports
-│   ├── programs/online/     # High-perf transaction processing
-│   └── tests/               # PL/I unit tests
-├── ims/                     # IMS subsystem definitions
-│   ├── dbdgen/              # Database Description generation
-│   ├── psbgen/              # Program Specification Blocks
-│   ├── mfs/                 # Message Format Services
-│   └── transactions/        # IMS/TM transaction routing
-├── java/                    # Java services (Maven multi-module)
-│   ├── pnb-core-banking/    # Accounts, customers, loans, deposits
-│   ├── pnb-channel-services/# ATM, online, mobile, branch APIs
-│   ├── pnb-integration/     # Payment gateways, credit bureau, MQ
-│   └── pnb-websphere/       # Liberty server config + Docker
-├── db/                      # Database definitions
-│   ├── db2/                 # DB2 DDL, stored procedures
-│   ├── ims/                 # IMS segment definitions
-│   └── migrations/          # Flyway migration scripts
-├── generators/              # Code generation framework
-│   ├── models/              # YAML data models driving generation
-│   └── templates/           # Jinja2 templates (COBOL, PL/I, Java)
-├── scripts/                 # Build & deployment automation
-├── tests/                   # Cross-cutting integration tests
-└── docs/                    # Architecture & operations docs
-```
+| Service | Port |
+|---------|------|
+| PNB DB2 | 50000 |
+| ACB DB2 | 50001 |
+| PNB Azure SQL | 1433 |
+| ACB Azure SQL | 1434 |
+| PNB deposits API | 8081 |
+| ACB deposits API | 8181 |
+| MuleSoft reconciliation | 8090 |
+| IMS sim (PNB / ACB) | 9998 / 9999 |
 
-## Code Generators
+## Code generators
 
-The `generators/` directory contains Python scripts that expand YAML data
-models into templated source across all three tiers:
+Bulk expansion (optional):
 
 ```bash
-python3 generators/generate_all.py              # generate everything
-python3 generators/generate_cobol.py --entities  # COBOL CRUD programs
-python3 generators/generate_pli.py --entities    # PL/I service programs
-python3 generators/generate_java.py --entities   # Java entity + DAO + REST
+python3 generators/generate_batch.py 1
+python3 generators/generate_supplemental.py
 ```
 
-Each generator reads `generators/models/banking_schema.yaml` and produces
-idiomatic source code with proper error handling, logging, and test stubs.
-
-## CI/CD Pipeline
-
-The GitHub Actions workflow (`.github/workflows/build.yml`) runs on every push:
-
-1. **COBOL compile** — GnuCOBOL 3.x on Ubuntu
-2. **PL/I transpile** — iron-spring PL/I or pli2c
-3. **Java build** — Maven 3.9 + JDK 17
-4. **Docker image** — WebSphere Liberty with all WARs
-5. **Integration tests** — against containerized DB2 + IMS
-6. **Push to registry** — GHCR or Azure ACR
+Configure output paths in generator scripts before running at scale.
 
 ## Licence
 
-Proprietary — Pacific National Bank, 2024–2026.
+Proprietary — PNB + ACB combined entity, 2024–2026.

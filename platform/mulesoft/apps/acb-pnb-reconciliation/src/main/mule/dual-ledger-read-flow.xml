@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:http="http://www.mulesoft.org/schema/mule/http"
+      xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="
+        http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+        http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+        http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+
+    <flow name="post-ledger-dual-read" doc:id="dual-ledger-read">
+        <http:listener config-ref="reconciliation-http" path="/v1/ledger/dual-read" allowedMethods="POST"/>
+        <set-variable variableName="mappingId" value="#[payload.mappingId]"/>
+        <http:request method="GET" config-ref="pnb-azure-http"
+                      path="/api/v1/pnb/deposits/accounts/{accountNumber}"
+                      doc:name="Read PNB Azure balance">
+            <http:uri-params><![CDATA[#[{accountNumber: vars.mappingId}]]]></http:uri-params>
+        </http:request>
+        <set-variable variableName="pnbBalance" value="#[payload.ledgerBalance default 0]"/>
+        <http:request method="GET" config-ref="acb-azure-http"
+                      path="/api/v1/acb/deposits/accounts/{accountNumber}"
+                      doc:name="Read ACB Azure balance">
+            <http:uri-params><![CDATA[#[{accountNumber: vars.mappingId}]]]></http:uri-params>
+        </http:request>
+        <set-variable variableName="acbBalance" value="#[payload.ledgerBalance default 0]"/>
+        <ee:transform doc:name="Compute variance">
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+var pnb = vars.pnbBalance as Number
+var acb = vars.acbBalance as Number
+var variance = pnb - acb
+---
+{
+  mappingId: vars.mappingId,
+  pnbLedgerBalance: pnb,
+  acbLedgerBalance: acb,
+  variance: variance,
+  withinTolerance: abs(variance) < 0.01
+}]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+    </flow>
+</mule>

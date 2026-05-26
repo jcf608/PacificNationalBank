@@ -1,0 +1,7 @@
+FROM python:3.11-slim
+WORKDIR /sim
+RUN pip install --no-cache-dir flask
+COPY ims_simulator.py .
+ENV IMS_SIM_PORT=9999
+EXPOSE 9999
+CMD ["python", "ims_simulator.py"]

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pnb-acb.internal/schemas/merger-reconciliation.json",
+  "title": "MergerReconciliationEvent",
+  "type": "object",
+  "required": ["eventType", "bank", "domain", "occurredAt"],
+  "properties": {
+    "eventType": {
+      "type": "string",
+      "enum": [
+        "PNB_DEPOSIT_BALANCE_CHANGED",
+        "ACB_DEPOSIT_BALANCE_CHANGED",
+        "CUSTOMER_DEDUP_LINKED",
+        "ACCOUNT_MAPPING_CREATED",
+        "DUAL_LEDGER_VARIANCE"
+      ]
+    },
+    "bank": { "type": "string", "enum": ["PNB", "ACB"] },
+    "domain": { "type": "string" },
+    "mappingId": { "type": "string" },
+    "pnbAccountNumber": { "type": "string" },
+    "acbAccountNumber": { "type": "string" },
+    "variance": { "type": "number" },
+    "occurredAt": { "type": "string", "format": "date-time" }
+  }
+}

@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: pnb-deposits-service
+  datasource:
+    url: jdbc:sqlserver://${PNB_AZURE_SQL_HOST:localhost}:${PNB_AZURE_SQL_PORT:1433};databaseName=pnb_deposits;encrypt=false
+    username: ${PNB_AZURE_SQL_USER:pnb_app}
+    password: ${PNB_AZURE_SQL_PASS:}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_schema: deposits
+
+azure:
+  servicebus:
+    connection-string: ${AZURE_SERVICEBUS_CONNECTION_STRING:}
+
+pnb:
+  merger:
+    topic: merger-reconciliation
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics

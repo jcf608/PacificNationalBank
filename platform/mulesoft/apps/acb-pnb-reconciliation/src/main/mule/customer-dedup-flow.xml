@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:http="http://www.mulesoft.org/schema/mule/http"
+      xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+      xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="
+        http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+        http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+        http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+
+    <flow name="post-customers-dedup" doc:id="customer-dedup">
+        <http:listener config-ref="reconciliation-http" path="/v1/customers/dedup" allowedMethods="POST"/>
+        <logger level="INFO" message="Merger dedup request: #[payload]"/>
+        <ee:transform doc:name="Build golden record">
+            <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+  goldenCustomerId: "GOLDEN-" ++ payload.pnbCustomerId,
+  pnbCustomerId: payload.pnbCustomerId,
+  acbCustomerId: payload.acbCustomerId,
+  matchScore: if (payload.matchStrategy == "TAX_ID") 0.99 else 0.85,
+  status: "LINKED"
+}]]></ee:set-payload>
+            </ee:message>
+        </ee:transform>
+        <logger level="INFO" message="Dedup complete: #[payload.goldenCustomerId]"/>
+    </flow>
+</mule>

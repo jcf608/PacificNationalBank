@@ -1,8 +1,11 @@
 version: "3.9"
 
+# PNB + ACB hybrid enterprise stack (local dev)
+# Legacy: COBOL (PNB) + PL/I (ACB) | Modern: Azure-style Spring services
+# Merger: MuleSoft reconciliation API on :8090
+
 services:
-  # ---- DB2 (simulated with PostgreSQL for Linux dev) ---------
-  db2:
+  pnb-db2:
     image: icr.io/db2_community/db2:11.5.9.0
     platform: linux/amd64
     environment:
@@ -12,62 +15,115 @@ services:
     ports:
       - "50000:50000"
     volumes:
-      - db2-data:/database
+      - pnb-db2-data:/database
     healthcheck:
       test: ["CMD", "su", "-", "db2inst1", "-c", "db2 connect to PNBCORE"]
       interval: 30s
       timeout: 10s
       retries: 10
 
-  # ---- WebSphere Liberty (Java services) ---------------------
-  websphere:
+  acb-db2:
+    image: icr.io/db2_community/db2:11.5.9.0
+    platform: linux/amd64
+    environment:
+      LICENSE: accept
+      DB2INST1_PASSWORD: acb_dev_2026
+      DBNAME: ACBCORE
+    ports:
+      - "50001:50000"
+    volumes:
+      - acb-db2-data:/database
+    healthcheck:
+      test: ["CMD", "su", "-", "db2inst1", "-c", "db2 connect to ACBCORE"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+
+  pnb-azure-sql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Pnb_Dev_2026!"
+    ports:
+      - "1433:1433"
+    volumes:
+      - pnb-sql-data:/var/opt/mssql
+
+  acb-azure-sql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Acb_Dev_2026!"
+    ports:
+      - "1434:1433"
+    volumes:
+      - acb-sql-data:/var/opt/mssql
+
+  pnb-deposits:
     build:
-      context: java/pnb-websphere/docker
+      context: pnb/azure/services/pnb-deposits-service
       dockerfile: Dockerfile
     ports:
-      - "9080:9080"
-      - "9443:9443"
+      - "8081:8081"
     environment:
-      PNB_DB_HOST: db2
-      PNB_DB_PORT: 50000
-      PNB_DB_NAME: PNBCORE
-      PNB_DB_USER: db2inst1
-      PNB_DB_PASS: pnb_dev_2026
-      PNB_IMS_CONNECT_HOST: ims-connect
-      PNB_IMS_CONNECT_PORT: 9999
-      WLP_LOGGING_CONSOLE_LOGLEVEL: info
-    depends_on:
-      db2:
-        condition: service_healthy
-    volumes:
-      - ./java/pnb-core-banking/target/pnb-core-banking.war:/config/dropins/core-banking.war
-      - ./java/pnb-channel-services/target/pnb-channel-services.war:/config/dropins/channel-services.war
-      - ./java/pnb-integration/target/pnb-integration.war:/config/dropins/integration.war
+      PNB_AZURE_SQL_HOST: pnb-azure-sql
+      PNB_AZURE_SQL_PORT: 1433
+      PNB_AZURE_SQL_USER: sa
+      PNB_AZURE_SQL_PASS: "Pnb_Dev_2026!"
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://pnb-azure-sql:1433;databaseName=pnb_deposits;encrypt=false;trustServerCertificate=true
 
-  # ---- IMS Connect simulator ---------------------------------
-  ims-connect:
+  acb-deposits:
+    build:
+      context: acb/azure/services/acb-deposits-service
+      dockerfile: Dockerfile
+    ports:
+      - "8181:8181"
+    environment:
+      ACB_AZURE_SQL_HOST: acb-azure-sql
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://acb-azure-sql:1433;databaseName=acb_deposits;encrypt=false;trustServerCertificate=true
+      MSSQL_SA_PASSWORD: "Acb_Dev_2026!"
+
+  merger-reconciliation:
+    image: mulesoft/mule-runtime:4.6.0
+    ports:
+      - "8090:8090"
+    volumes:
+      - ./platform/mulesoft/apps/acb-pnb-reconciliation:/opt/mule/apps/acb-pnb-reconciliation
+    depends_on:
+      - pnb-deposits
+      - acb-deposits
+
+  ims-connect-pnb:
+    build:
+      context: tests/integration
+      dockerfile: Dockerfile.ims-sim
+    ports:
+      - "9998:9999"
+    environment:
+      IMS_SIM_BANK: PNB
+
+  ims-connect-acb:
     build:
       context: tests/integration
       dockerfile: Dockerfile.ims-sim
     ports:
       - "9999:9999"
     environment:
-      IMS_SIM_MODE: "true"
+      IMS_SIM_BANK: ACB
 
-  # ---- COBOL batch runner ------------------------------------
-  cobol-batch:
+  cobol-batch-pnb:
     build:
-      context: cobol
+      context: pnb/legacy/cobol
       dockerfile: Dockerfile
     environment:
-      PNB_DB_HOST: db2
+      PNB_DB_HOST: pnb-db2
       PNB_DB_PORT: 50000
     depends_on:
-      db2:
+      pnb-db2:
         condition: service_healthy
-    volumes:
-      - batch-spool:/var/spool/pnb
 
 volumes:
-  db2-data:
-  batch-spool:
+  pnb-db2-data:
+  acb-db2-data:
+  pnb-sql-data:
+  acb-sql-data:

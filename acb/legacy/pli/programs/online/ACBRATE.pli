@@ -1,0 +1,32 @@
+/* **************************************************************** */
+/* ACBRATE.pli — Rate management                                  */
+/* Atlantic Commerce Bank (ACB) — IMS/TM online program             */
+/* **************************************************************** */
+ACBRATE: PROC OPTIONS(MAIN) REORDER;
+  DCL ca_function    CHAR(4);
+  DCL ca_acct_num    CHAR(16);
+  DCL ca_amount      FIXED DEC(15,2);
+  DCL ca_return      CHAR(2);
+  DCL ca_message     CHAR(60);
+
+  ca_function = 'INQ ';
+  SELECT (ca_function);
+    WHEN ('INQ ') CALL inquire;
+    WHEN ('POST') CALL post_txn;
+    OTHER DO;
+      ca_return = '96';
+      ca_message = 'INVALID FUNCTION';
+    END;
+  END;
+
+inquire: PROC;
+  ca_return = '00';
+  ca_message = 'ACB rate OK';
+END inquire;
+
+post_txn: PROC;
+  ca_return = '00';
+  ca_message = 'POSTED';
+END post_txn;
+
+END ACBRATE;

@@ -1,0 +1,149 @@
+openapi: 3.0.3
+info:
+  title: PNB–ACB Merger Reconciliation API
+  description: |
+    Canonical reconciliation layer after the Pacific National Bank and Atlantic Commerce Bank merger.
+    Synchronizes customer identity, account product mapping, and dual-ledger reads across COBOL/IMS (PNB),
+    PL/I/IMS (ACB), and Azure modern services.
+  version: 1.0.0
+  contact:
+    name: Enterprise Integration (MuleSoft)
+servers:
+  - url: https://api.pnb-acb-merger.internal/v1
+    description: Production API Management (Azure)
+  - url: http://localhost:8090/v1
+    description: Local Mule runtime
+tags:
+  - name: customers
+  - name: accounts
+  - name: ledger
+paths:
+  /customers/dedup:
+    post:
+      tags: [customers]
+      summary: Deduplicate customer across PNB and ACB cores
+      operationId: deduplicateCustomer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerDedupRequest'
+      responses:
+        '200':
+          description: Golden customer record
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerDedupResult'
+  /accounts/mapping:
+    post:
+      tags: [accounts]
+      summary: Map PNB account to ACB account (product line aware)
+      operationId: mapAccounts
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AccountMappingRequest'
+      responses:
+        '200':
+          description: Linked account pair
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AccountMappingResult'
+  /ledger/dual-read:
+    post:
+      tags: [ledger]
+      summary: Read balances from both ledgers and compute variance
+      operationId: dualLedgerRead
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DualLedgerReadRequest'
+      responses:
+        '200':
+          description: Aggregated position with variance
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DualLedgerReadResult'
+components:
+  schemas:
+    CustomerDedupRequest:
+      type: object
+      required: [pnbCustomerId, acbCustomerId, taxId]
+      properties:
+        pnbCustomerId:
+          type: string
+        acbCustomerId:
+          type: string
+        taxId:
+          type: string
+        matchStrategy:
+          type: string
+          enum: [TAX_ID, NAME_DOB, MANUAL_OVERRIDE]
+    CustomerDedupResult:
+      type: object
+      properties:
+        goldenCustomerId:
+          type: string
+        pnbCustomerId:
+          type: string
+        acbCustomerId:
+          type: string
+        matchScore:
+          type: number
+        status:
+          type: string
+    AccountMappingRequest:
+      type: object
+      required: [pnbAccountNumber, acbAccountNumber, domain]
+      properties:
+        pnbAccountNumber:
+          type: string
+        acbAccountNumber:
+          type: string
+        domain:
+          type: string
+          description: Banking domain slug (account, deposit, loan, ...)
+    AccountMappingResult:
+      type: object
+      properties:
+        mappingId:
+          type: string
+        pnbAccountNumber:
+          type: string
+        acbAccountNumber:
+          type: string
+        domain:
+          type: string
+        effectiveDate:
+          type: string
+          format: date
+    DualLedgerReadRequest:
+      type: object
+      required: [mappingId]
+      properties:
+        mappingId:
+          type: string
+        asOfDate:
+          type: string
+          format: date-time
+    DualLedgerReadResult:
+      type: object
+      properties:
+        mappingId:
+          type: string
+        pnbLedgerBalance:
+          type: number
+        acbLedgerBalance:
+          type: number
+        variance:
+          type: number
+        withinTolerance:
+          type: boolean
