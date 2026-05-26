@@ -1,0 +1,31 @@
+package com.pnb.deposit;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import javax.enterprise.context.ApplicationScoped;
+
+/**
+ * DepositValidator024 — Business rule validation.
+ */
+@ApplicationScoped
+public class DepositValidator024 {
+
+    public List<String> validate(DepositDto024 dto) {
+        List<String> errors = new ArrayList<>();
+        if (dto == null) {
+            errors.add("deposit DTO must not be null");
+            return errors;
+        }
+        if (dto.getDepoField000() != null && dto.getDepoField000().compareTo(BigDecimal.ZERO) < 0) {
+            errors.add("depoField000 must not be negative");
+        }
+        if (dto.getDepoField005() != null && dto.getDepoField005() < 0) {
+            errors.add("depoField005 must not be negative");
+        }
+        if (dto.getDepoField007() != null && dto.getDepoField007() < 0) {
+            errors.add("depoField007 must not be negative");
+        }
+        return errors;
+    }
+}
