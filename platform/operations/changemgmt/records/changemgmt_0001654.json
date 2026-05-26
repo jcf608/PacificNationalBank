@@ -1,0 +1,1430 @@
+{
+  "ticketNumber": "PRB000001654",
+  "type": "PRB",
+  "bank": "PNB",
+  "domain": "foreignexchange",
+  "shortDescription": "PNB foreignexchange — production support ticket",
+  "priority": "4",
+  "state": "RESOLVED",
+  "assignmentGroup": "PNB-CORE-FOREIGNEXCHANGE",
+  "openedAt": "2024-12-22T00:00:00Z",
+  "workNotes": [
+    {
+      "at": "2024-12-22T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 1: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xb15de1."
+    },
+    {
+      "at": "2024-12-22T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 2: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x914aa1."
+    },
+    {
+      "at": "2024-12-22T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 3: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x2f96f1."
+    },
+    {
+      "at": "2024-12-22T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 4: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x3da56a."
+    },
+    {
+      "at": "2024-12-22T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 5: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x8beda6."
+    },
+    {
+      "at": "2024-12-22T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 6: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xf7ab8e."
+    },
+    {
+      "at": "2024-12-22T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 7: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xa53ff6."
+    },
+    {
+      "at": "2024-12-22T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 8: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x04c580."
+    },
+    {
+      "at": "2024-12-23T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 9: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xc9889a."
+    },
+    {
+      "at": "2024-12-23T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 10: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xc4e2cd."
+    },
+    {
+      "at": "2024-12-23T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 11: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x8015dc."
+    },
+    {
+      "at": "2024-12-23T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 12: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xc1702e."
+    },
+    {
+      "at": "2024-12-23T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 13: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x825c29."
+    },
+    {
+      "at": "2024-12-23T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 14: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x1a6b21."
+    },
+    {
+      "at": "2024-12-23T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 15: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x41dd99."
+    },
+    {
+      "at": "2024-12-23T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 16: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x18f5fa."
+    },
+    {
+      "at": "2024-12-24T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 17: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xee829f."
+    },
+    {
+      "at": "2024-12-24T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 18: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x112785."
+    },
+    {
+      "at": "2024-12-24T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 19: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x2eef78."
+    },
+    {
+      "at": "2024-12-24T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 20: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x306d0c."
+    },
+    {
+      "at": "2024-12-24T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 21: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x122290."
+    },
+    {
+      "at": "2024-12-24T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 22: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x23574a."
+    },
+    {
+      "at": "2024-12-24T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 23: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xa28216."
+    },
+    {
+      "at": "2024-12-24T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 24: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x71c4c8."
+    },
+    {
+      "at": "2024-12-25T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 25: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xd51dfe."
+    },
+    {
+      "at": "2024-12-25T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 26: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x11b866."
+    },
+    {
+      "at": "2024-12-25T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 27: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x8dd8d7."
+    },
+    {
+      "at": "2024-12-25T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 28: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x745200."
+    },
+    {
+      "at": "2024-12-25T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 29: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xd9beed."
+    },
+    {
+      "at": "2024-12-25T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 30: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x605c75."
+    },
+    {
+      "at": "2024-12-25T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 31: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xd3050f."
+    },
+    {
+      "at": "2024-12-25T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 32: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xd6f399."
+    },
+    {
+      "at": "2024-12-26T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 33: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xd73e52."
+    },
+    {
+      "at": "2024-12-26T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 34: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xc9b8a5."
+    },
+    {
+      "at": "2024-12-26T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 35: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x8cb836."
+    },
+    {
+      "at": "2024-12-26T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 36: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x55b6cf."
+    },
+    {
+      "at": "2024-12-26T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 37: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x0cb059."
+    },
+    {
+      "at": "2024-12-26T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 38: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x9423d0."
+    },
+    {
+      "at": "2024-12-26T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 39: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x6e83da."
+    },
+    {
+      "at": "2024-12-26T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 40: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xd49210."
+    },
+    {
+      "at": "2024-12-27T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 41: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xce5530."
+    },
+    {
+      "at": "2024-12-27T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 42: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xa5e210."
+    },
+    {
+      "at": "2024-12-27T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 43: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x4207b6."
+    },
+    {
+      "at": "2024-12-27T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 44: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x455a4f."
+    },
+    {
+      "at": "2024-12-27T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 45: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x8ac241."
+    },
+    {
+      "at": "2024-12-27T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 46: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe94c5e."
+    },
+    {
+      "at": "2024-12-27T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 47: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x33a995."
+    },
+    {
+      "at": "2024-12-27T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 48: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x14b52c."
+    },
+    {
+      "at": "2024-12-28T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 49: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x3b0690."
+    },
+    {
+      "at": "2024-12-28T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 50: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xa75394."
+    },
+    {
+      "at": "2024-12-28T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 51: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x41d5b9."
+    },
+    {
+      "at": "2024-12-28T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 52: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xb0167d."
+    },
+    {
+      "at": "2024-12-28T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 53: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x9cf1ad."
+    },
+    {
+      "at": "2024-12-28T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 54: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xa52e6c."
+    },
+    {
+      "at": "2024-12-28T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 55: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x6cd926."
+    },
+    {
+      "at": "2024-12-28T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 56: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x66975d."
+    },
+    {
+      "at": "2024-12-29T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 57: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x5801e4."
+    },
+    {
+      "at": "2024-12-29T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 58: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x871ad9."
+    },
+    {
+      "at": "2024-12-29T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 59: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x2c54c6."
+    },
+    {
+      "at": "2024-12-29T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 60: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xc05941."
+    },
+    {
+      "at": "2024-12-29T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 61: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x20af09."
+    },
+    {
+      "at": "2024-12-29T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 62: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x98a2c1."
+    },
+    {
+      "at": "2024-12-29T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 63: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x3278fa."
+    },
+    {
+      "at": "2024-12-29T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 64: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xa1340e."
+    },
+    {
+      "at": "2024-12-30T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 65: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x6b7e6d."
+    },
+    {
+      "at": "2024-12-30T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 66: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x6b9b43."
+    },
+    {
+      "at": "2024-12-30T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 67: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x539c12."
+    },
+    {
+      "at": "2024-12-30T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 68: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x8ee18e."
+    },
+    {
+      "at": "2024-12-30T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 69: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe681a1."
+    },
+    {
+      "at": "2024-12-30T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 70: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xc16d4a."
+    },
+    {
+      "at": "2024-12-30T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 71: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x7205ca."
+    },
+    {
+      "at": "2024-12-30T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 72: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe92472."
+    },
+    {
+      "at": "2024-12-31T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 73: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x7933e7."
+    },
+    {
+      "at": "2024-12-31T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 74: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xac0445."
+    },
+    {
+      "at": "2024-12-31T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 75: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x1fe497."
+    },
+    {
+      "at": "2024-12-31T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 76: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe8bcbf."
+    },
+    {
+      "at": "2024-12-31T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 77: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xcab636."
+    },
+    {
+      "at": "2024-12-31T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 78: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x4fd1af."
+    },
+    {
+      "at": "2024-12-31T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 79: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x762ba5."
+    },
+    {
+      "at": "2024-12-31T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 80: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x5c26d3."
+    },
+    {
+      "at": "2025-01-01T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 81: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x52c8a3."
+    },
+    {
+      "at": "2025-01-01T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 82: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xba79a5."
+    },
+    {
+      "at": "2025-01-01T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 83: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe8540d."
+    },
+    {
+      "at": "2025-01-01T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 84: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x8e32f0."
+    },
+    {
+      "at": "2025-01-01T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 85: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x49d54a."
+    },
+    {
+      "at": "2025-01-01T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 86: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x3941f0."
+    },
+    {
+      "at": "2025-01-01T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 87: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x9c741e."
+    },
+    {
+      "at": "2025-01-01T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 88: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x0898a9."
+    },
+    {
+      "at": "2025-01-02T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 89: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x78cf03."
+    },
+    {
+      "at": "2025-01-02T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 90: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xf9d3d5."
+    },
+    {
+      "at": "2025-01-02T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 91: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xca2a1d."
+    },
+    {
+      "at": "2025-01-02T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 92: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xc1ce94."
+    },
+    {
+      "at": "2025-01-02T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 93: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x12fbb8."
+    },
+    {
+      "at": "2025-01-02T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 94: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xc145ce."
+    },
+    {
+      "at": "2025-01-02T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 95: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xd4455d."
+    },
+    {
+      "at": "2025-01-02T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 96: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xb3d94d."
+    },
+    {
+      "at": "2025-01-03T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 97: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x3d62ef."
+    },
+    {
+      "at": "2025-01-03T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 98: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xa1aa5d."
+    },
+    {
+      "at": "2025-01-03T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 99: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x981bb5."
+    },
+    {
+      "at": "2025-01-03T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 100: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x0c2595."
+    },
+    {
+      "at": "2025-01-03T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 101: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x702249."
+    },
+    {
+      "at": "2025-01-03T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 102: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x903ce1."
+    },
+    {
+      "at": "2025-01-03T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 103: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x72ed43."
+    },
+    {
+      "at": "2025-01-03T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 104: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xc02b35."
+    },
+    {
+      "at": "2025-01-04T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 105: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xaf22bc."
+    },
+    {
+      "at": "2025-01-04T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 106: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x31d540."
+    },
+    {
+      "at": "2025-01-04T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 107: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x008735."
+    },
+    {
+      "at": "2025-01-04T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 108: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x3c9782."
+    },
+    {
+      "at": "2025-01-04T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 109: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x6ed1db."
+    },
+    {
+      "at": "2025-01-04T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 110: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x8cb249."
+    },
+    {
+      "at": "2025-01-04T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 111: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x97a545."
+    },
+    {
+      "at": "2025-01-04T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 112: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x1f3531."
+    },
+    {
+      "at": "2025-01-05T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 113: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x6f5f1e."
+    },
+    {
+      "at": "2025-01-05T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 114: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xb6f647."
+    },
+    {
+      "at": "2025-01-05T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 115: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x428226."
+    },
+    {
+      "at": "2025-01-05T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 116: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xbec481."
+    },
+    {
+      "at": "2025-01-05T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 117: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x9bbd7c."
+    },
+    {
+      "at": "2025-01-05T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 118: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x4c2e11."
+    },
+    {
+      "at": "2025-01-05T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 119: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x2ec282."
+    },
+    {
+      "at": "2025-01-05T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 120: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x840157."
+    },
+    {
+      "at": "2025-01-06T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 121: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x6a9ea1."
+    },
+    {
+      "at": "2025-01-06T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 122: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xa78a23."
+    },
+    {
+      "at": "2025-01-06T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 123: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x74ac67."
+    },
+    {
+      "at": "2025-01-06T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 124: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xb91aa3."
+    },
+    {
+      "at": "2025-01-06T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 125: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x18e0b1."
+    },
+    {
+      "at": "2025-01-06T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 126: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x909c99."
+    },
+    {
+      "at": "2025-01-06T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 127: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe5ac15."
+    },
+    {
+      "at": "2025-01-06T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 128: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xa4631b."
+    },
+    {
+      "at": "2025-01-07T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 129: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xba79c9."
+    },
+    {
+      "at": "2025-01-07T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 130: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xc69483."
+    },
+    {
+      "at": "2025-01-07T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 131: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x57e812."
+    },
+    {
+      "at": "2025-01-07T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 132: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x166f5e."
+    },
+    {
+      "at": "2025-01-07T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 133: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x6d03b7."
+    },
+    {
+      "at": "2025-01-07T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 134: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x2b3807."
+    },
+    {
+      "at": "2025-01-07T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 135: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xcbeaf7."
+    },
+    {
+      "at": "2025-01-07T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 136: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x282ed4."
+    },
+    {
+      "at": "2025-01-08T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 137: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x797240."
+    },
+    {
+      "at": "2025-01-08T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 138: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xaf4bc2."
+    },
+    {
+      "at": "2025-01-08T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 139: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe1dfca."
+    },
+    {
+      "at": "2025-01-08T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 140: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x68350f."
+    },
+    {
+      "at": "2025-01-08T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 141: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x5a3f6f."
+    },
+    {
+      "at": "2025-01-08T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 142: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xde294d."
+    },
+    {
+      "at": "2025-01-08T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 143: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x1bbc38."
+    },
+    {
+      "at": "2025-01-08T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 144: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x6851a9."
+    },
+    {
+      "at": "2025-01-09T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 145: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x78fbd6."
+    },
+    {
+      "at": "2025-01-09T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 146: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x9ca1d0."
+    },
+    {
+      "at": "2025-01-09T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 147: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x66a647."
+    },
+    {
+      "at": "2025-01-09T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 148: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xfb97c0."
+    },
+    {
+      "at": "2025-01-09T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 149: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe0a239."
+    },
+    {
+      "at": "2025-01-09T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 150: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x039cda."
+    },
+    {
+      "at": "2025-01-09T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 151: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x423da2."
+    },
+    {
+      "at": "2025-01-09T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 152: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xebb34d."
+    },
+    {
+      "at": "2025-01-10T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 153: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xfc4b67."
+    },
+    {
+      "at": "2025-01-10T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 154: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x0eb5a9."
+    },
+    {
+      "at": "2025-01-10T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 155: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x693d12."
+    },
+    {
+      "at": "2025-01-10T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 156: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x7b536b."
+    },
+    {
+      "at": "2025-01-10T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 157: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x14e2d1."
+    },
+    {
+      "at": "2025-01-10T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 158: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x4377ae."
+    },
+    {
+      "at": "2025-01-10T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 159: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x915b45."
+    },
+    {
+      "at": "2025-01-10T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 160: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x9fc27c."
+    },
+    {
+      "at": "2025-01-11T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 161: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x77db24."
+    },
+    {
+      "at": "2025-01-11T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 162: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x1996d7."
+    },
+    {
+      "at": "2025-01-11T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 163: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x10a8e1."
+    },
+    {
+      "at": "2025-01-11T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 164: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x07004f."
+    },
+    {
+      "at": "2025-01-11T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 165: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x713038."
+    },
+    {
+      "at": "2025-01-11T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 166: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x732dc5."
+    },
+    {
+      "at": "2025-01-11T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 167: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x4c9d6a."
+    },
+    {
+      "at": "2025-01-11T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 168: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x3db106."
+    },
+    {
+      "at": "2025-01-12T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 169: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x192867."
+    },
+    {
+      "at": "2025-01-12T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 170: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x5b4234."
+    },
+    {
+      "at": "2025-01-12T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 171: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xeab77f."
+    },
+    {
+      "at": "2025-01-12T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 172: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x6ca4b8."
+    },
+    {
+      "at": "2025-01-12T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 173: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x23a28e."
+    },
+    {
+      "at": "2025-01-12T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 174: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xc24688."
+    },
+    {
+      "at": "2025-01-12T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 175: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x0272f5."
+    },
+    {
+      "at": "2025-01-12T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 176: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x166f37."
+    },
+    {
+      "at": "2025-01-13T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 177: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xcc305c."
+    },
+    {
+      "at": "2025-01-13T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 178: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xcb0632."
+    },
+    {
+      "at": "2025-01-13T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 179: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xfbe0ef."
+    },
+    {
+      "at": "2025-01-13T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 180: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe4c610."
+    },
+    {
+      "at": "2025-01-13T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 181: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xefd1dc."
+    },
+    {
+      "at": "2025-01-13T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 182: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x2e144c."
+    },
+    {
+      "at": "2025-01-13T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 183: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xd520e8."
+    },
+    {
+      "at": "2025-01-13T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 184: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x12b4b6."
+    },
+    {
+      "at": "2025-01-14T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 185: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x517d39."
+    },
+    {
+      "at": "2025-01-14T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 186: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x5c9746."
+    },
+    {
+      "at": "2025-01-14T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 187: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xefecb2."
+    },
+    {
+      "at": "2025-01-14T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 188: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x31874a."
+    },
+    {
+      "at": "2025-01-14T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 189: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x2bb2a6."
+    },
+    {
+      "at": "2025-01-14T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 190: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xf96593."
+    },
+    {
+      "at": "2025-01-14T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 191: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x3d2a20."
+    },
+    {
+      "at": "2025-01-14T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 192: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x039242."
+    },
+    {
+      "at": "2025-01-15T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 193: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe0bd69."
+    },
+    {
+      "at": "2025-01-15T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 194: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x4627ac."
+    },
+    {
+      "at": "2025-01-15T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 195: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xa923f1."
+    },
+    {
+      "at": "2025-01-15T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 196: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x2b2602."
+    },
+    {
+      "at": "2025-01-15T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 197: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xce9d68."
+    },
+    {
+      "at": "2025-01-15T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 198: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x409b0c."
+    },
+    {
+      "at": "2025-01-15T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 199: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x2f4656."
+    },
+    {
+      "at": "2025-01-15T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 200: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x347b3d."
+    },
+    {
+      "at": "2025-01-16T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 201: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x4a0644."
+    },
+    {
+      "at": "2025-01-16T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 202: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xf4179d."
+    },
+    {
+      "at": "2025-01-16T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 203: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x498912."
+    },
+    {
+      "at": "2025-01-16T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 204: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xf68f83."
+    },
+    {
+      "at": "2025-01-16T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 205: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xa85c1e."
+    },
+    {
+      "at": "2025-01-16T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 206: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x961e84."
+    },
+    {
+      "at": "2025-01-16T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 207: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xed506a."
+    },
+    {
+      "at": "2025-01-16T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 208: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x5a640a."
+    },
+    {
+      "at": "2025-01-17T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 209: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x3a3bab."
+    },
+    {
+      "at": "2025-01-17T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 210: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xa4e144."
+    },
+    {
+      "at": "2025-01-17T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 211: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x1ea0a6."
+    },
+    {
+      "at": "2025-01-17T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 212: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x8e7abb."
+    },
+    {
+      "at": "2025-01-17T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 213: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x66a1d0."
+    },
+    {
+      "at": "2025-01-17T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 214: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe6330b."
+    },
+    {
+      "at": "2025-01-17T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 215: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x028551."
+    },
+    {
+      "at": "2025-01-17T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 216: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x67c1f5."
+    },
+    {
+      "at": "2025-01-18T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 217: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x4c19c1."
+    },
+    {
+      "at": "2025-01-18T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 218: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x7fa9b9."
+    },
+    {
+      "at": "2025-01-18T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 219: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xab7aa7."
+    },
+    {
+      "at": "2025-01-18T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 220: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x25f9d9."
+    },
+    {
+      "at": "2025-01-18T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 221: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x788611."
+    },
+    {
+      "at": "2025-01-18T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 222: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe5f924."
+    },
+    {
+      "at": "2025-01-18T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 223: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x79f6da."
+    },
+    {
+      "at": "2025-01-18T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 224: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x27ff57."
+    },
+    {
+      "at": "2025-01-19T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 225: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xf4fb1e."
+    },
+    {
+      "at": "2025-01-19T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 226: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x1ded32."
+    },
+    {
+      "at": "2025-01-19T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 227: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xda5964."
+    },
+    {
+      "at": "2025-01-19T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 228: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x1125df."
+    },
+    {
+      "at": "2025-01-19T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 229: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xd54a8b."
+    },
+    {
+      "at": "2025-01-19T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 230: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xfcc9ff."
+    },
+    {
+      "at": "2025-01-19T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 231: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xc23bc6."
+    },
+    {
+      "at": "2025-01-19T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 232: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x7ce385."
+    },
+    {
+      "at": "2025-01-20T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 233: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xd8df99."
+    },
+    {
+      "at": "2025-01-20T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 234: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x20b5a0."
+    },
+    {
+      "at": "2025-01-20T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 235: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x3a7b90."
+    },
+    {
+      "at": "2025-01-20T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 236: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xfd4802."
+    },
+    {
+      "at": "2025-01-20T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 237: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xae6fe4."
+    },
+    {
+      "at": "2025-01-20T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 238: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x10f306."
+    },
+    {
+      "at": "2025-01-20T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 239: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x85fa2b."
+    },
+    {
+      "at": "2025-01-20T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 240: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xc0b04f."
+    },
+    {
+      "at": "2025-01-21T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 241: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x55ea1e."
+    },
+    {
+      "at": "2025-01-21T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 242: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x82cefa."
+    },
+    {
+      "at": "2025-01-21T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 243: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x3aa1e7."
+    },
+    {
+      "at": "2025-01-21T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 244: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x86e767."
+    },
+    {
+      "at": "2025-01-21T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 245: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xde9103."
+    },
+    {
+      "at": "2025-01-21T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 246: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xb802bb."
+    },
+    {
+      "at": "2025-01-21T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 247: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x31840e."
+    },
+    {
+      "at": "2025-01-21T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 248: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x28ddca."
+    },
+    {
+      "at": "2025-01-22T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 249: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x2645df."
+    },
+    {
+      "at": "2025-01-22T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 250: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xccf77e."
+    },
+    {
+      "at": "2025-01-22T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 251: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xf6b91d."
+    },
+    {
+      "at": "2025-01-22T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 252: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xb6c855."
+    },
+    {
+      "at": "2025-01-22T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 253: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x080e8a."
+    },
+    {
+      "at": "2025-01-22T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 254: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x5c5167."
+    },
+    {
+      "at": "2025-01-22T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 255: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x535b4e."
+    },
+    {
+      "at": "2025-01-22T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 256: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xf6de1f."
+    },
+    {
+      "at": "2025-01-23T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 257: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xa7939e."
+    },
+    {
+      "at": "2025-01-23T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 258: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x767893."
+    },
+    {
+      "at": "2025-01-23T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 259: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe1d0f9."
+    },
+    {
+      "at": "2025-01-23T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 260: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x6ebc3c."
+    },
+    {
+      "at": "2025-01-23T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 261: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x50fa9e."
+    },
+    {
+      "at": "2025-01-23T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 262: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x889cc6."
+    },
+    {
+      "at": "2025-01-23T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 263: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xdf675b."
+    },
+    {
+      "at": "2025-01-23T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 264: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x08805e."
+    },
+    {
+      "at": "2025-01-24T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 265: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x5b4aa1."
+    },
+    {
+      "at": "2025-01-24T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 266: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xb3812e."
+    },
+    {
+      "at": "2025-01-24T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 267: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x0b9d8b."
+    },
+    {
+      "at": "2025-01-24T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 268: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xc5ef09."
+    },
+    {
+      "at": "2025-01-24T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 269: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe5c0ba."
+    },
+    {
+      "at": "2025-01-24T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 270: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xb2e5da."
+    },
+    {
+      "at": "2025-01-24T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 271: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x892a54."
+    },
+    {
+      "at": "2025-01-24T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 272: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xe72b30."
+    },
+    {
+      "at": "2025-01-25T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 273: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xab26ee."
+    },
+    {
+      "at": "2025-01-25T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 274: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x9c14b1."
+    },
+    {
+      "at": "2025-01-25T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 275: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xa1a670."
+    },
+    {
+      "at": "2025-01-25T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 276: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xf4e7f2."
+    },
+    {
+      "at": "2025-01-25T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 277: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x8e7673."
+    },
+    {
+      "at": "2025-01-25T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 278: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x2eef90."
+    },
+    {
+      "at": "2025-01-25T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 279: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0x88c25d."
+    },
+    {
+      "at": "2025-01-25T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 280: validated foreignexchange path on PNB. Correlation to merger reconciliation queue MERGER-1654. Attached log excerpt and DB2 plan hash 0xcad21b."
+    }
+  ],
+  "relatedConfigurationItems": [
+    {"ci": "PNB-foreignexchange-CI-000", "class": "cmdb_ci_appl"},
+    {"ci": "PNB-foreignexchange-CI-001", "class": "cmdb_ci_appl"},
+    {"ci": "PNB-foreignexchange-CI-002", "class": "cmdb_ci_appl"},
+    {"ci": "PNB-foreignexchange-CI-003", "class": "cmdb_ci_appl"},
+    {"ci": "PNB-foreignexchange-CI-004", "class": "cmdb_ci_appl"},
+    {"ci": "PNB-foreignexchange-CI-005", "class": "cmdb_ci_appl"},
+    {"ci": "PNB-foreignexchange-CI-006", "class": "cmdb_ci_appl"},
+    {"ci": "PNB-foreignexchange-CI-007", "class": "cmdb_ci_appl"}
+  ],
+  "approvals": [
+    {"role": "CAB", "approver": "approver0@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver1@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver2@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver3@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver4@pnb-acb.internal", "status": "approved"}
+  ]
+}

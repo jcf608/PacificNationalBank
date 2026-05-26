@@ -1,0 +1,1430 @@
+{
+  "ticketNumber": "PRB000001694",
+  "type": "PRB",
+  "bank": "MERGER",
+  "domain": "transaction",
+  "shortDescription": "MERGER transaction — production support ticket",
+  "priority": "3",
+  "state": "RESOLVED",
+  "assignmentGroup": "MERGER-CORE-TRANSACTION",
+  "openedAt": "2026-01-14T00:00:00Z",
+  "workNotes": [
+    {
+      "at": "2026-01-14T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 1: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x7fe5c2."
+    },
+    {
+      "at": "2026-01-14T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 2: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x74f0a6."
+    },
+    {
+      "at": "2026-01-14T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 3: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x7e0a82."
+    },
+    {
+      "at": "2026-01-14T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 4: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xef23b9."
+    },
+    {
+      "at": "2026-01-14T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 5: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x637df7."
+    },
+    {
+      "at": "2026-01-14T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 6: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xce2e78."
+    },
+    {
+      "at": "2026-01-14T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 7: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x4fdf5b."
+    },
+    {
+      "at": "2026-01-14T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 8: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x9ccb44."
+    },
+    {
+      "at": "2026-01-15T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 9: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf54eec."
+    },
+    {
+      "at": "2026-01-15T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 10: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xe495e1."
+    },
+    {
+      "at": "2026-01-15T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 11: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xba0115."
+    },
+    {
+      "at": "2026-01-15T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 12: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x2084af."
+    },
+    {
+      "at": "2026-01-15T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 13: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x691aae."
+    },
+    {
+      "at": "2026-01-15T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 14: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x58f1ea."
+    },
+    {
+      "at": "2026-01-15T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 15: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x1e876c."
+    },
+    {
+      "at": "2026-01-15T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 16: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x8a3793."
+    },
+    {
+      "at": "2026-01-16T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 17: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x1b6ecf."
+    },
+    {
+      "at": "2026-01-16T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 18: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x541e29."
+    },
+    {
+      "at": "2026-01-16T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 19: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x03ead1."
+    },
+    {
+      "at": "2026-01-16T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 20: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x4dc632."
+    },
+    {
+      "at": "2026-01-16T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 21: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xbec746."
+    },
+    {
+      "at": "2026-01-16T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 22: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x228ca8."
+    },
+    {
+      "at": "2026-01-16T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 23: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xc5eb1c."
+    },
+    {
+      "at": "2026-01-16T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 24: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x969bd7."
+    },
+    {
+      "at": "2026-01-17T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 25: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x1d975e."
+    },
+    {
+      "at": "2026-01-17T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 26: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xe3036d."
+    },
+    {
+      "at": "2026-01-17T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 27: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x156f02."
+    },
+    {
+      "at": "2026-01-17T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 28: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf50a5c."
+    },
+    {
+      "at": "2026-01-17T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 29: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x178c91."
+    },
+    {
+      "at": "2026-01-17T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 30: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xd0162c."
+    },
+    {
+      "at": "2026-01-17T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 31: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x43d0b9."
+    },
+    {
+      "at": "2026-01-17T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 32: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x7be80f."
+    },
+    {
+      "at": "2026-01-18T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 33: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x3abb67."
+    },
+    {
+      "at": "2026-01-18T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 34: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xd40e17."
+    },
+    {
+      "at": "2026-01-18T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 35: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x0e289f."
+    },
+    {
+      "at": "2026-01-18T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 36: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xbf4929."
+    },
+    {
+      "at": "2026-01-18T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 37: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x322927."
+    },
+    {
+      "at": "2026-01-18T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 38: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf2297f."
+    },
+    {
+      "at": "2026-01-18T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 39: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x7faa1a."
+    },
+    {
+      "at": "2026-01-18T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 40: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x922199."
+    },
+    {
+      "at": "2026-01-19T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 41: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xea5340."
+    },
+    {
+      "at": "2026-01-19T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 42: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x52bf1f."
+    },
+    {
+      "at": "2026-01-19T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 43: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x2bec80."
+    },
+    {
+      "at": "2026-01-19T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 44: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xdaf854."
+    },
+    {
+      "at": "2026-01-19T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 45: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xc0524e."
+    },
+    {
+      "at": "2026-01-19T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 46: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x591f3b."
+    },
+    {
+      "at": "2026-01-19T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 47: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x6b13cd."
+    },
+    {
+      "at": "2026-01-19T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 48: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x944e66."
+    },
+    {
+      "at": "2026-01-20T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 49: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x0d63ce."
+    },
+    {
+      "at": "2026-01-20T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 50: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xbf9af8."
+    },
+    {
+      "at": "2026-01-20T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 51: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xdea6f9."
+    },
+    {
+      "at": "2026-01-20T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 52: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xcd68e3."
+    },
+    {
+      "at": "2026-01-20T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 53: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xad64df."
+    },
+    {
+      "at": "2026-01-20T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 54: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xef0301."
+    },
+    {
+      "at": "2026-01-20T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 55: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x891b59."
+    },
+    {
+      "at": "2026-01-20T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 56: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xa110ab."
+    },
+    {
+      "at": "2026-01-21T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 57: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xa6a96d."
+    },
+    {
+      "at": "2026-01-21T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 58: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x085015."
+    },
+    {
+      "at": "2026-01-21T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 59: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xad6e58."
+    },
+    {
+      "at": "2026-01-21T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 60: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x99718d."
+    },
+    {
+      "at": "2026-01-21T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 61: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xcd6307."
+    },
+    {
+      "at": "2026-01-21T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 62: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xbf7cee."
+    },
+    {
+      "at": "2026-01-21T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 63: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xbc2fea."
+    },
+    {
+      "at": "2026-01-21T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 64: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x3604a3."
+    },
+    {
+      "at": "2026-01-22T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 65: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x19c855."
+    },
+    {
+      "at": "2026-01-22T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 66: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x791d31."
+    },
+    {
+      "at": "2026-01-22T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 67: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x872628."
+    },
+    {
+      "at": "2026-01-22T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 68: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xc7cf7b."
+    },
+    {
+      "at": "2026-01-22T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 69: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xb2ac95."
+    },
+    {
+      "at": "2026-01-22T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 70: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x418e03."
+    },
+    {
+      "at": "2026-01-22T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 71: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x0df731."
+    },
+    {
+      "at": "2026-01-22T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 72: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x8d0a5c."
+    },
+    {
+      "at": "2026-01-23T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 73: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf39301."
+    },
+    {
+      "at": "2026-01-23T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 74: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xbedb42."
+    },
+    {
+      "at": "2026-01-23T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 75: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xdaf033."
+    },
+    {
+      "at": "2026-01-23T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 76: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x03330e."
+    },
+    {
+      "at": "2026-01-23T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 77: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xfed713."
+    },
+    {
+      "at": "2026-01-23T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 78: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x735775."
+    },
+    {
+      "at": "2026-01-23T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 79: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xa7275e."
+    },
+    {
+      "at": "2026-01-23T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 80: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x4faaa0."
+    },
+    {
+      "at": "2026-01-24T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 81: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xdf749c."
+    },
+    {
+      "at": "2026-01-24T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 82: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xb8449d."
+    },
+    {
+      "at": "2026-01-24T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 83: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x816325."
+    },
+    {
+      "at": "2026-01-24T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 84: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x180068."
+    },
+    {
+      "at": "2026-01-24T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 85: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xc1bc2f."
+    },
+    {
+      "at": "2026-01-24T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 86: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x111698."
+    },
+    {
+      "at": "2026-01-24T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 87: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x68df6b."
+    },
+    {
+      "at": "2026-01-24T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 88: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xeb6949."
+    },
+    {
+      "at": "2026-01-25T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 89: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x074ba3."
+    },
+    {
+      "at": "2026-01-25T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 90: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xa710b9."
+    },
+    {
+      "at": "2026-01-25T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 91: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x52086b."
+    },
+    {
+      "at": "2026-01-25T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 92: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x164ce8."
+    },
+    {
+      "at": "2026-01-25T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 93: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xcd2b74."
+    },
+    {
+      "at": "2026-01-25T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 94: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x9ce2a5."
+    },
+    {
+      "at": "2026-01-25T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 95: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xea0e32."
+    },
+    {
+      "at": "2026-01-25T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 96: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x9e6452."
+    },
+    {
+      "at": "2026-01-26T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 97: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x3dbd1c."
+    },
+    {
+      "at": "2026-01-26T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 98: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf41b5b."
+    },
+    {
+      "at": "2026-01-26T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 99: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x096112."
+    },
+    {
+      "at": "2026-01-26T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 100: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x16a0ed."
+    },
+    {
+      "at": "2026-01-26T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 101: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xcddfe0."
+    },
+    {
+      "at": "2026-01-26T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 102: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x2742a8."
+    },
+    {
+      "at": "2026-01-26T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 103: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x8adb08."
+    },
+    {
+      "at": "2026-01-26T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 104: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xfde367."
+    },
+    {
+      "at": "2026-01-27T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 105: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xa17c69."
+    },
+    {
+      "at": "2026-01-27T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 106: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x139435."
+    },
+    {
+      "at": "2026-01-27T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 107: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xff378e."
+    },
+    {
+      "at": "2026-01-27T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 108: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xc67c5b."
+    },
+    {
+      "at": "2026-01-27T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 109: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf31f3c."
+    },
+    {
+      "at": "2026-01-27T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 110: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xb8df17."
+    },
+    {
+      "at": "2026-01-27T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 111: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x03508a."
+    },
+    {
+      "at": "2026-01-27T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 112: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x687901."
+    },
+    {
+      "at": "2026-01-28T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 113: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xb41421."
+    },
+    {
+      "at": "2026-01-28T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 114: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x35a253."
+    },
+    {
+      "at": "2026-01-28T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 115: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x092369."
+    },
+    {
+      "at": "2026-01-28T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 116: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x103328."
+    },
+    {
+      "at": "2026-01-28T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 117: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x1ec7a6."
+    },
+    {
+      "at": "2026-01-28T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 118: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xe4c2d7."
+    },
+    {
+      "at": "2026-01-28T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 119: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xdcf621."
+    },
+    {
+      "at": "2026-01-28T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 120: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x9e8a1a."
+    },
+    {
+      "at": "2026-01-29T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 121: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xa41a49."
+    },
+    {
+      "at": "2026-01-29T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 122: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x61b363."
+    },
+    {
+      "at": "2026-01-29T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 123: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x53832e."
+    },
+    {
+      "at": "2026-01-29T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 124: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x61259f."
+    },
+    {
+      "at": "2026-01-29T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 125: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x4bb816."
+    },
+    {
+      "at": "2026-01-29T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 126: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x0f269b."
+    },
+    {
+      "at": "2026-01-29T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 127: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x19bdb6."
+    },
+    {
+      "at": "2026-01-29T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 128: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x461934."
+    },
+    {
+      "at": "2026-01-30T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 129: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x0fc754."
+    },
+    {
+      "at": "2026-01-30T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 130: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x69a97e."
+    },
+    {
+      "at": "2026-01-30T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 131: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x1b7852."
+    },
+    {
+      "at": "2026-01-30T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 132: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf1a9e8."
+    },
+    {
+      "at": "2026-01-30T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 133: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x8c63f4."
+    },
+    {
+      "at": "2026-01-30T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 134: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x8fbe5b."
+    },
+    {
+      "at": "2026-01-30T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 135: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x75298b."
+    },
+    {
+      "at": "2026-01-30T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 136: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xa9d6d4."
+    },
+    {
+      "at": "2026-01-31T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 137: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x500b59."
+    },
+    {
+      "at": "2026-01-31T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 138: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xc85ada."
+    },
+    {
+      "at": "2026-01-31T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 139: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x7afbdc."
+    },
+    {
+      "at": "2026-01-31T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 140: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x75cc9b."
+    },
+    {
+      "at": "2026-01-31T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 141: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xcf2e21."
+    },
+    {
+      "at": "2026-01-31T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 142: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x944bc8."
+    },
+    {
+      "at": "2026-01-31T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 143: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x9ec8c3."
+    },
+    {
+      "at": "2026-01-31T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 144: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x6993b4."
+    },
+    {
+      "at": "2026-02-01T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 145: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xc45e5f."
+    },
+    {
+      "at": "2026-02-01T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 146: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xaccd3b."
+    },
+    {
+      "at": "2026-02-01T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 147: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x2d6114."
+    },
+    {
+      "at": "2026-02-01T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 148: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf60d09."
+    },
+    {
+      "at": "2026-02-01T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 149: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x65dbd0."
+    },
+    {
+      "at": "2026-02-01T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 150: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf5c5d8."
+    },
+    {
+      "at": "2026-02-01T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 151: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x325f52."
+    },
+    {
+      "at": "2026-02-01T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 152: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xae1e84."
+    },
+    {
+      "at": "2026-02-02T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 153: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x8a4e5e."
+    },
+    {
+      "at": "2026-02-02T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 154: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x346bfe."
+    },
+    {
+      "at": "2026-02-02T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 155: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x086873."
+    },
+    {
+      "at": "2026-02-02T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 156: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x3e01f2."
+    },
+    {
+      "at": "2026-02-02T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 157: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x17b9cb."
+    },
+    {
+      "at": "2026-02-02T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 158: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x8e04ec."
+    },
+    {
+      "at": "2026-02-02T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 159: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x8b5017."
+    },
+    {
+      "at": "2026-02-02T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 160: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xbc2f3f."
+    },
+    {
+      "at": "2026-02-03T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 161: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x2b7bad."
+    },
+    {
+      "at": "2026-02-03T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 162: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xb5694b."
+    },
+    {
+      "at": "2026-02-03T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 163: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x6e0537."
+    },
+    {
+      "at": "2026-02-03T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 164: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x0e926a."
+    },
+    {
+      "at": "2026-02-03T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 165: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xb3e092."
+    },
+    {
+      "at": "2026-02-03T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 166: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x80d0e1."
+    },
+    {
+      "at": "2026-02-03T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 167: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf55248."
+    },
+    {
+      "at": "2026-02-03T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 168: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x65378d."
+    },
+    {
+      "at": "2026-02-04T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 169: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x953ec8."
+    },
+    {
+      "at": "2026-02-04T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 170: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xa4f6e5."
+    },
+    {
+      "at": "2026-02-04T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 171: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x263715."
+    },
+    {
+      "at": "2026-02-04T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 172: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x8c482b."
+    },
+    {
+      "at": "2026-02-04T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 173: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xcea426."
+    },
+    {
+      "at": "2026-02-04T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 174: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf7b3d6."
+    },
+    {
+      "at": "2026-02-04T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 175: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf5be49."
+    },
+    {
+      "at": "2026-02-04T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 176: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x1f6819."
+    },
+    {
+      "at": "2026-02-05T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 177: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x1fe8aa."
+    },
+    {
+      "at": "2026-02-05T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 178: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x23c844."
+    },
+    {
+      "at": "2026-02-05T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 179: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x7d14f9."
+    },
+    {
+      "at": "2026-02-05T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 180: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x64074a."
+    },
+    {
+      "at": "2026-02-05T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 181: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x839211."
+    },
+    {
+      "at": "2026-02-05T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 182: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xe4174c."
+    },
+    {
+      "at": "2026-02-05T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 183: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x5211c9."
+    },
+    {
+      "at": "2026-02-05T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 184: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xc8d40e."
+    },
+    {
+      "at": "2026-02-06T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 185: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x8125af."
+    },
+    {
+      "at": "2026-02-06T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 186: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xabcaf5."
+    },
+    {
+      "at": "2026-02-06T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 187: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x82fdb4."
+    },
+    {
+      "at": "2026-02-06T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 188: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x576c3e."
+    },
+    {
+      "at": "2026-02-06T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 189: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x6fbdc6."
+    },
+    {
+      "at": "2026-02-06T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 190: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x6b12b3."
+    },
+    {
+      "at": "2026-02-06T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 191: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x9d7b79."
+    },
+    {
+      "at": "2026-02-06T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 192: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xdc19b0."
+    },
+    {
+      "at": "2026-02-07T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 193: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x4f73c6."
+    },
+    {
+      "at": "2026-02-07T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 194: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xbadaf8."
+    },
+    {
+      "at": "2026-02-07T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 195: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xd06cc4."
+    },
+    {
+      "at": "2026-02-07T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 196: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xfbb8c1."
+    },
+    {
+      "at": "2026-02-07T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 197: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xe52d68."
+    },
+    {
+      "at": "2026-02-07T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 198: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x3684e3."
+    },
+    {
+      "at": "2026-02-07T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 199: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x977f70."
+    },
+    {
+      "at": "2026-02-07T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 200: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x1e1465."
+    },
+    {
+      "at": "2026-02-08T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 201: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xa0a2fc."
+    },
+    {
+      "at": "2026-02-08T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 202: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xc53ea7."
+    },
+    {
+      "at": "2026-02-08T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 203: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x4ca16c."
+    },
+    {
+      "at": "2026-02-08T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 204: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf7f1a5."
+    },
+    {
+      "at": "2026-02-08T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 205: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x827d7e."
+    },
+    {
+      "at": "2026-02-08T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 206: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x9f7cf2."
+    },
+    {
+      "at": "2026-02-08T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 207: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x73c383."
+    },
+    {
+      "at": "2026-02-08T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 208: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf6c901."
+    },
+    {
+      "at": "2026-02-09T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 209: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x3e02c7."
+    },
+    {
+      "at": "2026-02-09T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 210: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x3f8951."
+    },
+    {
+      "at": "2026-02-09T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 211: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x6eb03a."
+    },
+    {
+      "at": "2026-02-09T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 212: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x38f4a6."
+    },
+    {
+      "at": "2026-02-09T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 213: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xa19396."
+    },
+    {
+      "at": "2026-02-09T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 214: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xea191d."
+    },
+    {
+      "at": "2026-02-09T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 215: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xdfee8a."
+    },
+    {
+      "at": "2026-02-09T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 216: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x196b58."
+    },
+    {
+      "at": "2026-02-10T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 217: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xfd31c6."
+    },
+    {
+      "at": "2026-02-10T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 218: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x79d503."
+    },
+    {
+      "at": "2026-02-10T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 219: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xec7339."
+    },
+    {
+      "at": "2026-02-10T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 220: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xd7afd7."
+    },
+    {
+      "at": "2026-02-10T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 221: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x5914fd."
+    },
+    {
+      "at": "2026-02-10T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 222: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xdc7887."
+    },
+    {
+      "at": "2026-02-10T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 223: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x20105e."
+    },
+    {
+      "at": "2026-02-10T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 224: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x7db0e0."
+    },
+    {
+      "at": "2026-02-11T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 225: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xfe231c."
+    },
+    {
+      "at": "2026-02-11T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 226: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xbec74d."
+    },
+    {
+      "at": "2026-02-11T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 227: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x918f2c."
+    },
+    {
+      "at": "2026-02-11T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 228: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x6192e4."
+    },
+    {
+      "at": "2026-02-11T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 229: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xd20f3c."
+    },
+    {
+      "at": "2026-02-11T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 230: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xd5f8a0."
+    },
+    {
+      "at": "2026-02-11T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 231: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xe377ca."
+    },
+    {
+      "at": "2026-02-11T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 232: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xd7eb83."
+    },
+    {
+      "at": "2026-02-12T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 233: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xa39a41."
+    },
+    {
+      "at": "2026-02-12T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 234: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x05c30b."
+    },
+    {
+      "at": "2026-02-12T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 235: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x83f54a."
+    },
+    {
+      "at": "2026-02-12T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 236: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xe27243."
+    },
+    {
+      "at": "2026-02-12T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 237: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xc492bd."
+    },
+    {
+      "at": "2026-02-12T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 238: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x4f1bdb."
+    },
+    {
+      "at": "2026-02-12T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 239: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x7a7406."
+    },
+    {
+      "at": "2026-02-12T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 240: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xb40ef6."
+    },
+    {
+      "at": "2026-02-13T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 241: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x83e288."
+    },
+    {
+      "at": "2026-02-13T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 242: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x2084ab."
+    },
+    {
+      "at": "2026-02-13T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 243: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x0a987d."
+    },
+    {
+      "at": "2026-02-13T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 244: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x4679ef."
+    },
+    {
+      "at": "2026-02-13T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 245: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x775a31."
+    },
+    {
+      "at": "2026-02-13T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 246: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x3e3fac."
+    },
+    {
+      "at": "2026-02-13T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 247: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x040681."
+    },
+    {
+      "at": "2026-02-13T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 248: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x7182b2."
+    },
+    {
+      "at": "2026-02-14T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 249: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x556f7c."
+    },
+    {
+      "at": "2026-02-14T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 250: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xc0bbc3."
+    },
+    {
+      "at": "2026-02-14T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 251: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x438d0d."
+    },
+    {
+      "at": "2026-02-14T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 252: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xed6aa7."
+    },
+    {
+      "at": "2026-02-14T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 253: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xb7671b."
+    },
+    {
+      "at": "2026-02-14T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 254: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xc7e1bf."
+    },
+    {
+      "at": "2026-02-14T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 255: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x2c975b."
+    },
+    {
+      "at": "2026-02-14T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 256: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x007129."
+    },
+    {
+      "at": "2026-02-15T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 257: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x6ffc60."
+    },
+    {
+      "at": "2026-02-15T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 258: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xc01744."
+    },
+    {
+      "at": "2026-02-15T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 259: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xe78a10."
+    },
+    {
+      "at": "2026-02-15T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 260: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xd28de9."
+    },
+    {
+      "at": "2026-02-15T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 261: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xd7f7f2."
+    },
+    {
+      "at": "2026-02-15T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 262: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x394b33."
+    },
+    {
+      "at": "2026-02-15T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 263: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x8e2ccc."
+    },
+    {
+      "at": "2026-02-15T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 264: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xb46f82."
+    },
+    {
+      "at": "2026-02-16T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 265: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x952d99."
+    },
+    {
+      "at": "2026-02-16T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 266: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x805332."
+    },
+    {
+      "at": "2026-02-16T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 267: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x3da535."
+    },
+    {
+      "at": "2026-02-16T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 268: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xb45492."
+    },
+    {
+      "at": "2026-02-16T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 269: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x946715."
+    },
+    {
+      "at": "2026-02-16T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 270: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xe9d002."
+    },
+    {
+      "at": "2026-02-16T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 271: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x7c34a5."
+    },
+    {
+      "at": "2026-02-16T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 272: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x2fec91."
+    },
+    {
+      "at": "2026-02-17T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 273: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x6ef350."
+    },
+    {
+      "at": "2026-02-17T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 274: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xa2ee3a."
+    },
+    {
+      "at": "2026-02-17T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 275: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x39ca1e."
+    },
+    {
+      "at": "2026-02-17T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 276: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf2ae9a."
+    },
+    {
+      "at": "2026-02-17T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 277: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xa2d4b7."
+    },
+    {
+      "at": "2026-02-17T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 278: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xf49ae5."
+    },
+    {
+      "at": "2026-02-17T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 279: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0xb074c3."
+    },
+    {
+      "at": "2026-02-17T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 280: validated transaction path on MERGER. Correlation to merger reconciliation queue MERGER-1694. Attached log excerpt and DB2 plan hash 0x411d0e."
+    }
+  ],
+  "relatedConfigurationItems": [
+    {"ci": "MERGER-transaction-CI-000", "class": "cmdb_ci_appl"},
+    {"ci": "MERGER-transaction-CI-001", "class": "cmdb_ci_appl"},
+    {"ci": "MERGER-transaction-CI-002", "class": "cmdb_ci_appl"},
+    {"ci": "MERGER-transaction-CI-003", "class": "cmdb_ci_appl"},
+    {"ci": "MERGER-transaction-CI-004", "class": "cmdb_ci_appl"},
+    {"ci": "MERGER-transaction-CI-005", "class": "cmdb_ci_appl"},
+    {"ci": "MERGER-transaction-CI-006", "class": "cmdb_ci_appl"},
+    {"ci": "MERGER-transaction-CI-007", "class": "cmdb_ci_appl"}
+  ],
+  "approvals": [
+    {"role": "CAB", "approver": "approver0@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver1@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver2@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver3@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver4@pnb-acb.internal", "status": "approved"}
+  ]
+}
