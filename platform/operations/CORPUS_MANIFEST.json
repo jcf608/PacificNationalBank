@@ -1,0 +1,48 @@
+{
+  "targetLines": 3000000,
+  "generatedAt": "2026-05-26",
+  "banks": ["PNB", "ACB"],
+  "categories": {
+    "itsm": {
+      "path": "platform/operations/itsm/tickets",
+      "description": "ITSM incidents, changes, problems, requests (ServiceNow-style JSON)"
+    },
+    "ipc": {
+      "path": "platform/operations/ipc/tickets",
+      "description": "Inter-bank integration and merger reconciliation IPC tickets"
+    },
+    "architecture": {
+      "path": "docs/architecture/generated",
+      "description": "HLD/LLD architecture specifications with Mermaid diagrams"
+    },
+    "runbooks": {
+      "path": "docs/operations/runbooks/generated",
+      "description": "Operational runbooks for failover and cutover"
+    },
+    "changemgmt": {
+      "path": "platform/operations/changemgmt/records",
+      "description": "CAB change management records"
+    },
+    "audit": {
+      "path": "platform/operations/audit/events",
+      "description": "JSONL audit event streams"
+    },
+    "cobol": {
+      "path": "pnb/legacy/cobol/programs/generated/batch",
+      "description": "Generated PNB COBOL batch programs"
+    },
+    "pli": {
+      "path": "acb/legacy/pli/programs/generated/batch",
+      "description": "Generated ACB PL/I batch programs"
+    },
+    "sql": {
+      "path": "db/generated/views",
+      "description": "Generated DB2 view definitions"
+    },
+    "java": {
+      "path": "platform/shared/generated/java/sources",
+      "description": "Generated Java reference classes"
+    }
+  },
+  "regenerate": "make corpus"
+}
