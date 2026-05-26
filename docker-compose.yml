@@ -1,0 +1,73 @@
+version: "3.9"
+
+services:
+  # ---- DB2 (simulated with PostgreSQL for Linux dev) ---------
+  db2:
+    image: icr.io/db2_community/db2:11.5.9.0
+    platform: linux/amd64
+    environment:
+      LICENSE: accept
+      DB2INST1_PASSWORD: pnb_dev_2026
+      DBNAME: PNBCORE
+    ports:
+      - "50000:50000"
+    volumes:
+      - db2-data:/database
+    healthcheck:
+      test: ["CMD", "su", "-", "db2inst1", "-c", "db2 connect to PNBCORE"]
+      interval: 30s
+      timeout: 10s
+      retries: 10
+
+  # ---- WebSphere Liberty (Java services) ---------------------
+  websphere:
+    build:
+      context: java/pnb-websphere/docker
+      dockerfile: Dockerfile
+    ports:
+      - "9080:9080"
+      - "9443:9443"
+    environment:
+      PNB_DB_HOST: db2
+      PNB_DB_PORT: 50000
+      PNB_DB_NAME: PNBCORE
+      PNB_DB_USER: db2inst1
+      PNB_DB_PASS: pnb_dev_2026
+      PNB_IMS_CONNECT_HOST: ims-connect
+      PNB_IMS_CONNECT_PORT: 9999
+      WLP_LOGGING_CONSOLE_LOGLEVEL: info
+    depends_on:
+      db2:
+        condition: service_healthy
+    volumes:
+      - ./java/pnb-core-banking/target/pnb-core-banking.war:/config/dropins/core-banking.war
+      - ./java/pnb-channel-services/target/pnb-channel-services.war:/config/dropins/channel-services.war
+      - ./java/pnb-integration/target/pnb-integration.war:/config/dropins/integration.war
+
+  # ---- IMS Connect simulator ---------------------------------
+  ims-connect:
+    build:
+      context: tests/integration
+      dockerfile: Dockerfile.ims-sim
+    ports:
+      - "9999:9999"
+    environment:
+      IMS_SIM_MODE: "true"
+
+  # ---- COBOL batch runner ------------------------------------
+  cobol-batch:
+    build:
+      context: cobol
+      dockerfile: Dockerfile
+    environment:
+      PNB_DB_HOST: db2
+      PNB_DB_PORT: 50000
+    depends_on:
+      db2:
+        condition: service_healthy
+    volumes:
+      - batch-spool:/var/spool/pnb
+
+volumes:
+  db2-data:
+  batch-spool:
