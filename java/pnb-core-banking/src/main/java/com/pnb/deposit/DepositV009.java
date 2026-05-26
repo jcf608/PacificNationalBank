@@ -1,0 +1,136 @@
+package com.pnb.deposit;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Objects;
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+/**
+ * DepositV009 — Pacific National Bank entity.
+ * Auto-generated domain object.
+ */
+@Entity
+@Table(name = "DEPOSITV009")
+public class DepositV009 {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "DEP_ID", unique = true)
+    private String depositId;
+
+    @Column(name = "ACCT_NUM")
+    private String accountNumber;
+
+    @Column(name = "DEP_TYPE")
+    private String depositType;
+
+    @Column(name = "AMOUNT", precision = 15, scale = 2)
+    private BigDecimal amount;
+
+    @Column(name = "TERM_MONTHS")
+    private Integer term;
+
+    @Column(name = "INT_RATE", precision = 9, scale = 6)
+    private BigDecimal interestRate;
+
+    @Column(name = "MATURITY_DATE")
+    private LocalDate maturityDate;
+
+    @Column(name = "AUTO_RENEW")
+    private Boolean autoRenew;
+
+    @Column(name = "FLD_009_00")
+    private BigDecimal field009_00;
+
+    @Column(name = "FLD_009_01")
+    private Integer field009_01;
+
+    @Column(name = "FLD_009_02")
+    private LocalDate field009_02;
+
+    @Column(name = "FLD_009_03")
+    private Integer field009_03;
+
+    @Column(name = "CREATED_AT")
+    private LocalDateTime createdAt;
+
+    @Column(name = "UPDATED_AT")
+    private LocalDateTime updatedAt;
+
+    @Version
+    private Long version;
+
+    public DepositV009() {}
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getDepositId() { return depositId; }
+    public void setDepositId(String depositId) { this.depositId = depositId; }
+
+    public String getAccountNumber() { return accountNumber; }
+    public void setAccountNumber(String accountNumber) { this.accountNumber = accountNumber; }
+
+    public String getDepositType() { return depositType; }
+    public void setDepositType(String depositType) { this.depositType = depositType; }
+
+    public BigDecimal getAmount() { return amount; }
+    public void setAmount(BigDecimal amount) { this.amount = amount; }
+
+    public Integer getTerm() { return term; }
+    public void setTerm(Integer term) { this.term = term; }
+
+    public BigDecimal getInterestRate() { return interestRate; }
+    public void setInterestRate(BigDecimal interestRate) { this.interestRate = interestRate; }
+
+    public LocalDate getMaturityDate() { return maturityDate; }
+    public void setMaturityDate(LocalDate maturityDate) { this.maturityDate = maturityDate; }
+
+    public Boolean getAutoRenew() { return autoRenew; }
+    public void setAutoRenew(Boolean autoRenew) { this.autoRenew = autoRenew; }
+
+    public BigDecimal getField009_00() { return field009_00; }
+    public void setField009_00(BigDecimal field009_00) { this.field009_00 = field009_00; }
+
+    public Integer getField009_01() { return field009_01; }
+    public void setField009_01(Integer field009_01) { this.field009_01 = field009_01; }
+
+    public LocalDate getField009_02() { return field009_02; }
+    public void setField009_02(LocalDate field009_02) { this.field009_02 = field009_02; }
+
+    public Integer getField009_03() { return field009_03; }
+    public void setField009_03(Integer field009_03) { this.field009_03 = field009_03; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+
+    public LocalDateTime getUpdatedAt() { return updatedAt; }
+    public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof DepositV009)) return false;
+        DepositV009 that = (DepositV009) o;
+        return Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() { return Objects.hash(id); }
+
+    @Override
+    public String toString() {
+        return "DepositV009{" +
+            "id=" + id +
+            ", depositId=" + depositId +
+            ", accountNumber=" + accountNumber +
+            ", depositType=" + depositType +
+            ", amount=" + amount +
+            ", term=" + term +
+            '}';
+    }
+}
