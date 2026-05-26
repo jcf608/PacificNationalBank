@@ -1,0 +1,167 @@
+package com.pnb.account;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Objects;
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+/**
+ * AccountV029 — Pacific National Bank entity.
+ * Auto-generated domain object.
+ */
+@Entity
+@Table(name = "ACCOUNTV029")
+public class AccountV029 {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "ACCT_NUM", unique = true)
+    @NotBlank
+    private String accountNumber;
+
+    @Column(name = "ACCT_TYPE")
+    private String accountType;
+
+    @Column(name = "STATUS")
+    private String status;
+
+    @Column(name = "CURR_BAL", precision = 15, scale = 2)
+    private BigDecimal currentBalance;
+
+    @Column(name = "AVAIL_BAL", precision = 15, scale = 2)
+    private BigDecimal availableBalance;
+
+    @Column(name = "INT_RATE", precision = 9, scale = 6)
+    private BigDecimal interestRate;
+
+    @Column(name = "OPEN_DATE")
+    private LocalDate openDate;
+
+    @Column(name = "BRANCH_CODE")
+    private String branchCode;
+
+    @Column(name = "CURRENCY")
+    private String currencyCode;
+
+    @Column(name = "FLD_029_00")
+    private BigDecimal field029_00;
+
+    @Column(name = "FLD_029_01")
+    private Integer field029_01;
+
+    @Column(name = "FLD_029_02")
+    private LocalDate field029_02;
+
+    @Column(name = "FLD_029_03")
+    private Integer field029_03;
+
+    @Column(name = "FLD_029_04")
+    private LocalDate field029_04;
+
+    @Column(name = "FLD_029_05")
+    private Boolean field029_05;
+
+    @Column(name = "FLD_029_06")
+    private LocalDate field029_06;
+
+    @Column(name = "FLD_029_07")
+    private String field029_07;
+
+    @Column(name = "CREATED_AT")
+    private LocalDateTime createdAt;
+
+    @Column(name = "UPDATED_AT")
+    private LocalDateTime updatedAt;
+
+    @Version
+    private Long version;
+
+    public AccountV029() {}
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getAccountNumber() { return accountNumber; }
+    public void setAccountNumber(String accountNumber) { this.accountNumber = accountNumber; }
+
+    public String getAccountType() { return accountType; }
+    public void setAccountType(String accountType) { this.accountType = accountType; }
+
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
+
+    public BigDecimal getCurrentBalance() { return currentBalance; }
+    public void setCurrentBalance(BigDecimal currentBalance) { this.currentBalance = currentBalance; }
+
+    public BigDecimal getAvailableBalance() { return availableBalance; }
+    public void setAvailableBalance(BigDecimal availableBalance) { this.availableBalance = availableBalance; }
+
+    public BigDecimal getInterestRate() { return interestRate; }
+    public void setInterestRate(BigDecimal interestRate) { this.interestRate = interestRate; }
+
+    public LocalDate getOpenDate() { return openDate; }
+    public void setOpenDate(LocalDate openDate) { this.openDate = openDate; }
+
+    public String getBranchCode() { return branchCode; }
+    public void setBranchCode(String branchCode) { this.branchCode = branchCode; }
+
+    public String getCurrencyCode() { return currencyCode; }
+    public void setCurrencyCode(String currencyCode) { this.currencyCode = currencyCode; }
+
+    public BigDecimal getField029_00() { return field029_00; }
+    public void setField029_00(BigDecimal field029_00) { this.field029_00 = field029_00; }
+
+    public Integer getField029_01() { return field029_01; }
+    public void setField029_01(Integer field029_01) { this.field029_01 = field029_01; }
+
+    public LocalDate getField029_02() { return field029_02; }
+    public void setField029_02(LocalDate field029_02) { this.field029_02 = field029_02; }
+
+    public Integer getField029_03() { return field029_03; }
+    public void setField029_03(Integer field029_03) { this.field029_03 = field029_03; }
+
+    public LocalDate getField029_04() { return field029_04; }
+    public void setField029_04(LocalDate field029_04) { this.field029_04 = field029_04; }
+
+    public Boolean getField029_05() { return field029_05; }
+    public void setField029_05(Boolean field029_05) { this.field029_05 = field029_05; }
+
+    public LocalDate getField029_06() { return field029_06; }
+    public void setField029_06(LocalDate field029_06) { this.field029_06 = field029_06; }
+
+    public String getField029_07() { return field029_07; }
+    public void setField029_07(String field029_07) { this.field029_07 = field029_07; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+
+    public LocalDateTime getUpdatedAt() { return updatedAt; }
+    public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof AccountV029)) return false;
+        AccountV029 that = (AccountV029) o;
+        return Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() { return Objects.hash(id); }
+
+    @Override
+    public String toString() {
+        return "AccountV029{" +
+            "id=" + id +
+            ", accountNumber=" + accountNumber +
+            ", accountType=" + accountType +
+            ", status=" + status +
+            ", currentBalance=" + currentBalance +
+            ", availableBalance=" + availableBalance +
+            '}';
+    }
+}
