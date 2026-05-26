@@ -1,0 +1,1430 @@
+{
+  "ticketNumber": "CHG000001840",
+  "type": "CHG",
+  "bank": "ACB",
+  "domain": "loan",
+  "shortDescription": "ACB loan — production support ticket",
+  "priority": "2",
+  "state": "NEW",
+  "assignmentGroup": "ACB-CORE-LOAN",
+  "openedAt": "2025-11-23T00:00:00Z",
+  "workNotes": [
+    {
+      "at": "2025-11-23T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 1: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xeaeefa."
+    },
+    {
+      "at": "2025-11-23T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 2: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x912ebc."
+    },
+    {
+      "at": "2025-11-23T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 3: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x57ecde."
+    },
+    {
+      "at": "2025-11-23T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 4: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x64f1d9."
+    },
+    {
+      "at": "2025-11-23T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 5: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x2cd589."
+    },
+    {
+      "at": "2025-11-23T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 6: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x88b406."
+    },
+    {
+      "at": "2025-11-23T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 7: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x049245."
+    },
+    {
+      "at": "2025-11-23T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 8: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xb62f42."
+    },
+    {
+      "at": "2025-11-24T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 9: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xe134a5."
+    },
+    {
+      "at": "2025-11-24T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 10: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xb2c79b."
+    },
+    {
+      "at": "2025-11-24T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 11: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x3b72a4."
+    },
+    {
+      "at": "2025-11-24T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 12: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc5965f."
+    },
+    {
+      "at": "2025-11-24T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 13: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xf62c51."
+    },
+    {
+      "at": "2025-11-24T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 14: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x926f5d."
+    },
+    {
+      "at": "2025-11-24T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 15: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xa1fbaa."
+    },
+    {
+      "at": "2025-11-24T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 16: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x3a52ca."
+    },
+    {
+      "at": "2025-11-25T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 17: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x5885c0."
+    },
+    {
+      "at": "2025-11-25T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 18: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x95318a."
+    },
+    {
+      "at": "2025-11-25T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 19: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x08cbfa."
+    },
+    {
+      "at": "2025-11-25T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 20: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xff49bd."
+    },
+    {
+      "at": "2025-11-25T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 21: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xace793."
+    },
+    {
+      "at": "2025-11-25T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 22: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x72208a."
+    },
+    {
+      "at": "2025-11-25T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 23: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x5c8dfe."
+    },
+    {
+      "at": "2025-11-25T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 24: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x6dd730."
+    },
+    {
+      "at": "2025-11-26T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 25: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xd6b153."
+    },
+    {
+      "at": "2025-11-26T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 26: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xf94788."
+    },
+    {
+      "at": "2025-11-26T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 27: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xcfcd12."
+    },
+    {
+      "at": "2025-11-26T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 28: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0ace48."
+    },
+    {
+      "at": "2025-11-26T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 29: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xff2da9."
+    },
+    {
+      "at": "2025-11-26T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 30: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x31b531."
+    },
+    {
+      "at": "2025-11-26T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 31: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xe08044."
+    },
+    {
+      "at": "2025-11-26T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 32: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0cedb4."
+    },
+    {
+      "at": "2025-11-27T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 33: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x23daab."
+    },
+    {
+      "at": "2025-11-27T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 34: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xea1f8e."
+    },
+    {
+      "at": "2025-11-27T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 35: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x74b616."
+    },
+    {
+      "at": "2025-11-27T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 36: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xf54862."
+    },
+    {
+      "at": "2025-11-27T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 37: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x3dbaec."
+    },
+    {
+      "at": "2025-11-27T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 38: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x9773b0."
+    },
+    {
+      "at": "2025-11-27T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 39: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xca278e."
+    },
+    {
+      "at": "2025-11-27T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 40: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x19f490."
+    },
+    {
+      "at": "2025-11-28T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 41: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xb714e6."
+    },
+    {
+      "at": "2025-11-28T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 42: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x2c1590."
+    },
+    {
+      "at": "2025-11-28T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 43: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xacad17."
+    },
+    {
+      "at": "2025-11-28T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 44: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xdfa3b9."
+    },
+    {
+      "at": "2025-11-28T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 45: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x15e01f."
+    },
+    {
+      "at": "2025-11-28T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 46: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x511147."
+    },
+    {
+      "at": "2025-11-28T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 47: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x278641."
+    },
+    {
+      "at": "2025-11-28T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 48: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0857be."
+    },
+    {
+      "at": "2025-11-29T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 49: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x31095d."
+    },
+    {
+      "at": "2025-11-29T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 50: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x77232b."
+    },
+    {
+      "at": "2025-11-29T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 51: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xf5adad."
+    },
+    {
+      "at": "2025-11-29T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 52: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x1ee9cd."
+    },
+    {
+      "at": "2025-11-29T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 53: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xe91403."
+    },
+    {
+      "at": "2025-11-29T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 54: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xad1458."
+    },
+    {
+      "at": "2025-11-29T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 55: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xaf1752."
+    },
+    {
+      "at": "2025-11-29T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 56: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc6cc50."
+    },
+    {
+      "at": "2025-11-30T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 57: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xcd32ff."
+    },
+    {
+      "at": "2025-11-30T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 58: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x38834f."
+    },
+    {
+      "at": "2025-11-30T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 59: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0dec7b."
+    },
+    {
+      "at": "2025-11-30T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 60: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x2408e6."
+    },
+    {
+      "at": "2025-11-30T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 61: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xb5a145."
+    },
+    {
+      "at": "2025-11-30T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 62: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x53ffe1."
+    },
+    {
+      "at": "2025-11-30T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 63: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc67701."
+    },
+    {
+      "at": "2025-11-30T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 64: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x28a8a2."
+    },
+    {
+      "at": "2025-12-01T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 65: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x88ee6a."
+    },
+    {
+      "at": "2025-12-01T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 66: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x338206."
+    },
+    {
+      "at": "2025-12-01T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 67: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xf98d71."
+    },
+    {
+      "at": "2025-12-01T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 68: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xf80cbb."
+    },
+    {
+      "at": "2025-12-01T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 69: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xe86872."
+    },
+    {
+      "at": "2025-12-01T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 70: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xacdaf4."
+    },
+    {
+      "at": "2025-12-01T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 71: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc35056."
+    },
+    {
+      "at": "2025-12-01T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 72: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xcf1801."
+    },
+    {
+      "at": "2025-12-02T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 73: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xd49a24."
+    },
+    {
+      "at": "2025-12-02T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 74: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xd2a7ca."
+    },
+    {
+      "at": "2025-12-02T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 75: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x5489cf."
+    },
+    {
+      "at": "2025-12-02T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 76: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xa9471f."
+    },
+    {
+      "at": "2025-12-02T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 77: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x5701f0."
+    },
+    {
+      "at": "2025-12-02T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 78: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x5f9b84."
+    },
+    {
+      "at": "2025-12-02T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 79: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xcfbc7c."
+    },
+    {
+      "at": "2025-12-02T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 80: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc6d561."
+    },
+    {
+      "at": "2025-12-03T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 81: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x8816e8."
+    },
+    {
+      "at": "2025-12-03T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 82: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xaa1b62."
+    },
+    {
+      "at": "2025-12-03T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 83: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x557bac."
+    },
+    {
+      "at": "2025-12-03T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 84: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xbe0ef9."
+    },
+    {
+      "at": "2025-12-03T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 85: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x8641ba."
+    },
+    {
+      "at": "2025-12-03T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 86: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xcfb246."
+    },
+    {
+      "at": "2025-12-03T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 87: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x6600e2."
+    },
+    {
+      "at": "2025-12-03T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 88: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xde1c26."
+    },
+    {
+      "at": "2025-12-04T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 89: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x11856b."
+    },
+    {
+      "at": "2025-12-04T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 90: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x039f51."
+    },
+    {
+      "at": "2025-12-04T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 91: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xdc97f0."
+    },
+    {
+      "at": "2025-12-04T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 92: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x7c89fe."
+    },
+    {
+      "at": "2025-12-04T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 93: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0159c4."
+    },
+    {
+      "at": "2025-12-04T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 94: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xade803."
+    },
+    {
+      "at": "2025-12-04T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 95: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc44de8."
+    },
+    {
+      "at": "2025-12-04T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 96: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x77489f."
+    },
+    {
+      "at": "2025-12-05T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 97: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc3e089."
+    },
+    {
+      "at": "2025-12-05T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 98: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x3cd543."
+    },
+    {
+      "at": "2025-12-05T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 99: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xfbfb0c."
+    },
+    {
+      "at": "2025-12-05T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 100: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x8d7fd5."
+    },
+    {
+      "at": "2025-12-05T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 101: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0e49f2."
+    },
+    {
+      "at": "2025-12-05T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 102: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc3740c."
+    },
+    {
+      "at": "2025-12-05T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 103: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x3e23fb."
+    },
+    {
+      "at": "2025-12-05T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 104: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xac161c."
+    },
+    {
+      "at": "2025-12-06T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 105: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x65c736."
+    },
+    {
+      "at": "2025-12-06T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 106: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0a85e7."
+    },
+    {
+      "at": "2025-12-06T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 107: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xe478a7."
+    },
+    {
+      "at": "2025-12-06T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 108: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x5243ac."
+    },
+    {
+      "at": "2025-12-06T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 109: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xf1435a."
+    },
+    {
+      "at": "2025-12-06T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 110: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xb56066."
+    },
+    {
+      "at": "2025-12-06T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 111: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x62ade0."
+    },
+    {
+      "at": "2025-12-06T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 112: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x2b72b9."
+    },
+    {
+      "at": "2025-12-07T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 113: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x97080e."
+    },
+    {
+      "at": "2025-12-07T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 114: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x22a96a."
+    },
+    {
+      "at": "2025-12-07T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 115: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xfab1ae."
+    },
+    {
+      "at": "2025-12-07T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 116: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x851a8c."
+    },
+    {
+      "at": "2025-12-07T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 117: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x6d38a9."
+    },
+    {
+      "at": "2025-12-07T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 118: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xac718d."
+    },
+    {
+      "at": "2025-12-07T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 119: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x743825."
+    },
+    {
+      "at": "2025-12-07T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 120: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x7ba879."
+    },
+    {
+      "at": "2025-12-08T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 121: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xfa3425."
+    },
+    {
+      "at": "2025-12-08T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 122: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xb66c87."
+    },
+    {
+      "at": "2025-12-08T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 123: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x056c4a."
+    },
+    {
+      "at": "2025-12-08T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 124: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xac9465."
+    },
+    {
+      "at": "2025-12-08T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 125: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xbda99f."
+    },
+    {
+      "at": "2025-12-08T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 126: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xe17415."
+    },
+    {
+      "at": "2025-12-08T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 127: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x419165."
+    },
+    {
+      "at": "2025-12-08T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 128: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xe6ea2a."
+    },
+    {
+      "at": "2025-12-09T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 129: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x78c3b5."
+    },
+    {
+      "at": "2025-12-09T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 130: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xe0c9af."
+    },
+    {
+      "at": "2025-12-09T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 131: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xd93229."
+    },
+    {
+      "at": "2025-12-09T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 132: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x7de403."
+    },
+    {
+      "at": "2025-12-09T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 133: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x2adf60."
+    },
+    {
+      "at": "2025-12-09T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 134: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0422be."
+    },
+    {
+      "at": "2025-12-09T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 135: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x771cfd."
+    },
+    {
+      "at": "2025-12-09T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 136: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x922a6f."
+    },
+    {
+      "at": "2025-12-10T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 137: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x9082f3."
+    },
+    {
+      "at": "2025-12-10T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 138: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0479d3."
+    },
+    {
+      "at": "2025-12-10T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 139: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x2b7359."
+    },
+    {
+      "at": "2025-12-10T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 140: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xe4548d."
+    },
+    {
+      "at": "2025-12-10T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 141: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x1e11ad."
+    },
+    {
+      "at": "2025-12-10T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 142: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xe30316."
+    },
+    {
+      "at": "2025-12-10T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 143: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0f5d99."
+    },
+    {
+      "at": "2025-12-10T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 144: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x161401."
+    },
+    {
+      "at": "2025-12-11T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 145: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xcb1e7b."
+    },
+    {
+      "at": "2025-12-11T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 146: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x50046f."
+    },
+    {
+      "at": "2025-12-11T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 147: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x144524."
+    },
+    {
+      "at": "2025-12-11T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 148: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x3a13ae."
+    },
+    {
+      "at": "2025-12-11T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 149: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x75086d."
+    },
+    {
+      "at": "2025-12-11T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 150: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xb13049."
+    },
+    {
+      "at": "2025-12-11T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 151: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xf4e581."
+    },
+    {
+      "at": "2025-12-11T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 152: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xff4171."
+    },
+    {
+      "at": "2025-12-12T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 153: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x5273a9."
+    },
+    {
+      "at": "2025-12-12T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 154: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x29b125."
+    },
+    {
+      "at": "2025-12-12T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 155: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xa3e8ff."
+    },
+    {
+      "at": "2025-12-12T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 156: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x2b003c."
+    },
+    {
+      "at": "2025-12-12T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 157: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x7930c6."
+    },
+    {
+      "at": "2025-12-12T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 158: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xb7cfdd."
+    },
+    {
+      "at": "2025-12-12T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 159: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xebfdb0."
+    },
+    {
+      "at": "2025-12-12T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 160: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x6f2a13."
+    },
+    {
+      "at": "2025-12-13T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 161: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xf1da77."
+    },
+    {
+      "at": "2025-12-13T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 162: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x40714d."
+    },
+    {
+      "at": "2025-12-13T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 163: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x184049."
+    },
+    {
+      "at": "2025-12-13T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 164: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x553690."
+    },
+    {
+      "at": "2025-12-13T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 165: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x9b44e8."
+    },
+    {
+      "at": "2025-12-13T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 166: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xf7b0df."
+    },
+    {
+      "at": "2025-12-13T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 167: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x8a946e."
+    },
+    {
+      "at": "2025-12-13T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 168: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xdb8470."
+    },
+    {
+      "at": "2025-12-14T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 169: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x51026e."
+    },
+    {
+      "at": "2025-12-14T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 170: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x6e662d."
+    },
+    {
+      "at": "2025-12-14T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 171: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xac6660."
+    },
+    {
+      "at": "2025-12-14T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 172: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x5ce3e1."
+    },
+    {
+      "at": "2025-12-14T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 173: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x7d82dc."
+    },
+    {
+      "at": "2025-12-14T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 174: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x4685b0."
+    },
+    {
+      "at": "2025-12-14T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 175: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xa90895."
+    },
+    {
+      "at": "2025-12-14T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 176: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc653c9."
+    },
+    {
+      "at": "2025-12-15T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 177: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x82cc00."
+    },
+    {
+      "at": "2025-12-15T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 178: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc5c9de."
+    },
+    {
+      "at": "2025-12-15T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 179: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x552bb4."
+    },
+    {
+      "at": "2025-12-15T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 180: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xce12a0."
+    },
+    {
+      "at": "2025-12-15T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 181: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x80cd33."
+    },
+    {
+      "at": "2025-12-15T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 182: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x4c63bb."
+    },
+    {
+      "at": "2025-12-15T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 183: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xfa1419."
+    },
+    {
+      "at": "2025-12-15T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 184: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xee761b."
+    },
+    {
+      "at": "2025-12-16T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 185: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xcf309b."
+    },
+    {
+      "at": "2025-12-16T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 186: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xd4c4d5."
+    },
+    {
+      "at": "2025-12-16T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 187: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xdc1e2c."
+    },
+    {
+      "at": "2025-12-16T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 188: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x10ea25."
+    },
+    {
+      "at": "2025-12-16T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 189: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x197727."
+    },
+    {
+      "at": "2025-12-16T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 190: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xf1ed19."
+    },
+    {
+      "at": "2025-12-16T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 191: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x2db4f4."
+    },
+    {
+      "at": "2025-12-16T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 192: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xfe2789."
+    },
+    {
+      "at": "2025-12-17T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 193: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x02b147."
+    },
+    {
+      "at": "2025-12-17T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 194: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xedac5f."
+    },
+    {
+      "at": "2025-12-17T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 195: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xb0fcf7."
+    },
+    {
+      "at": "2025-12-17T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 196: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x1e7bfa."
+    },
+    {
+      "at": "2025-12-17T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 197: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x1d74b9."
+    },
+    {
+      "at": "2025-12-17T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 198: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x75d451."
+    },
+    {
+      "at": "2025-12-17T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 199: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x94d0d1."
+    },
+    {
+      "at": "2025-12-17T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 200: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x189dfa."
+    },
+    {
+      "at": "2025-12-18T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 201: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xb8a4c6."
+    },
+    {
+      "at": "2025-12-18T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 202: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x6a4b6d."
+    },
+    {
+      "at": "2025-12-18T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 203: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x8c5644."
+    },
+    {
+      "at": "2025-12-18T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 204: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xa3d325."
+    },
+    {
+      "at": "2025-12-18T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 205: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x2a30f4."
+    },
+    {
+      "at": "2025-12-18T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 206: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x34b319."
+    },
+    {
+      "at": "2025-12-18T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 207: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xfce98a."
+    },
+    {
+      "at": "2025-12-18T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 208: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xca8164."
+    },
+    {
+      "at": "2025-12-19T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 209: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x5db3ec."
+    },
+    {
+      "at": "2025-12-19T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 210: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x51e1da."
+    },
+    {
+      "at": "2025-12-19T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 211: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x914ced."
+    },
+    {
+      "at": "2025-12-19T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 212: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x076460."
+    },
+    {
+      "at": "2025-12-19T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 213: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x9596f8."
+    },
+    {
+      "at": "2025-12-19T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 214: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xa4598f."
+    },
+    {
+      "at": "2025-12-19T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 215: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0c711f."
+    },
+    {
+      "at": "2025-12-19T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 216: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x99aa5c."
+    },
+    {
+      "at": "2025-12-20T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 217: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc4e432."
+    },
+    {
+      "at": "2025-12-20T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 218: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xed1ce3."
+    },
+    {
+      "at": "2025-12-20T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 219: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc15796."
+    },
+    {
+      "at": "2025-12-20T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 220: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x88f894."
+    },
+    {
+      "at": "2025-12-20T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 221: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x184bed."
+    },
+    {
+      "at": "2025-12-20T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 222: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x11cd56."
+    },
+    {
+      "at": "2025-12-20T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 223: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x7329fb."
+    },
+    {
+      "at": "2025-12-20T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 224: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x5b4c4a."
+    },
+    {
+      "at": "2025-12-21T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 225: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0832e0."
+    },
+    {
+      "at": "2025-12-21T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 226: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xa21e31."
+    },
+    {
+      "at": "2025-12-21T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 227: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xa24c07."
+    },
+    {
+      "at": "2025-12-21T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 228: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x6b0e3a."
+    },
+    {
+      "at": "2025-12-21T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 229: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x6fef64."
+    },
+    {
+      "at": "2025-12-21T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 230: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xd0d71e."
+    },
+    {
+      "at": "2025-12-21T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 231: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xd2b57f."
+    },
+    {
+      "at": "2025-12-21T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 232: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xce5452."
+    },
+    {
+      "at": "2025-12-22T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 233: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x4ba3db."
+    },
+    {
+      "at": "2025-12-22T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 234: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x68a51e."
+    },
+    {
+      "at": "2025-12-22T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 235: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x07ec30."
+    },
+    {
+      "at": "2025-12-22T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 236: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc2d693."
+    },
+    {
+      "at": "2025-12-22T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 237: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x870ec5."
+    },
+    {
+      "at": "2025-12-22T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 238: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xae56d7."
+    },
+    {
+      "at": "2025-12-22T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 239: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xfc6111."
+    },
+    {
+      "at": "2025-12-22T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 240: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x688926."
+    },
+    {
+      "at": "2025-12-23T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 241: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc7d0d4."
+    },
+    {
+      "at": "2025-12-23T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 242: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xe6e97f."
+    },
+    {
+      "at": "2025-12-23T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 243: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xe754c9."
+    },
+    {
+      "at": "2025-12-23T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 244: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x5005cb."
+    },
+    {
+      "at": "2025-12-23T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 245: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x011dd5."
+    },
+    {
+      "at": "2025-12-23T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 246: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xdbb886."
+    },
+    {
+      "at": "2025-12-23T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 247: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x291e9d."
+    },
+    {
+      "at": "2025-12-23T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 248: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xfc5186."
+    },
+    {
+      "at": "2025-12-24T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 249: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x8088c4."
+    },
+    {
+      "at": "2025-12-24T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 250: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xad3c9d."
+    },
+    {
+      "at": "2025-12-24T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 251: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x5f37b7."
+    },
+    {
+      "at": "2025-12-24T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 252: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xaadf63."
+    },
+    {
+      "at": "2025-12-24T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 253: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x9c4113."
+    },
+    {
+      "at": "2025-12-24T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 254: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x85b650."
+    },
+    {
+      "at": "2025-12-24T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 255: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xcaa18f."
+    },
+    {
+      "at": "2025-12-24T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 256: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xfd31f9."
+    },
+    {
+      "at": "2025-12-25T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 257: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x10ce79."
+    },
+    {
+      "at": "2025-12-25T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 258: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x192b1e."
+    },
+    {
+      "at": "2025-12-25T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 259: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0c894c."
+    },
+    {
+      "at": "2025-12-25T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 260: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x959bf2."
+    },
+    {
+      "at": "2025-12-25T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 261: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x8f83e7."
+    },
+    {
+      "at": "2025-12-25T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 262: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xc328bf."
+    },
+    {
+      "at": "2025-12-25T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 263: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x65bceb."
+    },
+    {
+      "at": "2025-12-25T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 264: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x556480."
+    },
+    {
+      "at": "2025-12-26T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 265: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0bf7b1."
+    },
+    {
+      "at": "2025-12-26T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 266: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xae83fb."
+    },
+    {
+      "at": "2025-12-26T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 267: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xb8f66b."
+    },
+    {
+      "at": "2025-12-26T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 268: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xf2bd9e."
+    },
+    {
+      "at": "2025-12-26T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 269: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x199759."
+    },
+    {
+      "at": "2025-12-26T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 270: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xd0034d."
+    },
+    {
+      "at": "2025-12-26T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 271: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0c8a4a."
+    },
+    {
+      "at": "2025-12-26T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 272: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x4a627a."
+    },
+    {
+      "at": "2025-12-27T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 273: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x0188a1."
+    },
+    {
+      "at": "2025-12-27T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 274: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xf62e2a."
+    },
+    {
+      "at": "2025-12-27T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 275: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xb970c4."
+    },
+    {
+      "at": "2025-12-27T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 276: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x68ec4e."
+    },
+    {
+      "at": "2025-12-27T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 277: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xb14f32."
+    },
+    {
+      "at": "2025-12-27T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 278: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0x66acf9."
+    },
+    {
+      "at": "2025-12-27T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 279: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xf76b59."
+    },
+    {
+      "at": "2025-12-27T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 280: validated loan path on ACB. Correlation to merger reconciliation queue MERGER-1840. Attached log excerpt and DB2 plan hash 0xedc12b."
+    }
+  ],
+  "relatedConfigurationItems": [
+    {"ci": "ACB-loan-CI-000", "class": "cmdb_ci_appl"},
+    {"ci": "ACB-loan-CI-001", "class": "cmdb_ci_appl"},
+    {"ci": "ACB-loan-CI-002", "class": "cmdb_ci_appl"},
+    {"ci": "ACB-loan-CI-003", "class": "cmdb_ci_appl"},
+    {"ci": "ACB-loan-CI-004", "class": "cmdb_ci_appl"},
+    {"ci": "ACB-loan-CI-005", "class": "cmdb_ci_appl"},
+    {"ci": "ACB-loan-CI-006", "class": "cmdb_ci_appl"},
+    {"ci": "ACB-loan-CI-007", "class": "cmdb_ci_appl"}
+  ],
+  "approvals": [
+    {"role": "CAB", "approver": "approver0@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver1@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver2@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver3@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver4@pnb-acb.internal", "status": "approved"}
+  ]
+}
