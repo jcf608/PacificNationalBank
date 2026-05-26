@@ -1,0 +1,103 @@
+*********************************************************************
+* PSB for PSBPRODV03
+* Pacific National Bank — IMS/DB Program Specification
+*********************************************************************
+         PCB   TYPE=DB,DBDNAME=ACCTDBV00,
+               PROCOPT=GI,
+               KEYLEN=16,
+               POS=SINGLE
+         SENSEG NAME=SEG000,
+               PARENT=0,
+               PROCOPT=A
+         SENSEG NAME=SEG001,
+               PARENT=SEG000,
+               PROCOPT=A
+         SENSEG NAME=SEG002,
+               PARENT=SEG001,
+               PROCOPT=A
+         SENSEG NAME=SEG003,
+               PARENT=SEG002,
+               PROCOPT=A
+         SENSEG NAME=SEG004,
+               PARENT=SEG003,
+               PROCOPT=A
+         PCB   TYPE=DB,DBDNAME=CUSTDBV01,
+               PROCOPT=A,
+               KEYLEN=20,
+               POS=SINGLE
+         SENSEG NAME=SEG000,
+               PARENT=0,
+               PROCOPT=A
+         SENSEG NAME=SEG001,
+               PARENT=SEG000,
+               PROCOPT=A
+         SENSEG NAME=SEG002,
+               PARENT=SEG001,
+               PROCOPT=A
+         SENSEG NAME=SEG003,
+               PARENT=SEG002,
+               PROCOPT=A
+         SENSEG NAME=SEG004,
+               PARENT=SEG003,
+               PROCOPT=A
+         PCB   TYPE=DB,DBDNAME=ACCTDBV02,
+               PROCOPT=R,
+               KEYLEN=24,
+               POS=SINGLE
+         SENSEG NAME=SEG000,
+               PARENT=0,
+               PROCOPT=A
+         SENSEG NAME=SEG001,
+               PARENT=SEG000,
+               PROCOPT=A
+         SENSEG NAME=SEG002,
+               PARENT=SEG001,
+               PROCOPT=A
+         SENSEG NAME=SEG003,
+               PARENT=SEG002,
+               PROCOPT=A
+         SENSEG NAME=SEG004,
+               PARENT=SEG003,
+               PROCOPT=A
+         PCB   TYPE=DB,DBDNAME=CUSTDBV03,
+               PROCOPT=GR,
+               KEYLEN=28,
+               POS=SINGLE
+         SENSEG NAME=SEG000,
+               PARENT=0,
+               PROCOPT=A
+         SENSEG NAME=SEG001,
+               PARENT=SEG000,
+               PROCOPT=A
+         SENSEG NAME=SEG002,
+               PARENT=SEG001,
+               PROCOPT=A
+         SENSEG NAME=SEG003,
+               PARENT=SEG002,
+               PROCOPT=A
+         SENSEG NAME=SEG004,
+               PARENT=SEG003,
+               PROCOPT=A
+         PCB   TYPE=DB,DBDNAME=ACCTDBV04,
+               PROCOPT=GI,
+               KEYLEN=32,
+               POS=SINGLE
+         SENSEG NAME=SEG000,
+               PARENT=0,
+               PROCOPT=A
+         SENSEG NAME=SEG001,
+               PARENT=SEG000,
+               PROCOPT=A
+         SENSEG NAME=SEG002,
+               PARENT=SEG001,
+               PROCOPT=A
+         SENSEG NAME=SEG003,
+               PARENT=SEG002,
+               PROCOPT=A
+         SENSEG NAME=SEG004,
+               PARENT=SEG003,
+               PROCOPT=A
+*
+         PSBGEN LANG=COBOL,PSBNAME=PSBPRODV03,
+               IOASIZE=4096
+         END
