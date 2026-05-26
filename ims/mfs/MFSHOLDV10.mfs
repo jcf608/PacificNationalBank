@@ -1,0 +1,45 @@
+*********************************************************************
+* MFS for MFSHOLDV10
+* Pacific National Bank — IMS/TM Message Format
+*********************************************************************
+         PRINT NOGEN
+MFSHOLDV10M  MSG   TYPE=INPUT,SOR=(MFSHOLDV10I,IGNORE),
+               NXT=MFSHOLDV10O
+         SEG
+         MFLD  'FLD000',LTH=8,
+               JUST=L
+         MFLD  'FLD001',LTH=30,
+               JUST=L
+         MFLD  'FLD002',LTH=8,
+               JUST=L
+         MFLD  'FLD003',LTH=16,
+               JUST=R
+         MFLD  'FLD004',LTH=16,
+               JUST=R
+         MSGEND
+*
+MFSHOLDV10O  MSG   TYPE=OUTPUT,SOR=(MFSHOLDV10D,IGNORE),
+               NXT=MFSHOLDV10M
+         SEG
+         MFLD  'FLD000',LTH=8
+         MFLD  'FLD001',LTH=30
+         MFLD  'FLD002',LTH=8
+         MFLD  'FLD003',LTH=16
+         MFLD  'FLD004',LTH=16
+         MSGEND
+*
+MFSHOLDV10I  FMT
+         DEV   TYPE=(3270,2),FEAT=(IGNORE),DSCA=X'0020'
+         DIV   TYPE=INOUT
+         DFLD  'FLD000',LTH=8,
+               POS=(1,1),ATTR=(PROT,NUM)
+         DFLD  'FLD001',LTH=30,
+               POS=(1,11),ATTR=(PROT,NUM)
+         DFLD  'FLD002',LTH=8,
+               POS=(1,43),ATTR=(PROT,NUM)
+         DFLD  'FLD003',LTH=16,
+               POS=(1,53),ATTR=(PROT,NUM)
+         DFLD  'FLD004',LTH=16,
+               POS=(1,71),ATTR=(PROT,NUM)
+         FMTEND
+         END

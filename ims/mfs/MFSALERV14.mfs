@@ -1,0 +1,65 @@
+*********************************************************************
+* MFS for MFSALERV14
+* Pacific National Bank — IMS/TM Message Format
+*********************************************************************
+         PRINT NOGEN
+MFSALERV14M  MSG   TYPE=INPUT,SOR=(MFSALERV14I,IGNORE),
+               NXT=MFSALERV14O
+         SEG
+         MFLD  'FLD000',LTH=16,
+               JUST=R
+         MFLD  'FLD001',LTH=40,
+               JUST=L
+         MFLD  'FLD002',LTH=40,
+               JUST=L
+         MFLD  'FLD003',LTH=30,
+               JUST=L
+         MFLD  'FLD004',LTH=20,
+               JUST=R
+         MFLD  'FLD005',LTH=20,
+               JUST=R
+         MFLD  'FLD006',LTH=8,
+               JUST=L
+         MFLD  'FLD007',LTH=8,
+               JUST=L
+         MFLD  'FLD008',LTH=20,
+               JUST=L
+         MSGEND
+*
+MFSALERV14O  MSG   TYPE=OUTPUT,SOR=(MFSALERV14D,IGNORE),
+               NXT=MFSALERV14M
+         SEG
+         MFLD  'FLD000',LTH=16
+         MFLD  'FLD001',LTH=40
+         MFLD  'FLD002',LTH=40
+         MFLD  'FLD003',LTH=30
+         MFLD  'FLD004',LTH=20
+         MFLD  'FLD005',LTH=20
+         MFLD  'FLD006',LTH=8
+         MFLD  'FLD007',LTH=8
+         MFLD  'FLD008',LTH=20
+         MSGEND
+*
+MFSALERV14I  FMT
+         DEV   TYPE=(3270,2),FEAT=(IGNORE),DSCA=X'0020'
+         DIV   TYPE=INOUT
+         DFLD  'FLD000',LTH=16,
+               POS=(1,1),ATTR=(PROT,NUM)
+         DFLD  'FLD001',LTH=40,
+               POS=(1,19),ATTR=(PROT,NUM)
+         DFLD  'FLD002',LTH=40,
+               POS=(1,61),ATTR=(PROT,NUM)
+         DFLD  'FLD003',LTH=30,
+               POS=(2,23),ATTR=(PROT,NUM)
+         DFLD  'FLD004',LTH=20,
+               POS=(2,55),ATTR=(PROT,NUM)
+         DFLD  'FLD005',LTH=20,
+               POS=(2,77),ATTR=(PROT,NUM)
+         DFLD  'FLD006',LTH=8,
+               POS=(3,19),ATTR=(PROT,NUM)
+         DFLD  'FLD007',LTH=8,
+               POS=(3,29),ATTR=(PROT,NUM)
+         DFLD  'FLD008',LTH=20,
+               POS=(3,39),ATTR=(PROT,NUM)
+         FMTEND
+         END
