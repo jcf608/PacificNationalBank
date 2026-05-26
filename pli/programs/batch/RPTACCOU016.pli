@@ -1,0 +1,189 @@
+/*********************************************************************/
+/* RPTACCOU016 — account Reporting and Analytics Module                   */
+/* Pacific National Bank — PL/I Batch Analytics                       */
+/*********************************************************************/
+
+RPTACCOU016: PROCEDURE OPTIONS(MAIN);
+
+  %INCLUDE PNBACCT;
+  %INCLUDE PNBCUST;
+  %INCLUDE PNBERR;
+
+  DCL program_name    CHAR(12) INIT('RPTACCOU016');
+  DCL report_title    CHAR(80);
+  DCL report_date     CHAR(10);
+  DCL page_number     FIXED BIN(31) INIT(0);
+  DCL line_number     FIXED BIN(31) INIT(0);
+  DCL lines_per_page  FIXED BIN(31) INIT(55);
+  DCL records_read    FIXED BIN(31) INIT(0);
+  DCL records_ok      FIXED BIN(31) INIT(0);
+  DCL eof_flag        BIT(1) INIT('0'B);
+  DCL INFILE          FILE RECORD INPUT;
+  DCL OUTFILE         FILE PRINT OUTPUT;
+  DCL ERRFILE         FILE RECORD OUTPUT;
+  DCL input_buffer    CHAR(600);
+  DCL 1 report_header,
+      3 rh_bank_name  CHAR(25) INIT('PACIFIC NATIONAL BANK'),
+      3 rh_filler1    CHAR(5) INIT(' '),
+      3 rh_report     CHAR(40),
+      3 rh_date       CHAR(10),
+      3 rh_page       CHAR(10);
+
+  DCL total_acco_000 FIXED DEC(17,2) INIT(0);
+  DCL count_acco_000 FIXED BIN(31) INIT(0);
+  DCL avg_acco_000   FIXED DEC(15,2) INIT(0);
+  DCL min_acco_000   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_acco_000   FIXED DEC(15,2) INIT(0);
+  DCL total_acco_001 FIXED DEC(17,2) INIT(0);
+  DCL count_acco_001 FIXED BIN(31) INIT(0);
+  DCL avg_acco_001   FIXED DEC(15,2) INIT(0);
+  DCL min_acco_001   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_acco_001   FIXED DEC(15,2) INIT(0);
+  DCL total_acco_002 FIXED DEC(17,2) INIT(0);
+  DCL count_acco_002 FIXED BIN(31) INIT(0);
+  DCL avg_acco_002   FIXED DEC(15,2) INIT(0);
+  DCL min_acco_002   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_acco_002   FIXED DEC(15,2) INIT(0);
+  DCL total_acco_003 FIXED DEC(17,2) INIT(0);
+  DCL count_acco_003 FIXED BIN(31) INIT(0);
+  DCL avg_acco_003   FIXED DEC(15,2) INIT(0);
+  DCL min_acco_003   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_acco_003   FIXED DEC(15,2) INIT(0);
+  DCL total_acco_004 FIXED DEC(17,2) INIT(0);
+  DCL count_acco_004 FIXED BIN(31) INIT(0);
+  DCL avg_acco_004   FIXED DEC(15,2) INIT(0);
+  DCL min_acco_004   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_acco_004   FIXED DEC(15,2) INIT(0);
+
+  /* Main processing */
+  CALL initialize_report;
+  DO WHILE (^eof_flag);
+    CALL process_record;
+  END;
+  CALL print_summary;
+  CALL finalize_report;
+
+  /*---------------------------------------------------------------*/
+  initialize_report: PROCEDURE;
+    report_title = 'account Analysis Report - Variant 16';
+    report_date = DATETIME();
+    OPEN FILE(INFILE) INPUT;
+    OPEN FILE(OUTFILE) OUTPUT;
+    OPEN FILE(ERRFILE) OUTPUT;
+    ON ENDFILE(INFILE) eof_flag = '1'B;
+    CALL print_page_header;
+    READ FILE(INFILE) INTO(input_buffer);
+  END initialize_report;
+
+  print_page_header: PROCEDURE;
+    page_number = page_number + 1;
+    line_number = 0;
+    rh_report = report_title;
+    rh_date = report_date;
+    rh_page = 'PAGE ' || TRIM(CHAR(page_number));
+    PUT FILE(OUTFILE) SKIP(1) EDIT(report_header)(A);
+    PUT FILE(OUTFILE) SKIP(1) EDIT(('-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-'))(A);
+  END print_page_header;
+
+  process_record: PROCEDURE;
+    records_read = records_read + 1;
+    CALL validate_input;
+    CALL accumulate_totals;
+    CALL analyze_acco_metric_000;
+    CALL analyze_acco_metric_001;
+    records_ok = records_ok + 1;
+    line_number = line_number + 1;
+    IF line_number >= lines_per_page THEN
+      CALL print_page_header;
+    READ FILE(INFILE) INTO(input_buffer);
+  END process_record;
+
+  validate_input: PROCEDURE;
+    IF LENGTH(TRIM(input_buffer)) = 0 THEN DO;
+      PUT SKIP LIST('Empty record at ' || records_read);
+      RETURN;
+    END;
+  END validate_input;
+
+  accumulate_totals: PROCEDURE;
+    count_acco_000 = count_acco_000 + 1;
+    /* Accumulate metric 0 */
+    count_acco_001 = count_acco_001 + 1;
+    /* Accumulate metric 1 */
+    count_acco_002 = count_acco_002 + 1;
+    /* Accumulate metric 2 */
+    count_acco_003 = count_acco_003 + 1;
+    /* Accumulate metric 3 */
+    count_acco_004 = count_acco_004 + 1;
+    /* Accumulate metric 4 */
+  END accumulate_totals;
+
+  analyze_acco_metric_000: PROCEDURE;
+    DCL metric_val FIXED DEC(15,2);
+    DCL threshold  FIXED DEC(15,2) INIT(86518.00);
+    metric_val = 0;  /* Extracted from input */
+    IF metric_val > max_acco_000 THEN
+      max_acco_000 = metric_val;
+    IF metric_val < min_acco_000 THEN
+      min_acco_000 = metric_val;
+    total_acco_000 = total_acco_000 + metric_val;
+    IF metric_val > threshold THEN
+      PUT FILE(OUTFILE) SKIP LIST('ALERT: account metric 0 exceeds threshold');
+  END analyze_acco_metric_000;
+
+  analyze_acco_metric_001: PROCEDURE;
+    DCL metric_val FIXED DEC(15,2);
+    DCL threshold  FIXED DEC(15,2) INIT(83341.00);
+    metric_val = 0;  /* Extracted from input */
+    IF metric_val > max_acco_001 THEN
+      max_acco_001 = metric_val;
+    IF metric_val < min_acco_001 THEN
+      min_acco_001 = metric_val;
+    total_acco_001 = total_acco_001 + metric_val;
+    IF metric_val > threshold THEN
+      PUT FILE(OUTFILE) SKIP LIST('ALERT: account metric 1 exceeds threshold');
+  END analyze_acco_metric_001;
+
+  print_summary: PROCEDURE;
+    PUT FILE(OUTFILE) SKIP(3) LIST('=== SUMMARY ===');
+    PUT FILE(OUTFILE) SKIP LIST('Records processed: ' || records_ok);
+    IF count_acco_000 > 0 THEN
+      avg_acco_000 = total_acco_000 / count_acco_000;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 0: total=' || total_acco_000
+      || ' avg=' || avg_acco_000
+      || ' min=' || min_acco_000
+      || ' max=' || max_acco_000);
+    IF count_acco_001 > 0 THEN
+      avg_acco_001 = total_acco_001 / count_acco_001;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 1: total=' || total_acco_001
+      || ' avg=' || avg_acco_001
+      || ' min=' || min_acco_001
+      || ' max=' || max_acco_001);
+    IF count_acco_002 > 0 THEN
+      avg_acco_002 = total_acco_002 / count_acco_002;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 2: total=' || total_acco_002
+      || ' avg=' || avg_acco_002
+      || ' min=' || min_acco_002
+      || ' max=' || max_acco_002);
+    IF count_acco_003 > 0 THEN
+      avg_acco_003 = total_acco_003 / count_acco_003;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 3: total=' || total_acco_003
+      || ' avg=' || avg_acco_003
+      || ' min=' || min_acco_003
+      || ' max=' || max_acco_003);
+    IF count_acco_004 > 0 THEN
+      avg_acco_004 = total_acco_004 / count_acco_004;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 4: total=' || total_acco_004
+      || ' avg=' || avg_acco_004
+      || ' min=' || min_acco_004
+      || ' max=' || max_acco_004);
+  END print_summary;
+
+  finalize_report: PROCEDURE;
+    CLOSE FILE(INFILE);
+    CLOSE FILE(OUTFILE);
+    CLOSE FILE(ERRFILE);
+    PUT SKIP LIST(program_name || ' complete.');
+  END finalize_report;
+
+END RPTACCOU016;

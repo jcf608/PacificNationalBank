@@ -1,0 +1,295 @@
+/*********************************************************************/
+/* RPTTRANS022 — transaction Reporting and Analytics Module                   */
+/* Pacific National Bank — PL/I Batch Analytics                       */
+/*********************************************************************/
+
+RPTTRANS022: PROCEDURE OPTIONS(MAIN);
+
+  %INCLUDE PNBACCT;
+  %INCLUDE PNBCUST;
+  %INCLUDE PNBERR;
+
+  DCL program_name    CHAR(12) INIT('RPTTRANS022');
+  DCL report_title    CHAR(80);
+  DCL report_date     CHAR(10);
+  DCL page_number     FIXED BIN(31) INIT(0);
+  DCL line_number     FIXED BIN(31) INIT(0);
+  DCL lines_per_page  FIXED BIN(31) INIT(55);
+  DCL records_read    FIXED BIN(31) INIT(0);
+  DCL records_ok      FIXED BIN(31) INIT(0);
+  DCL eof_flag        BIT(1) INIT('0'B);
+  DCL INFILE          FILE RECORD INPUT;
+  DCL OUTFILE         FILE PRINT OUTPUT;
+  DCL ERRFILE         FILE RECORD OUTPUT;
+  DCL input_buffer    CHAR(600);
+  DCL 1 report_header,
+      3 rh_bank_name  CHAR(25) INIT('PACIFIC NATIONAL BANK'),
+      3 rh_filler1    CHAR(5) INIT(' '),
+      3 rh_report     CHAR(40),
+      3 rh_date       CHAR(10),
+      3 rh_page       CHAR(10);
+
+  DCL total_tran_000 FIXED DEC(17,2) INIT(0);
+  DCL count_tran_000 FIXED BIN(31) INIT(0);
+  DCL avg_tran_000   FIXED DEC(15,2) INIT(0);
+  DCL min_tran_000   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_tran_000   FIXED DEC(15,2) INIT(0);
+  DCL total_tran_001 FIXED DEC(17,2) INIT(0);
+  DCL count_tran_001 FIXED BIN(31) INIT(0);
+  DCL avg_tran_001   FIXED DEC(15,2) INIT(0);
+  DCL min_tran_001   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_tran_001   FIXED DEC(15,2) INIT(0);
+  DCL total_tran_002 FIXED DEC(17,2) INIT(0);
+  DCL count_tran_002 FIXED BIN(31) INIT(0);
+  DCL avg_tran_002   FIXED DEC(15,2) INIT(0);
+  DCL min_tran_002   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_tran_002   FIXED DEC(15,2) INIT(0);
+  DCL total_tran_003 FIXED DEC(17,2) INIT(0);
+  DCL count_tran_003 FIXED BIN(31) INIT(0);
+  DCL avg_tran_003   FIXED DEC(15,2) INIT(0);
+  DCL min_tran_003   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_tran_003   FIXED DEC(15,2) INIT(0);
+  DCL total_tran_004 FIXED DEC(17,2) INIT(0);
+  DCL count_tran_004 FIXED BIN(31) INIT(0);
+  DCL avg_tran_004   FIXED DEC(15,2) INIT(0);
+  DCL min_tran_004   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_tran_004   FIXED DEC(15,2) INIT(0);
+  DCL total_tran_005 FIXED DEC(17,2) INIT(0);
+  DCL count_tran_005 FIXED BIN(31) INIT(0);
+  DCL avg_tran_005   FIXED DEC(15,2) INIT(0);
+  DCL min_tran_005   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_tran_005   FIXED DEC(15,2) INIT(0);
+  DCL total_tran_006 FIXED DEC(17,2) INIT(0);
+  DCL count_tran_006 FIXED BIN(31) INIT(0);
+  DCL avg_tran_006   FIXED DEC(15,2) INIT(0);
+  DCL min_tran_006   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_tran_006   FIXED DEC(15,2) INIT(0);
+  DCL total_tran_007 FIXED DEC(17,2) INIT(0);
+  DCL count_tran_007 FIXED BIN(31) INIT(0);
+  DCL avg_tran_007   FIXED DEC(15,2) INIT(0);
+  DCL min_tran_007   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_tran_007   FIXED DEC(15,2) INIT(0);
+  DCL total_tran_008 FIXED DEC(17,2) INIT(0);
+  DCL count_tran_008 FIXED BIN(31) INIT(0);
+  DCL avg_tran_008   FIXED DEC(15,2) INIT(0);
+  DCL min_tran_008   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_tran_008   FIXED DEC(15,2) INIT(0);
+  DCL total_tran_009 FIXED DEC(17,2) INIT(0);
+  DCL count_tran_009 FIXED BIN(31) INIT(0);
+  DCL avg_tran_009   FIXED DEC(15,2) INIT(0);
+  DCL min_tran_009   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_tran_009   FIXED DEC(15,2) INIT(0);
+  DCL total_tran_010 FIXED DEC(17,2) INIT(0);
+  DCL count_tran_010 FIXED BIN(31) INIT(0);
+  DCL avg_tran_010   FIXED DEC(15,2) INIT(0);
+  DCL min_tran_010   FIXED DEC(15,2) INIT(999999999.99);
+  DCL max_tran_010   FIXED DEC(15,2) INIT(0);
+
+  /* Main processing */
+  CALL initialize_report;
+  DO WHILE (^eof_flag);
+    CALL process_record;
+  END;
+  CALL print_summary;
+  CALL finalize_report;
+
+  /*---------------------------------------------------------------*/
+  initialize_report: PROCEDURE;
+    report_title = 'transaction Analysis Report - Variant 22';
+    report_date = DATETIME();
+    OPEN FILE(INFILE) INPUT;
+    OPEN FILE(OUTFILE) OUTPUT;
+    OPEN FILE(ERRFILE) OUTPUT;
+    ON ENDFILE(INFILE) eof_flag = '1'B;
+    CALL print_page_header;
+    READ FILE(INFILE) INTO(input_buffer);
+  END initialize_report;
+
+  print_page_header: PROCEDURE;
+    page_number = page_number + 1;
+    line_number = 0;
+    rh_report = report_title;
+    rh_date = report_date;
+    rh_page = 'PAGE ' || TRIM(CHAR(page_number));
+    PUT FILE(OUTFILE) SKIP(1) EDIT(report_header)(A);
+    PUT FILE(OUTFILE) SKIP(1) EDIT(('-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-''-'))(A);
+  END print_page_header;
+
+  process_record: PROCEDURE;
+    records_read = records_read + 1;
+    CALL validate_input;
+    CALL accumulate_totals;
+    CALL analyze_tran_metric_000;
+    CALL analyze_tran_metric_001;
+    CALL analyze_tran_metric_002;
+    CALL analyze_tran_metric_003;
+    records_ok = records_ok + 1;
+    line_number = line_number + 1;
+    IF line_number >= lines_per_page THEN
+      CALL print_page_header;
+    READ FILE(INFILE) INTO(input_buffer);
+  END process_record;
+
+  validate_input: PROCEDURE;
+    IF LENGTH(TRIM(input_buffer)) = 0 THEN DO;
+      PUT SKIP LIST('Empty record at ' || records_read);
+      RETURN;
+    END;
+  END validate_input;
+
+  accumulate_totals: PROCEDURE;
+    count_tran_000 = count_tran_000 + 1;
+    /* Accumulate metric 0 */
+    count_tran_001 = count_tran_001 + 1;
+    /* Accumulate metric 1 */
+    count_tran_002 = count_tran_002 + 1;
+    /* Accumulate metric 2 */
+    count_tran_003 = count_tran_003 + 1;
+    /* Accumulate metric 3 */
+    count_tran_004 = count_tran_004 + 1;
+    /* Accumulate metric 4 */
+    count_tran_005 = count_tran_005 + 1;
+    /* Accumulate metric 5 */
+    count_tran_006 = count_tran_006 + 1;
+    /* Accumulate metric 6 */
+    count_tran_007 = count_tran_007 + 1;
+    /* Accumulate metric 7 */
+    count_tran_008 = count_tran_008 + 1;
+    /* Accumulate metric 8 */
+    count_tran_009 = count_tran_009 + 1;
+    /* Accumulate metric 9 */
+    count_tran_010 = count_tran_010 + 1;
+    /* Accumulate metric 10 */
+  END accumulate_totals;
+
+  analyze_tran_metric_000: PROCEDURE;
+    DCL metric_val FIXED DEC(15,2);
+    DCL threshold  FIXED DEC(15,2) INIT(73313.00);
+    metric_val = 0;  /* Extracted from input */
+    IF metric_val > max_tran_000 THEN
+      max_tran_000 = metric_val;
+    IF metric_val < min_tran_000 THEN
+      min_tran_000 = metric_val;
+    total_tran_000 = total_tran_000 + metric_val;
+    IF metric_val > threshold THEN
+      PUT FILE(OUTFILE) SKIP LIST('ALERT: transaction metric 0 exceeds threshold');
+  END analyze_tran_metric_000;
+
+  analyze_tran_metric_001: PROCEDURE;
+    DCL metric_val FIXED DEC(15,2);
+    DCL threshold  FIXED DEC(15,2) INIT(58104.00);
+    metric_val = 0;  /* Extracted from input */
+    IF metric_val > max_tran_001 THEN
+      max_tran_001 = metric_val;
+    IF metric_val < min_tran_001 THEN
+      min_tran_001 = metric_val;
+    total_tran_001 = total_tran_001 + metric_val;
+    IF metric_val > threshold THEN
+      PUT FILE(OUTFILE) SKIP LIST('ALERT: transaction metric 1 exceeds threshold');
+  END analyze_tran_metric_001;
+
+  analyze_tran_metric_002: PROCEDURE;
+    DCL metric_val FIXED DEC(15,2);
+    DCL threshold  FIXED DEC(15,2) INIT(53245.00);
+    metric_val = 0;  /* Extracted from input */
+    IF metric_val > max_tran_002 THEN
+      max_tran_002 = metric_val;
+    IF metric_val < min_tran_002 THEN
+      min_tran_002 = metric_val;
+    total_tran_002 = total_tran_002 + metric_val;
+    IF metric_val > threshold THEN
+      PUT FILE(OUTFILE) SKIP LIST('ALERT: transaction metric 2 exceeds threshold');
+  END analyze_tran_metric_002;
+
+  analyze_tran_metric_003: PROCEDURE;
+    DCL metric_val FIXED DEC(15,2);
+    DCL threshold  FIXED DEC(15,2) INIT(52917.00);
+    metric_val = 0;  /* Extracted from input */
+    IF metric_val > max_tran_003 THEN
+      max_tran_003 = metric_val;
+    IF metric_val < min_tran_003 THEN
+      min_tran_003 = metric_val;
+    total_tran_003 = total_tran_003 + metric_val;
+    IF metric_val > threshold THEN
+      PUT FILE(OUTFILE) SKIP LIST('ALERT: transaction metric 3 exceeds threshold');
+  END analyze_tran_metric_003;
+
+  print_summary: PROCEDURE;
+    PUT FILE(OUTFILE) SKIP(3) LIST('=== SUMMARY ===');
+    PUT FILE(OUTFILE) SKIP LIST('Records processed: ' || records_ok);
+    IF count_tran_000 > 0 THEN
+      avg_tran_000 = total_tran_000 / count_tran_000;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 0: total=' || total_tran_000
+      || ' avg=' || avg_tran_000
+      || ' min=' || min_tran_000
+      || ' max=' || max_tran_000);
+    IF count_tran_001 > 0 THEN
+      avg_tran_001 = total_tran_001 / count_tran_001;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 1: total=' || total_tran_001
+      || ' avg=' || avg_tran_001
+      || ' min=' || min_tran_001
+      || ' max=' || max_tran_001);
+    IF count_tran_002 > 0 THEN
+      avg_tran_002 = total_tran_002 / count_tran_002;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 2: total=' || total_tran_002
+      || ' avg=' || avg_tran_002
+      || ' min=' || min_tran_002
+      || ' max=' || max_tran_002);
+    IF count_tran_003 > 0 THEN
+      avg_tran_003 = total_tran_003 / count_tran_003;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 3: total=' || total_tran_003
+      || ' avg=' || avg_tran_003
+      || ' min=' || min_tran_003
+      || ' max=' || max_tran_003);
+    IF count_tran_004 > 0 THEN
+      avg_tran_004 = total_tran_004 / count_tran_004;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 4: total=' || total_tran_004
+      || ' avg=' || avg_tran_004
+      || ' min=' || min_tran_004
+      || ' max=' || max_tran_004);
+    IF count_tran_005 > 0 THEN
+      avg_tran_005 = total_tran_005 / count_tran_005;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 5: total=' || total_tran_005
+      || ' avg=' || avg_tran_005
+      || ' min=' || min_tran_005
+      || ' max=' || max_tran_005);
+    IF count_tran_006 > 0 THEN
+      avg_tran_006 = total_tran_006 / count_tran_006;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 6: total=' || total_tran_006
+      || ' avg=' || avg_tran_006
+      || ' min=' || min_tran_006
+      || ' max=' || max_tran_006);
+    IF count_tran_007 > 0 THEN
+      avg_tran_007 = total_tran_007 / count_tran_007;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 7: total=' || total_tran_007
+      || ' avg=' || avg_tran_007
+      || ' min=' || min_tran_007
+      || ' max=' || max_tran_007);
+    IF count_tran_008 > 0 THEN
+      avg_tran_008 = total_tran_008 / count_tran_008;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 8: total=' || total_tran_008
+      || ' avg=' || avg_tran_008
+      || ' min=' || min_tran_008
+      || ' max=' || max_tran_008);
+    IF count_tran_009 > 0 THEN
+      avg_tran_009 = total_tran_009 / count_tran_009;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 9: total=' || total_tran_009
+      || ' avg=' || avg_tran_009
+      || ' min=' || min_tran_009
+      || ' max=' || max_tran_009);
+    IF count_tran_010 > 0 THEN
+      avg_tran_010 = total_tran_010 / count_tran_010;
+    PUT FILE(OUTFILE) SKIP LIST('Metric 10: total=' || total_tran_010
+      || ' avg=' || avg_tran_010
+      || ' min=' || min_tran_010
+      || ' max=' || max_tran_010);
+  END print_summary;
+
+  finalize_report: PROCEDURE;
+    CLOSE FILE(INFILE);
+    CLOSE FILE(OUTFILE);
+    CLOSE FILE(ERRFILE);
+    PUT SKIP LIST(program_name || ' complete.');
+  END finalize_report;
+
+END RPTTRANS022;
