@@ -1,0 +1,28 @@
+*********************************************************************
+* PSB for PSBTXNDV00
+* Pacific National Bank — IMS/DB Program Specification
+*********************************************************************
+         PCB   TYPE=DB,DBDNAME=ACCTDBV00,
+               PROCOPT=R,
+               KEYLEN=16,
+               POS=SINGLE
+         SENSEG NAME=SEG000,
+               PARENT=0,
+               PROCOPT=A
+         SENSEG NAME=SEG001,
+               PARENT=SEG000,
+               PROCOPT=A
+         PCB   TYPE=DB,DBDNAME=CUSTDBV01,
+               PROCOPT=I,
+               KEYLEN=20,
+               POS=SINGLE
+         SENSEG NAME=SEG000,
+               PARENT=0,
+               PROCOPT=A
+         SENSEG NAME=SEG001,
+               PARENT=SEG000,
+               PROCOPT=A
+*
+         PSBGEN LANG=COBOL,PSBNAME=PSBTXNDV00,
+               IOASIZE=4096
+         END
