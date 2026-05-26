@@ -10,7 +10,7 @@ JAVA_BUILD    ?= mvn
 DOCKER        ?= docker
 PYTHON        ?= python3
 
-.PHONY: all clean test bootstrap legacy azure mule integration generate
+.PHONY: all clean test bootstrap legacy azure mule integration generate corpus corpus-stats
 
 all: legacy azure
 	@echo "=== PNB + ACB enterprise build complete ==="
@@ -56,6 +56,12 @@ test-integration:
 
 generate:
 	$(PYTHON) generators/generate_batch.py 1 || true
+
+corpus:
+	$(PYTHON) generators/generate_enterprise_corpus.py --target 3000000 --commit-every 500000
+
+corpus-stats:
+	@bash scripts/count_corpus.sh
 
 clean:
 	$(MAKE) -C pnb/legacy/cobol clean

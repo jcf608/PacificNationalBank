@@ -1,0 +1,1334 @@
+{
+  "ipcTicketId": "IPC-MAP-0000000301",
+  "sourceBank": "PNB",
+  "targetBank": "ACB",
+  "integrationFlow": "merger-reconciliation/trust",
+  "muleApplication": "acb-pnb-reconciliation",
+  "correlationId": "CORR-000000000301",
+  "payloadTraces": [
+    {
+      "sequence": 0,
+      "hop": "acb-azure",
+      "latencyMs": 1372,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 0 byteLen=8014"
+    },
+    {
+      "sequence": 1,
+      "hop": "acb-azure",
+      "latencyMs": 2025,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 1 byteLen=6738"
+    },
+    {
+      "sequence": 2,
+      "hop": "pnb-azure",
+      "latencyMs": 713,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 2 byteLen=4842"
+    },
+    {
+      "sequence": 3,
+      "hop": "acb-legacy",
+      "latencyMs": 211,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 3 byteLen=1450"
+    },
+    {
+      "sequence": 4,
+      "hop": "pnb-azure",
+      "latencyMs": 1187,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 4 byteLen=3378"
+    },
+    {
+      "sequence": 5,
+      "hop": "mulesoft",
+      "latencyMs": 202,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 5 byteLen=5403"
+    },
+    {
+      "sequence": 6,
+      "hop": "acb-legacy",
+      "latencyMs": 2159,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 6 byteLen=8617"
+    },
+    {
+      "sequence": 7,
+      "hop": "pnb-azure",
+      "latencyMs": 921,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 7 byteLen=8016"
+    },
+    {
+      "sequence": 8,
+      "hop": "mulesoft",
+      "latencyMs": 435,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 8 byteLen=8263"
+    },
+    {
+      "sequence": 9,
+      "hop": "acb-azure",
+      "latencyMs": 2293,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 9 byteLen=5296"
+    },
+    {
+      "sequence": 10,
+      "hop": "acb-legacy",
+      "latencyMs": 320,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 10 byteLen=5949"
+    },
+    {
+      "sequence": 11,
+      "hop": "pnb-azure",
+      "latencyMs": 1504,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 11 byteLen=6779"
+    },
+    {
+      "sequence": 12,
+      "hop": "mulesoft",
+      "latencyMs": 2285,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 12 byteLen=6606"
+    },
+    {
+      "sequence": 13,
+      "hop": "pnb-azure",
+      "latencyMs": 1952,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 13 byteLen=4318"
+    },
+    {
+      "sequence": 14,
+      "hop": "acb-legacy",
+      "latencyMs": 772,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 14 byteLen=8553"
+    },
+    {
+      "sequence": 15,
+      "hop": "acb-azure",
+      "latencyMs": 1891,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 15 byteLen=6214"
+    },
+    {
+      "sequence": 16,
+      "hop": "acb-legacy",
+      "latencyMs": 1174,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 16 byteLen=2510"
+    },
+    {
+      "sequence": 17,
+      "hop": "mulesoft",
+      "latencyMs": 2223,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 17 byteLen=4141"
+    },
+    {
+      "sequence": 18,
+      "hop": "mulesoft",
+      "latencyMs": 1272,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 18 byteLen=8196"
+    },
+    {
+      "sequence": 19,
+      "hop": "mulesoft",
+      "latencyMs": 90,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 19 byteLen=8923"
+    },
+    {
+      "sequence": 20,
+      "hop": "pnb-azure",
+      "latencyMs": 1919,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 20 byteLen=2795"
+    },
+    {
+      "sequence": 21,
+      "hop": "acb-azure",
+      "latencyMs": 1507,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 21 byteLen=5924"
+    },
+    {
+      "sequence": 22,
+      "hop": "mulesoft",
+      "latencyMs": 1540,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 22 byteLen=8492"
+    },
+    {
+      "sequence": 23,
+      "hop": "mulesoft",
+      "latencyMs": 2425,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 23 byteLen=5285"
+    },
+    {
+      "sequence": 24,
+      "hop": "mulesoft",
+      "latencyMs": 1412,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 24 byteLen=6525"
+    },
+    {
+      "sequence": 25,
+      "hop": "mulesoft",
+      "latencyMs": 944,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 25 byteLen=7523"
+    },
+    {
+      "sequence": 26,
+      "hop": "acb-legacy",
+      "latencyMs": 426,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 26 byteLen=1589"
+    },
+    {
+      "sequence": 27,
+      "hop": "pnb-azure",
+      "latencyMs": 745,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 27 byteLen=1980"
+    },
+    {
+      "sequence": 28,
+      "hop": "mulesoft",
+      "latencyMs": 2326,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 28 byteLen=5414"
+    },
+    {
+      "sequence": 29,
+      "hop": "pnb-azure",
+      "latencyMs": 451,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 29 byteLen=6761"
+    },
+    {
+      "sequence": 30,
+      "hop": "acb-azure",
+      "latencyMs": 830,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 30 byteLen=7441"
+    },
+    {
+      "sequence": 31,
+      "hop": "acb-legacy",
+      "latencyMs": 2479,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 31 byteLen=8325"
+    },
+    {
+      "sequence": 32,
+      "hop": "acb-azure",
+      "latencyMs": 727,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 32 byteLen=3003"
+    },
+    {
+      "sequence": 33,
+      "hop": "pnb-azure",
+      "latencyMs": 722,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 33 byteLen=1754"
+    },
+    {
+      "sequence": 34,
+      "hop": "acb-legacy",
+      "latencyMs": 1105,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 34 byteLen=5207"
+    },
+    {
+      "sequence": 35,
+      "hop": "mulesoft",
+      "latencyMs": 997,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 35 byteLen=8904"
+    },
+    {
+      "sequence": 36,
+      "hop": "mulesoft",
+      "latencyMs": 1098,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 36 byteLen=7479"
+    },
+    {
+      "sequence": 37,
+      "hop": "acb-legacy",
+      "latencyMs": 2214,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 37 byteLen=4641"
+    },
+    {
+      "sequence": 38,
+      "hop": "mulesoft",
+      "latencyMs": 1912,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 38 byteLen=4778"
+    },
+    {
+      "sequence": 39,
+      "hop": "pnb-azure",
+      "latencyMs": 518,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 39 byteLen=8190"
+    },
+    {
+      "sequence": 40,
+      "hop": "pnb-azure",
+      "latencyMs": 1560,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 40 byteLen=2274"
+    },
+    {
+      "sequence": 41,
+      "hop": "pnb-azure",
+      "latencyMs": 2464,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 41 byteLen=2512"
+    },
+    {
+      "sequence": 42,
+      "hop": "mulesoft",
+      "latencyMs": 1809,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 42 byteLen=5717"
+    },
+    {
+      "sequence": 43,
+      "hop": "pnb-azure",
+      "latencyMs": 1488,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 43 byteLen=5734"
+    },
+    {
+      "sequence": 44,
+      "hop": "acb-legacy",
+      "latencyMs": 617,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 44 byteLen=3779"
+    },
+    {
+      "sequence": 45,
+      "hop": "pnb-azure",
+      "latencyMs": 1064,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 45 byteLen=5985"
+    },
+    {
+      "sequence": 46,
+      "hop": "pnb-azure",
+      "latencyMs": 1035,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 46 byteLen=2843"
+    },
+    {
+      "sequence": 47,
+      "hop": "acb-legacy",
+      "latencyMs": 1663,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 47 byteLen=7339"
+    },
+    {
+      "sequence": 48,
+      "hop": "mulesoft",
+      "latencyMs": 1969,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 48 byteLen=1774"
+    },
+    {
+      "sequence": 49,
+      "hop": "pnb-azure",
+      "latencyMs": 2379,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 49 byteLen=6763"
+    },
+    {
+      "sequence": 50,
+      "hop": "acb-legacy",
+      "latencyMs": 373,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 50 byteLen=2947"
+    },
+    {
+      "sequence": 51,
+      "hop": "acb-legacy",
+      "latencyMs": 2407,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 51 byteLen=6182"
+    },
+    {
+      "sequence": 52,
+      "hop": "acb-azure",
+      "latencyMs": 2212,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 52 byteLen=8992"
+    },
+    {
+      "sequence": 53,
+      "hop": "pnb-azure",
+      "latencyMs": 2445,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 53 byteLen=1240"
+    },
+    {
+      "sequence": 54,
+      "hop": "pnb-azure",
+      "latencyMs": 442,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 54 byteLen=2501"
+    },
+    {
+      "sequence": 55,
+      "hop": "pnb-azure",
+      "latencyMs": 2425,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 55 byteLen=7568"
+    },
+    {
+      "sequence": 56,
+      "hop": "acb-legacy",
+      "latencyMs": 599,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 56 byteLen=7216"
+    },
+    {
+      "sequence": 57,
+      "hop": "acb-legacy",
+      "latencyMs": 476,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 57 byteLen=1359"
+    },
+    {
+      "sequence": 58,
+      "hop": "pnb-azure",
+      "latencyMs": 1856,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 58 byteLen=2433"
+    },
+    {
+      "sequence": 59,
+      "hop": "mulesoft",
+      "latencyMs": 1044,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 59 byteLen=7136"
+    },
+    {
+      "sequence": 60,
+      "hop": "acb-azure",
+      "latencyMs": 71,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 60 byteLen=4021"
+    },
+    {
+      "sequence": 61,
+      "hop": "pnb-azure",
+      "latencyMs": 2331,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 61 byteLen=671"
+    },
+    {
+      "sequence": 62,
+      "hop": "pnb-azure",
+      "latencyMs": 966,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 62 byteLen=1842"
+    },
+    {
+      "sequence": 63,
+      "hop": "acb-azure",
+      "latencyMs": 438,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 63 byteLen=8756"
+    },
+    {
+      "sequence": 64,
+      "hop": "acb-azure",
+      "latencyMs": 373,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 64 byteLen=8895"
+    },
+    {
+      "sequence": 65,
+      "hop": "pnb-azure",
+      "latencyMs": 951,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 65 byteLen=7015"
+    },
+    {
+      "sequence": 66,
+      "hop": "mulesoft",
+      "latencyMs": 309,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 66 byteLen=3881"
+    },
+    {
+      "sequence": 67,
+      "hop": "acb-legacy",
+      "latencyMs": 1844,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 67 byteLen=2704"
+    },
+    {
+      "sequence": 68,
+      "hop": "pnb-azure",
+      "latencyMs": 2348,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 68 byteLen=904"
+    },
+    {
+      "sequence": 69,
+      "hop": "mulesoft",
+      "latencyMs": 599,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 69 byteLen=8665"
+    },
+    {
+      "sequence": 70,
+      "hop": "acb-azure",
+      "latencyMs": 468,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 70 byteLen=8082"
+    },
+    {
+      "sequence": 71,
+      "hop": "pnb-azure",
+      "latencyMs": 2102,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 71 byteLen=5322"
+    },
+    {
+      "sequence": 72,
+      "hop": "acb-azure",
+      "latencyMs": 141,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 72 byteLen=6425"
+    },
+    {
+      "sequence": 73,
+      "hop": "acb-azure",
+      "latencyMs": 476,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 73 byteLen=4697"
+    },
+    {
+      "sequence": 74,
+      "hop": "pnb-azure",
+      "latencyMs": 1499,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 74 byteLen=4013"
+    },
+    {
+      "sequence": 75,
+      "hop": "mulesoft",
+      "latencyMs": 135,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 75 byteLen=1870"
+    },
+    {
+      "sequence": 76,
+      "hop": "pnb-azure",
+      "latencyMs": 1925,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 76 byteLen=3957"
+    },
+    {
+      "sequence": 77,
+      "hop": "acb-legacy",
+      "latencyMs": 1465,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 77 byteLen=8624"
+    },
+    {
+      "sequence": 78,
+      "hop": "mulesoft",
+      "latencyMs": 320,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 78 byteLen=597"
+    },
+    {
+      "sequence": 79,
+      "hop": "acb-azure",
+      "latencyMs": 620,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 79 byteLen=1592"
+    },
+    {
+      "sequence": 80,
+      "hop": "mulesoft",
+      "latencyMs": 2105,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 80 byteLen=8417"
+    },
+    {
+      "sequence": 81,
+      "hop": "pnb-azure",
+      "latencyMs": 1695,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 81 byteLen=5103"
+    },
+    {
+      "sequence": 82,
+      "hop": "pnb-azure",
+      "latencyMs": 1036,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 82 byteLen=6356"
+    },
+    {
+      "sequence": 83,
+      "hop": "mulesoft",
+      "latencyMs": 1698,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 83 byteLen=5651"
+    },
+    {
+      "sequence": 84,
+      "hop": "pnb-azure",
+      "latencyMs": 2218,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 84 byteLen=8407"
+    },
+    {
+      "sequence": 85,
+      "hop": "mulesoft",
+      "latencyMs": 31,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 85 byteLen=3589"
+    },
+    {
+      "sequence": 86,
+      "hop": "pnb-azure",
+      "latencyMs": 477,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 86 byteLen=7109"
+    },
+    {
+      "sequence": 87,
+      "hop": "pnb-azure",
+      "latencyMs": 2478,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 87 byteLen=1214"
+    },
+    {
+      "sequence": 88,
+      "hop": "pnb-azure",
+      "latencyMs": 1660,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 88 byteLen=6589"
+    },
+    {
+      "sequence": 89,
+      "hop": "acb-azure",
+      "latencyMs": 1780,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 89 byteLen=5797"
+    },
+    {
+      "sequence": 90,
+      "hop": "pnb-azure",
+      "latencyMs": 2289,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 90 byteLen=6199"
+    },
+    {
+      "sequence": 91,
+      "hop": "acb-azure",
+      "latencyMs": 588,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 91 byteLen=4329"
+    },
+    {
+      "sequence": 92,
+      "hop": "acb-legacy",
+      "latencyMs": 1381,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 92 byteLen=5715"
+    },
+    {
+      "sequence": 93,
+      "hop": "mulesoft",
+      "latencyMs": 2124,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 93 byteLen=1632"
+    },
+    {
+      "sequence": 94,
+      "hop": "pnb-azure",
+      "latencyMs": 153,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 94 byteLen=4577"
+    },
+    {
+      "sequence": 95,
+      "hop": "mulesoft",
+      "latencyMs": 2333,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 95 byteLen=8509"
+    },
+    {
+      "sequence": 96,
+      "hop": "acb-legacy",
+      "latencyMs": 1632,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 96 byteLen=5369"
+    },
+    {
+      "sequence": 97,
+      "hop": "acb-legacy",
+      "latencyMs": 391,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 97 byteLen=4201"
+    },
+    {
+      "sequence": 98,
+      "hop": "acb-azure",
+      "latencyMs": 1989,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 98 byteLen=2832"
+    },
+    {
+      "sequence": 99,
+      "hop": "acb-azure",
+      "latencyMs": 1332,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 99 byteLen=4346"
+    },
+    {
+      "sequence": 100,
+      "hop": "acb-legacy",
+      "latencyMs": 2153,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 100 byteLen=1516"
+    },
+    {
+      "sequence": 101,
+      "hop": "acb-legacy",
+      "latencyMs": 946,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 101 byteLen=303"
+    },
+    {
+      "sequence": 102,
+      "hop": "mulesoft",
+      "latencyMs": 794,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 102 byteLen=4897"
+    },
+    {
+      "sequence": 103,
+      "hop": "acb-legacy",
+      "latencyMs": 2497,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 103 byteLen=2750"
+    },
+    {
+      "sequence": 104,
+      "hop": "acb-azure",
+      "latencyMs": 1121,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 104 byteLen=6778"
+    },
+    {
+      "sequence": 105,
+      "hop": "acb-azure",
+      "latencyMs": 707,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 105 byteLen=1907"
+    },
+    {
+      "sequence": 106,
+      "hop": "acb-azure",
+      "latencyMs": 1953,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 106 byteLen=8945"
+    },
+    {
+      "sequence": 107,
+      "hop": "acb-legacy",
+      "latencyMs": 1456,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 107 byteLen=5599"
+    },
+    {
+      "sequence": 108,
+      "hop": "acb-azure",
+      "latencyMs": 1715,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 108 byteLen=294"
+    },
+    {
+      "sequence": 109,
+      "hop": "acb-legacy",
+      "latencyMs": 2071,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 109 byteLen=7955"
+    },
+    {
+      "sequence": 110,
+      "hop": "pnb-azure",
+      "latencyMs": 1860,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 110 byteLen=6557"
+    },
+    {
+      "sequence": 111,
+      "hop": "mulesoft",
+      "latencyMs": 2487,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 111 byteLen=336"
+    },
+    {
+      "sequence": 112,
+      "hop": "mulesoft",
+      "latencyMs": 2479,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 112 byteLen=6599"
+    },
+    {
+      "sequence": 113,
+      "hop": "acb-legacy",
+      "latencyMs": 142,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 113 byteLen=8643"
+    },
+    {
+      "sequence": 114,
+      "hop": "mulesoft",
+      "latencyMs": 392,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 114 byteLen=8548"
+    },
+    {
+      "sequence": 115,
+      "hop": "acb-legacy",
+      "latencyMs": 2351,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 115 byteLen=6254"
+    },
+    {
+      "sequence": 116,
+      "hop": "pnb-azure",
+      "latencyMs": 1657,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 116 byteLen=4621"
+    },
+    {
+      "sequence": 117,
+      "hop": "acb-legacy",
+      "latencyMs": 2450,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 117 byteLen=7209"
+    },
+    {
+      "sequence": 118,
+      "hop": "mulesoft",
+      "latencyMs": 385,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 118 byteLen=8944"
+    },
+    {
+      "sequence": 119,
+      "hop": "acb-azure",
+      "latencyMs": 474,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 119 byteLen=8897"
+    },
+    {
+      "sequence": 120,
+      "hop": "acb-azure",
+      "latencyMs": 2446,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 120 byteLen=8868"
+    },
+    {
+      "sequence": 121,
+      "hop": "mulesoft",
+      "latencyMs": 786,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 121 byteLen=5895"
+    },
+    {
+      "sequence": 122,
+      "hop": "pnb-azure",
+      "latencyMs": 2415,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 122 byteLen=7358"
+    },
+    {
+      "sequence": 123,
+      "hop": "pnb-azure",
+      "latencyMs": 2336,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 123 byteLen=6279"
+    },
+    {
+      "sequence": 124,
+      "hop": "acb-azure",
+      "latencyMs": 253,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 124 byteLen=5653"
+    },
+    {
+      "sequence": 125,
+      "hop": "pnb-azure",
+      "latencyMs": 1372,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 125 byteLen=6007"
+    },
+    {
+      "sequence": 126,
+      "hop": "pnb-azure",
+      "latencyMs": 1230,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 126 byteLen=7683"
+    },
+    {
+      "sequence": 127,
+      "hop": "pnb-azure",
+      "latencyMs": 641,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 127 byteLen=3213"
+    },
+    {
+      "sequence": 128,
+      "hop": "acb-legacy",
+      "latencyMs": 475,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 128 byteLen=5681"
+    },
+    {
+      "sequence": 129,
+      "hop": "acb-azure",
+      "latencyMs": 1400,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 129 byteLen=3762"
+    },
+    {
+      "sequence": 130,
+      "hop": "pnb-azure",
+      "latencyMs": 2400,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 130 byteLen=2095"
+    },
+    {
+      "sequence": 131,
+      "hop": "acb-legacy",
+      "latencyMs": 2215,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 131 byteLen=8629"
+    },
+    {
+      "sequence": 132,
+      "hop": "acb-legacy",
+      "latencyMs": 2334,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 132 byteLen=1214"
+    },
+    {
+      "sequence": 133,
+      "hop": "mulesoft",
+      "latencyMs": 2165,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 133 byteLen=1766"
+    },
+    {
+      "sequence": 134,
+      "hop": "pnb-azure",
+      "latencyMs": 1057,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 134 byteLen=1833"
+    },
+    {
+      "sequence": 135,
+      "hop": "pnb-azure",
+      "latencyMs": 194,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 135 byteLen=7817"
+    },
+    {
+      "sequence": 136,
+      "hop": "mulesoft",
+      "latencyMs": 2411,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 136 byteLen=3437"
+    },
+    {
+      "sequence": 137,
+      "hop": "acb-azure",
+      "latencyMs": 656,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 137 byteLen=5438"
+    },
+    {
+      "sequence": 138,
+      "hop": "acb-legacy",
+      "latencyMs": 136,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 138 byteLen=4987"
+    },
+    {
+      "sequence": 139,
+      "hop": "pnb-azure",
+      "latencyMs": 2381,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 139 byteLen=3520"
+    },
+    {
+      "sequence": 140,
+      "hop": "mulesoft",
+      "latencyMs": 1806,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 140 byteLen=3562"
+    },
+    {
+      "sequence": 141,
+      "hop": "mulesoft",
+      "latencyMs": 1574,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 141 byteLen=749"
+    },
+    {
+      "sequence": 142,
+      "hop": "pnb-azure",
+      "latencyMs": 2086,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 142 byteLen=3092"
+    },
+    {
+      "sequence": 143,
+      "hop": "acb-azure",
+      "latencyMs": 745,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 143 byteLen=3508"
+    },
+    {
+      "sequence": 144,
+      "hop": "acb-legacy",
+      "latencyMs": 1653,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 144 byteLen=5606"
+    },
+    {
+      "sequence": 145,
+      "hop": "acb-azure",
+      "latencyMs": 1723,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 145 byteLen=6229"
+    },
+    {
+      "sequence": 146,
+      "hop": "acb-legacy",
+      "latencyMs": 2177,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 146 byteLen=7149"
+    },
+    {
+      "sequence": 147,
+      "hop": "mulesoft",
+      "latencyMs": 248,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 147 byteLen=2318"
+    },
+    {
+      "sequence": 148,
+      "hop": "acb-azure",
+      "latencyMs": 895,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 148 byteLen=6423"
+    },
+    {
+      "sequence": 149,
+      "hop": "acb-legacy",
+      "latencyMs": 2128,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 149 byteLen=842"
+    },
+    {
+      "sequence": 150,
+      "hop": "pnb-azure",
+      "latencyMs": 54,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 150 byteLen=4340"
+    },
+    {
+      "sequence": 151,
+      "hop": "pnb-azure",
+      "latencyMs": 1670,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 151 byteLen=6034"
+    },
+    {
+      "sequence": 152,
+      "hop": "acb-legacy",
+      "latencyMs": 261,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 152 byteLen=7011"
+    },
+    {
+      "sequence": 153,
+      "hop": "acb-legacy",
+      "latencyMs": 479,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 153 byteLen=1549"
+    },
+    {
+      "sequence": 154,
+      "hop": "acb-azure",
+      "latencyMs": 808,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 154 byteLen=3501"
+    },
+    {
+      "sequence": 155,
+      "hop": "pnb-azure",
+      "latencyMs": 2313,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 155 byteLen=7800"
+    },
+    {
+      "sequence": 156,
+      "hop": "mulesoft",
+      "latencyMs": 932,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 156 byteLen=988"
+    },
+    {
+      "sequence": 157,
+      "hop": "acb-azure",
+      "latencyMs": 2091,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 157 byteLen=4156"
+    },
+    {
+      "sequence": 158,
+      "hop": "acb-azure",
+      "latencyMs": 2024,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 158 byteLen=7442"
+    },
+    {
+      "sequence": 159,
+      "hop": "pnb-azure",
+      "latencyMs": 1233,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 159 byteLen=3261"
+    },
+    {
+      "sequence": 160,
+      "hop": "acb-legacy",
+      "latencyMs": 503,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 160 byteLen=5806"
+    },
+    {
+      "sequence": 161,
+      "hop": "mulesoft",
+      "latencyMs": 2397,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 161 byteLen=1067"
+    },
+    {
+      "sequence": 162,
+      "hop": "mulesoft",
+      "latencyMs": 116,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 162 byteLen=7035"
+    },
+    {
+      "sequence": 163,
+      "hop": "acb-legacy",
+      "latencyMs": 1729,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 163 byteLen=5063"
+    },
+    {
+      "sequence": 164,
+      "hop": "acb-legacy",
+      "latencyMs": 2462,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 164 byteLen=8283"
+    },
+    {
+      "sequence": 165,
+      "hop": "acb-legacy",
+      "latencyMs": 469,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 165 byteLen=5319"
+    },
+    {
+      "sequence": 166,
+      "hop": "acb-legacy",
+      "latencyMs": 438,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 166 byteLen=8872"
+    },
+    {
+      "sequence": 167,
+      "hop": "acb-azure",
+      "latencyMs": 899,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 167 byteLen=6675"
+    },
+    {
+      "sequence": 168,
+      "hop": "acb-legacy",
+      "latencyMs": 444,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 168 byteLen=6318"
+    },
+    {
+      "sequence": 169,
+      "hop": "acb-legacy",
+      "latencyMs": 1167,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 169 byteLen=4107"
+    },
+    {
+      "sequence": 170,
+      "hop": "acb-legacy",
+      "latencyMs": 1384,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 170 byteLen=3111"
+    },
+    {
+      "sequence": 171,
+      "hop": "pnb-azure",
+      "latencyMs": 635,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 171 byteLen=1937"
+    },
+    {
+      "sequence": 172,
+      "hop": "mulesoft",
+      "latencyMs": 1205,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 172 byteLen=2691"
+    },
+    {
+      "sequence": 173,
+      "hop": "pnb-azure",
+      "latencyMs": 713,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 173 byteLen=4792"
+    },
+    {
+      "sequence": 174,
+      "hop": "acb-azure",
+      "latencyMs": 898,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 174 byteLen=3436"
+    },
+    {
+      "sequence": 175,
+      "hop": "mulesoft",
+      "latencyMs": 745,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 175 byteLen=8614"
+    },
+    {
+      "sequence": 176,
+      "hop": "pnb-azure",
+      "latencyMs": 756,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 176 byteLen=7856"
+    },
+    {
+      "sequence": 177,
+      "hop": "mulesoft",
+      "latencyMs": 1329,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 177 byteLen=4002"
+    },
+    {
+      "sequence": 178,
+      "hop": "acb-legacy",
+      "latencyMs": 508,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 178 byteLen=1930"
+    },
+    {
+      "sequence": 179,
+      "hop": "acb-azure",
+      "latencyMs": 968,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 179 byteLen=7413"
+    },
+    {
+      "sequence": 180,
+      "hop": "pnb-azure",
+      "latencyMs": 1894,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 180 byteLen=5200"
+    },
+    {
+      "sequence": 181,
+      "hop": "acb-legacy",
+      "latencyMs": 2139,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 181 byteLen=8231"
+    },
+    {
+      "sequence": 182,
+      "hop": "acb-legacy",
+      "latencyMs": 2259,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 182 byteLen=6481"
+    },
+    {
+      "sequence": 183,
+      "hop": "mulesoft",
+      "latencyMs": 2282,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 183 byteLen=5568"
+    },
+    {
+      "sequence": 184,
+      "hop": "acb-azure",
+      "latencyMs": 1115,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 184 byteLen=3393"
+    },
+    {
+      "sequence": 185,
+      "hop": "mulesoft",
+      "latencyMs": 395,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 185 byteLen=2009"
+    },
+    {
+      "sequence": 186,
+      "hop": "acb-azure",
+      "latencyMs": 1150,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 186 byteLen=7547"
+    },
+    {
+      "sequence": 187,
+      "hop": "acb-azure",
+      "latencyMs": 281,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 187 byteLen=1129"
+    },
+    {
+      "sequence": 188,
+      "hop": "acb-legacy",
+      "latencyMs": 774,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 188 byteLen=7181"
+    },
+    {
+      "sequence": 189,
+      "hop": "pnb-azure",
+      "latencyMs": 2007,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 189 byteLen=4852"
+    },
+    {
+      "sequence": 190,
+      "hop": "mulesoft",
+      "latencyMs": 978,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 190 byteLen=8949"
+    },
+    {
+      "sequence": 191,
+      "hop": "pnb-azure",
+      "latencyMs": 27,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 191 byteLen=7853"
+    },
+    {
+      "sequence": 192,
+      "hop": "acb-legacy",
+      "latencyMs": 203,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 192 byteLen=5102"
+    },
+    {
+      "sequence": 193,
+      "hop": "mulesoft",
+      "latencyMs": 917,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 193 byteLen=1786"
+    },
+    {
+      "sequence": 194,
+      "hop": "acb-legacy",
+      "latencyMs": 2330,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 194 byteLen=8399"
+    },
+    {
+      "sequence": 195,
+      "hop": "acb-azure",
+      "latencyMs": 29,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 195 byteLen=4558"
+    },
+    {
+      "sequence": 196,
+      "hop": "acb-azure",
+      "latencyMs": 527,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 196 byteLen=8949"
+    },
+    {
+      "sequence": 197,
+      "hop": "pnb-azure",
+      "latencyMs": 1355,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 197 byteLen=4295"
+    },
+    {
+      "sequence": 198,
+      "hop": "mulesoft",
+      "latencyMs": 1552,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 198 byteLen=8465"
+    },
+    {
+      "sequence": 199,
+      "hop": "mulesoft",
+      "latencyMs": 191,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 199 byteLen=2076"
+    },
+    {
+      "sequence": 200,
+      "hop": "pnb-azure",
+      "latencyMs": 1685,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 200 byteLen=322"
+    },
+    {
+      "sequence": 201,
+      "hop": "acb-azure",
+      "latencyMs": 1150,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 201 byteLen=1566"
+    },
+    {
+      "sequence": 202,
+      "hop": "acb-azure",
+      "latencyMs": 1589,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 202 byteLen=8558"
+    },
+    {
+      "sequence": 203,
+      "hop": "pnb-azure",
+      "latencyMs": 1013,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 203 byteLen=5829"
+    },
+    {
+      "sequence": 204,
+      "hop": "acb-azure",
+      "latencyMs": 1758,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 204 byteLen=4112"
+    },
+    {
+      "sequence": 205,
+      "hop": "pnb-azure",
+      "latencyMs": 470,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 205 byteLen=7414"
+    },
+    {
+      "sequence": 206,
+      "hop": "mulesoft",
+      "latencyMs": 495,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 206 byteLen=8449"
+    },
+    {
+      "sequence": 207,
+      "hop": "mulesoft",
+      "latencyMs": 357,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 207 byteLen=6870"
+    },
+    {
+      "sequence": 208,
+      "hop": "pnb-azure",
+      "latencyMs": 2085,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 208 byteLen=8993"
+    },
+    {
+      "sequence": 209,
+      "hop": "acb-azure",
+      "latencyMs": 1235,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 209 byteLen=6090"
+    },
+    {
+      "sequence": 210,
+      "hop": "mulesoft",
+      "latencyMs": 1420,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 210 byteLen=1562"
+    },
+    {
+      "sequence": 211,
+      "hop": "acb-azure",
+      "latencyMs": 2269,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 211 byteLen=7179"
+    },
+    {
+      "sequence": 212,
+      "hop": "mulesoft",
+      "latencyMs": 2131,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 212 byteLen=5747"
+    },
+    {
+      "sequence": 213,
+      "hop": "acb-legacy",
+      "latencyMs": 1870,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 213 byteLen=7765"
+    },
+    {
+      "sequence": 214,
+      "hop": "mulesoft",
+      "latencyMs": 1652,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 214 byteLen=7610"
+    },
+    {
+      "sequence": 215,
+      "hop": "acb-legacy",
+      "latencyMs": 185,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 215 byteLen=3757"
+    },
+    {
+      "sequence": 216,
+      "hop": "acb-legacy",
+      "latencyMs": 1418,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 216 byteLen=8602"
+    },
+    {
+      "sequence": 217,
+      "hop": "pnb-azure",
+      "latencyMs": 1388,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 217 byteLen=3778"
+    },
+    {
+      "sequence": 218,
+      "hop": "mulesoft",
+      "latencyMs": 670,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 218 byteLen=5422"
+    },
+    {
+      "sequence": 219,
+      "hop": "acb-legacy",
+      "latencyMs": 2035,
+      "requestSnippet": "POST /v1/accounts/mapping fragment 219 byteLen=5892"
+    }
+  ],
+  "reconciliationOutcome": {
+    "withinTolerance": true,
+    "variance": -200.9464
+  }
+}

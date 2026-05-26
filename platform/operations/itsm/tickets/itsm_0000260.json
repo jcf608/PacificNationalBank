@@ -1,0 +1,1430 @@
+{
+  "ticketNumber": "REQ000000260",
+  "type": "REQ",
+  "bank": "PNB",
+  "domain": "deposit",
+  "shortDescription": "PNB deposit — production support ticket",
+  "priority": "3",
+  "state": "NEW",
+  "assignmentGroup": "PNB-CORE-DEPOSIT",
+  "openedAt": "2025-12-15T00:00:00Z",
+  "workNotes": [
+    {
+      "at": "2025-12-15T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 1: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xdc94af."
+    },
+    {
+      "at": "2025-12-15T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 2: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x0a64c2."
+    },
+    {
+      "at": "2025-12-15T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 3: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x9a37ad."
+    },
+    {
+      "at": "2025-12-15T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 4: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x0a8378."
+    },
+    {
+      "at": "2025-12-15T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 5: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x432ec5."
+    },
+    {
+      "at": "2025-12-15T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 6: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x61d6d7."
+    },
+    {
+      "at": "2025-12-15T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 7: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x99ada3."
+    },
+    {
+      "at": "2025-12-15T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 8: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x90bafb."
+    },
+    {
+      "at": "2025-12-16T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 9: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x4da641."
+    },
+    {
+      "at": "2025-12-16T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 10: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb1e09a."
+    },
+    {
+      "at": "2025-12-16T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 11: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe539dd."
+    },
+    {
+      "at": "2025-12-16T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 12: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xea1e3e."
+    },
+    {
+      "at": "2025-12-16T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 13: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x55f03a."
+    },
+    {
+      "at": "2025-12-16T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 14: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x7c6d95."
+    },
+    {
+      "at": "2025-12-16T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 15: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x6ee9a4."
+    },
+    {
+      "at": "2025-12-16T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 16: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x7583ee."
+    },
+    {
+      "at": "2025-12-17T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 17: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x266115."
+    },
+    {
+      "at": "2025-12-17T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 18: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x826d59."
+    },
+    {
+      "at": "2025-12-17T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 19: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe2d71d."
+    },
+    {
+      "at": "2025-12-17T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 20: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe2070d."
+    },
+    {
+      "at": "2025-12-17T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 21: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x41b815."
+    },
+    {
+      "at": "2025-12-17T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 22: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xf77c7f."
+    },
+    {
+      "at": "2025-12-17T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 23: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x3d353c."
+    },
+    {
+      "at": "2025-12-17T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 24: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xea69b3."
+    },
+    {
+      "at": "2025-12-18T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 25: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x815701."
+    },
+    {
+      "at": "2025-12-18T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 26: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x0cd2df."
+    },
+    {
+      "at": "2025-12-18T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 27: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x922620."
+    },
+    {
+      "at": "2025-12-18T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 28: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe99951."
+    },
+    {
+      "at": "2025-12-18T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 29: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xcf2afc."
+    },
+    {
+      "at": "2025-12-18T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 30: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x671ef4."
+    },
+    {
+      "at": "2025-12-18T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 31: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x367cd8."
+    },
+    {
+      "at": "2025-12-18T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 32: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x3ff4ca."
+    },
+    {
+      "at": "2025-12-19T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 33: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xc4b2e9."
+    },
+    {
+      "at": "2025-12-19T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 34: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x013f1c."
+    },
+    {
+      "at": "2025-12-19T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 35: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe15140."
+    },
+    {
+      "at": "2025-12-19T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 36: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x2ef1ea."
+    },
+    {
+      "at": "2025-12-19T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 37: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xd43c80."
+    },
+    {
+      "at": "2025-12-19T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 38: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb00fe9."
+    },
+    {
+      "at": "2025-12-19T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 39: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x12ce20."
+    },
+    {
+      "at": "2025-12-19T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 40: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xbb903e."
+    },
+    {
+      "at": "2025-12-20T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 41: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x2a788c."
+    },
+    {
+      "at": "2025-12-20T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 42: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x75695f."
+    },
+    {
+      "at": "2025-12-20T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 43: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x675b92."
+    },
+    {
+      "at": "2025-12-20T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 44: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x3e6a82."
+    },
+    {
+      "at": "2025-12-20T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 45: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x1e3564."
+    },
+    {
+      "at": "2025-12-20T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 46: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x61fa04."
+    },
+    {
+      "at": "2025-12-20T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 47: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xae308e."
+    },
+    {
+      "at": "2025-12-20T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 48: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x60be5b."
+    },
+    {
+      "at": "2025-12-21T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 49: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xf39952."
+    },
+    {
+      "at": "2025-12-21T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 50: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x426be1."
+    },
+    {
+      "at": "2025-12-21T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 51: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x2f9e2b."
+    },
+    {
+      "at": "2025-12-21T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 52: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb9588b."
+    },
+    {
+      "at": "2025-12-21T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 53: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x31750b."
+    },
+    {
+      "at": "2025-12-21T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 54: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb8e24b."
+    },
+    {
+      "at": "2025-12-21T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 55: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x2e0679."
+    },
+    {
+      "at": "2025-12-21T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 56: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xc62650."
+    },
+    {
+      "at": "2025-12-22T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 57: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xaee8df."
+    },
+    {
+      "at": "2025-12-22T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 58: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe2902f."
+    },
+    {
+      "at": "2025-12-22T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 59: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x4a718e."
+    },
+    {
+      "at": "2025-12-22T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 60: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x1e7620."
+    },
+    {
+      "at": "2025-12-22T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 61: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x7b101d."
+    },
+    {
+      "at": "2025-12-22T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 62: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xc3a8c9."
+    },
+    {
+      "at": "2025-12-22T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 63: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x446078."
+    },
+    {
+      "at": "2025-12-22T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 64: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x261c79."
+    },
+    {
+      "at": "2025-12-23T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 65: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x5f43b2."
+    },
+    {
+      "at": "2025-12-23T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 66: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xfc48de."
+    },
+    {
+      "at": "2025-12-23T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 67: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x6f71d3."
+    },
+    {
+      "at": "2025-12-23T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 68: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x2f4bf3."
+    },
+    {
+      "at": "2025-12-23T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 69: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x564959."
+    },
+    {
+      "at": "2025-12-23T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 70: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x1989ed."
+    },
+    {
+      "at": "2025-12-23T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 71: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x9549fb."
+    },
+    {
+      "at": "2025-12-23T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 72: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x8eaba0."
+    },
+    {
+      "at": "2025-12-24T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 73: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x2fe841."
+    },
+    {
+      "at": "2025-12-24T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 74: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x51f760."
+    },
+    {
+      "at": "2025-12-24T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 75: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x5daf15."
+    },
+    {
+      "at": "2025-12-24T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 76: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x56339f."
+    },
+    {
+      "at": "2025-12-24T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 77: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x3062d0."
+    },
+    {
+      "at": "2025-12-24T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 78: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb311fe."
+    },
+    {
+      "at": "2025-12-24T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 79: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xefb525."
+    },
+    {
+      "at": "2025-12-24T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 80: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xa3e3ba."
+    },
+    {
+      "at": "2025-12-25T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 81: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x7f2669."
+    },
+    {
+      "at": "2025-12-25T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 82: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x5af53d."
+    },
+    {
+      "at": "2025-12-25T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 83: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x4ec4d7."
+    },
+    {
+      "at": "2025-12-25T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 84: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb788ae."
+    },
+    {
+      "at": "2025-12-25T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 85: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x627379."
+    },
+    {
+      "at": "2025-12-25T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 86: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x8d6112."
+    },
+    {
+      "at": "2025-12-25T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 87: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x6e3646."
+    },
+    {
+      "at": "2025-12-25T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 88: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x5df37d."
+    },
+    {
+      "at": "2025-12-26T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 89: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x1e8466."
+    },
+    {
+      "at": "2025-12-26T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 90: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x383be0."
+    },
+    {
+      "at": "2025-12-26T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 91: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xa92094."
+    },
+    {
+      "at": "2025-12-26T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 92: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x8a359c."
+    },
+    {
+      "at": "2025-12-26T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 93: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x2a4db9."
+    },
+    {
+      "at": "2025-12-26T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 94: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xec31cd."
+    },
+    {
+      "at": "2025-12-26T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 95: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x7cf68d."
+    },
+    {
+      "at": "2025-12-26T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 96: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xcdc12b."
+    },
+    {
+      "at": "2025-12-27T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 97: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x7d34eb."
+    },
+    {
+      "at": "2025-12-27T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 98: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x332015."
+    },
+    {
+      "at": "2025-12-27T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 99: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xed98be."
+    },
+    {
+      "at": "2025-12-27T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 100: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xbf7e65."
+    },
+    {
+      "at": "2025-12-27T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 101: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xa27952."
+    },
+    {
+      "at": "2025-12-27T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 102: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x93cac8."
+    },
+    {
+      "at": "2025-12-27T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 103: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb90d80."
+    },
+    {
+      "at": "2025-12-27T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 104: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xf46770."
+    },
+    {
+      "at": "2025-12-28T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 105: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x922864."
+    },
+    {
+      "at": "2025-12-28T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 106: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb090cc."
+    },
+    {
+      "at": "2025-12-28T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 107: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x031926."
+    },
+    {
+      "at": "2025-12-28T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 108: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x9a7107."
+    },
+    {
+      "at": "2025-12-28T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 109: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x30e8a0."
+    },
+    {
+      "at": "2025-12-28T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 110: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x8dc37f."
+    },
+    {
+      "at": "2025-12-28T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 111: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xa366fd."
+    },
+    {
+      "at": "2025-12-28T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 112: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x6409b7."
+    },
+    {
+      "at": "2025-12-29T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 113: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x13bfa9."
+    },
+    {
+      "at": "2025-12-29T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 114: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xf80712."
+    },
+    {
+      "at": "2025-12-29T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 115: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xa6f9d8."
+    },
+    {
+      "at": "2025-12-29T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 116: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x74393f."
+    },
+    {
+      "at": "2025-12-29T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 117: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x02b350."
+    },
+    {
+      "at": "2025-12-29T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 118: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x60c517."
+    },
+    {
+      "at": "2025-12-29T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 119: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x1223a8."
+    },
+    {
+      "at": "2025-12-29T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 120: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xd61bf1."
+    },
+    {
+      "at": "2025-12-30T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 121: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x5980ed."
+    },
+    {
+      "at": "2025-12-30T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 122: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x542878."
+    },
+    {
+      "at": "2025-12-30T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 123: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x4c31a0."
+    },
+    {
+      "at": "2025-12-30T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 124: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xc64ab0."
+    },
+    {
+      "at": "2025-12-30T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 125: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x38f693."
+    },
+    {
+      "at": "2025-12-30T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 126: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe0d036."
+    },
+    {
+      "at": "2025-12-30T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 127: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xeef978."
+    },
+    {
+      "at": "2025-12-30T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 128: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xd02c9b."
+    },
+    {
+      "at": "2025-12-31T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 129: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x437779."
+    },
+    {
+      "at": "2025-12-31T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 130: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xef49c5."
+    },
+    {
+      "at": "2025-12-31T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 131: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xa1f71e."
+    },
+    {
+      "at": "2025-12-31T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 132: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe7e11a."
+    },
+    {
+      "at": "2025-12-31T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 133: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x0f0ea6."
+    },
+    {
+      "at": "2025-12-31T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 134: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xebefc7."
+    },
+    {
+      "at": "2025-12-31T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 135: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb2468e."
+    },
+    {
+      "at": "2025-12-31T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 136: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x64e6a7."
+    },
+    {
+      "at": "2026-01-01T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 137: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x7c90ca."
+    },
+    {
+      "at": "2026-01-01T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 138: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xa02f34."
+    },
+    {
+      "at": "2026-01-01T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 139: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x35f144."
+    },
+    {
+      "at": "2026-01-01T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 140: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x7488eb."
+    },
+    {
+      "at": "2026-01-01T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 141: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x02e4c1."
+    },
+    {
+      "at": "2026-01-01T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 142: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x34fde1."
+    },
+    {
+      "at": "2026-01-01T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 143: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x532e7e."
+    },
+    {
+      "at": "2026-01-01T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 144: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x78ba42."
+    },
+    {
+      "at": "2026-01-02T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 145: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x365e03."
+    },
+    {
+      "at": "2026-01-02T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 146: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x4d5c47."
+    },
+    {
+      "at": "2026-01-02T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 147: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x2adc9b."
+    },
+    {
+      "at": "2026-01-02T09:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 148: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x2aed55."
+    },
+    {
+      "at": "2026-01-02T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 149: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x26eda5."
+    },
+    {
+      "at": "2026-01-02T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 150: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x165dd5."
+    },
+    {
+      "at": "2026-01-02T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 151: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x0023f9."
+    },
+    {
+      "at": "2026-01-02T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 152: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xafe666."
+    },
+    {
+      "at": "2026-01-03T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 153: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xc699ef."
+    },
+    {
+      "at": "2026-01-03T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 154: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xbec8e8."
+    },
+    {
+      "at": "2026-01-03T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 155: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x73fe24."
+    },
+    {
+      "at": "2026-01-03T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 156: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xca9b9d."
+    },
+    {
+      "at": "2026-01-03T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 157: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x8a68eb."
+    },
+    {
+      "at": "2026-01-03T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 158: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x0c7c51."
+    },
+    {
+      "at": "2026-01-03T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 159: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x3205c1."
+    },
+    {
+      "at": "2026-01-03T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 160: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb35446."
+    },
+    {
+      "at": "2026-01-04T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 161: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xc8e4c5."
+    },
+    {
+      "at": "2026-01-04T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 162: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xce0ebc."
+    },
+    {
+      "at": "2026-01-04T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 163: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x4ff152."
+    },
+    {
+      "at": "2026-01-04T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 164: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xf78ea0."
+    },
+    {
+      "at": "2026-01-04T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 165: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x86313b."
+    },
+    {
+      "at": "2026-01-04T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 166: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x086001."
+    },
+    {
+      "at": "2026-01-04T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 167: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x80c4b5."
+    },
+    {
+      "at": "2026-01-04T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 168: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xaa09fb."
+    },
+    {
+      "at": "2026-01-05T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 169: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x471644."
+    },
+    {
+      "at": "2026-01-05T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 170: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x872825."
+    },
+    {
+      "at": "2026-01-05T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 171: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe2bc20."
+    },
+    {
+      "at": "2026-01-05T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 172: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x7556e2."
+    },
+    {
+      "at": "2026-01-05T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 173: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x3de051."
+    },
+    {
+      "at": "2026-01-05T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 174: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x0f3feb."
+    },
+    {
+      "at": "2026-01-05T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 175: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe5ca65."
+    },
+    {
+      "at": "2026-01-05T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 176: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x93f3f1."
+    },
+    {
+      "at": "2026-01-06T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 177: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xd60f70."
+    },
+    {
+      "at": "2026-01-06T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 178: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xedd478."
+    },
+    {
+      "at": "2026-01-06T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 179: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x255cad."
+    },
+    {
+      "at": "2026-01-06T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 180: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x40861b."
+    },
+    {
+      "at": "2026-01-06T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 181: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb23658."
+    },
+    {
+      "at": "2026-01-06T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 182: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xd5c2cf."
+    },
+    {
+      "at": "2026-01-06T18:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 183: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xac13d2."
+    },
+    {
+      "at": "2026-01-06T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 184: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x3869e1."
+    },
+    {
+      "at": "2026-01-07T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 185: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe31aac."
+    },
+    {
+      "at": "2026-01-07T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 186: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xaa1b22."
+    },
+    {
+      "at": "2026-01-07T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 187: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x0d67b9."
+    },
+    {
+      "at": "2026-01-07T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 188: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x9bd65f."
+    },
+    {
+      "at": "2026-01-07T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 189: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xc67f66."
+    },
+    {
+      "at": "2026-01-07T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 190: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb08ad9."
+    },
+    {
+      "at": "2026-01-07T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 191: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x2058ff."
+    },
+    {
+      "at": "2026-01-07T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 192: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xceaef5."
+    },
+    {
+      "at": "2026-01-08T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 193: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x459d5f."
+    },
+    {
+      "at": "2026-01-08T03:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 194: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x6b15ad."
+    },
+    {
+      "at": "2026-01-08T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 195: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xa3271b."
+    },
+    {
+      "at": "2026-01-08T09:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 196: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb48a89."
+    },
+    {
+      "at": "2026-01-08T12:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 197: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x3af2ea."
+    },
+    {
+      "at": "2026-01-08T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 198: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xeded83."
+    },
+    {
+      "at": "2026-01-08T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 199: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x333c4c."
+    },
+    {
+      "at": "2026-01-08T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 200: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x49043a."
+    },
+    {
+      "at": "2026-01-09T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 201: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xbc7078."
+    },
+    {
+      "at": "2026-01-09T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 202: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x0ca3c8."
+    },
+    {
+      "at": "2026-01-09T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 203: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xdaf063."
+    },
+    {
+      "at": "2026-01-09T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 204: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x038811."
+    },
+    {
+      "at": "2026-01-09T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 205: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x631f39."
+    },
+    {
+      "at": "2026-01-09T15:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 206: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x20f019."
+    },
+    {
+      "at": "2026-01-09T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 207: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xec8419."
+    },
+    {
+      "at": "2026-01-09T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 208: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xcd842f."
+    },
+    {
+      "at": "2026-01-10T00:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 209: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xc9d501."
+    },
+    {
+      "at": "2026-01-10T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 210: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x4bc3ad."
+    },
+    {
+      "at": "2026-01-10T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 211: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xd15938."
+    },
+    {
+      "at": "2026-01-10T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 212: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x1792bc."
+    },
+    {
+      "at": "2026-01-10T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 213: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe33f02."
+    },
+    {
+      "at": "2026-01-10T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 214: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x2efff7."
+    },
+    {
+      "at": "2026-01-10T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 215: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe0c465."
+    },
+    {
+      "at": "2026-01-10T21:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 216: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x2ff549."
+    },
+    {
+      "at": "2026-01-11T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 217: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x3ba413."
+    },
+    {
+      "at": "2026-01-11T03:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 218: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x42a650."
+    },
+    {
+      "at": "2026-01-11T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 219: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xffb407."
+    },
+    {
+      "at": "2026-01-11T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 220: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x10a9bb."
+    },
+    {
+      "at": "2026-01-11T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 221: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x770218."
+    },
+    {
+      "at": "2026-01-11T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 222: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xaa66a8."
+    },
+    {
+      "at": "2026-01-11T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 223: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x15a02f."
+    },
+    {
+      "at": "2026-01-11T21:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 224: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x20ef83."
+    },
+    {
+      "at": "2026-01-12T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 225: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x0ac59d."
+    },
+    {
+      "at": "2026-01-12T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 226: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xa1d492."
+    },
+    {
+      "at": "2026-01-12T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 227: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x517a3a."
+    },
+    {
+      "at": "2026-01-12T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 228: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x8acae3."
+    },
+    {
+      "at": "2026-01-12T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 229: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x5e546a."
+    },
+    {
+      "at": "2026-01-12T15:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 230: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xc11387."
+    },
+    {
+      "at": "2026-01-12T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 231: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x40932e."
+    },
+    {
+      "at": "2026-01-12T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 232: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe87bcd."
+    },
+    {
+      "at": "2026-01-13T00:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 233: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x95fabc."
+    },
+    {
+      "at": "2026-01-13T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 234: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xc755c9."
+    },
+    {
+      "at": "2026-01-13T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 235: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x5c0959."
+    },
+    {
+      "at": "2026-01-13T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 236: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xd04797."
+    },
+    {
+      "at": "2026-01-13T12:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 237: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xf33cec."
+    },
+    {
+      "at": "2026-01-13T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 238: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x2f8008."
+    },
+    {
+      "at": "2026-01-13T18:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 239: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xc6a990."
+    },
+    {
+      "at": "2026-01-13T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 240: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x1b30b4."
+    },
+    {
+      "at": "2026-01-14T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 241: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe02b24."
+    },
+    {
+      "at": "2026-01-14T03:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 242: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xe221f7."
+    },
+    {
+      "at": "2026-01-14T06:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 243: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x580c5b."
+    },
+    {
+      "at": "2026-01-14T09:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 244: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xbddd32."
+    },
+    {
+      "at": "2026-01-14T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 245: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xfc02a6."
+    },
+    {
+      "at": "2026-01-14T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 246: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xf3890c."
+    },
+    {
+      "at": "2026-01-14T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 247: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x8246c9."
+    },
+    {
+      "at": "2026-01-14T21:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 248: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb8baa5."
+    },
+    {
+      "at": "2026-01-15T00:00:00Z",
+      "author": "svc_pli_ops",
+      "note": "Investigation step 249: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x5c4704."
+    },
+    {
+      "at": "2026-01-15T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 250: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xd57e77."
+    },
+    {
+      "at": "2026-01-15T06:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 251: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x40350e."
+    },
+    {
+      "at": "2026-01-15T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 252: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x4b6958."
+    },
+    {
+      "at": "2026-01-15T12:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 253: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x0351bc."
+    },
+    {
+      "at": "2026-01-15T15:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 254: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xad82c7."
+    },
+    {
+      "at": "2026-01-15T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 255: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xde0700."
+    },
+    {
+      "at": "2026-01-15T21:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 256: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x51836e."
+    },
+    {
+      "at": "2026-01-16T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 257: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xdf623e."
+    },
+    {
+      "at": "2026-01-16T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 258: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x4b2ef5."
+    },
+    {
+      "at": "2026-01-16T06:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 259: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x5b37c2."
+    },
+    {
+      "at": "2026-01-16T09:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 260: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x3589fc."
+    },
+    {
+      "at": "2026-01-16T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 261: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xec0a05."
+    },
+    {
+      "at": "2026-01-16T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 262: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xce1d2e."
+    },
+    {
+      "at": "2026-01-16T18:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 263: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x1621de."
+    },
+    {
+      "at": "2026-01-16T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 264: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x564603."
+    },
+    {
+      "at": "2026-01-17T00:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 265: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xfadd5d."
+    },
+    {
+      "at": "2026-01-17T03:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 266: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x52d801."
+    },
+    {
+      "at": "2026-01-17T06:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 267: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xca7277."
+    },
+    {
+      "at": "2026-01-17T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 268: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x4f1879."
+    },
+    {
+      "at": "2026-01-17T12:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 269: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x3e5775."
+    },
+    {
+      "at": "2026-01-17T15:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 270: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb70ffb."
+    },
+    {
+      "at": "2026-01-17T18:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 271: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x3f54fd."
+    },
+    {
+      "at": "2026-01-17T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 272: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xf2069d."
+    },
+    {
+      "at": "2026-01-18T00:00:00Z",
+      "author": "svc_cobol_ops",
+      "note": "Investigation step 273: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xf346ed."
+    },
+    {
+      "at": "2026-01-18T03:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 274: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x5731f1."
+    },
+    {
+      "at": "2026-01-18T06:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 275: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xc2c29d."
+    },
+    {
+      "at": "2026-01-18T09:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 276: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x59f79d."
+    },
+    {
+      "at": "2026-01-18T12:00:00Z",
+      "author": "l2_core",
+      "note": "Investigation step 277: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0x462ad9."
+    },
+    {
+      "at": "2026-01-18T15:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 278: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xf8a7b3."
+    },
+    {
+      "at": "2026-01-18T18:00:00Z",
+      "author": "merger_mule",
+      "note": "Investigation step 279: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xb231d6."
+    },
+    {
+      "at": "2026-01-18T21:00:00Z",
+      "author": "svc_azure_ops",
+      "note": "Investigation step 280: validated deposit path on PNB. Correlation to merger reconciliation queue MERGER-0260. Attached log excerpt and DB2 plan hash 0xac1254."
+    }
+  ],
+  "relatedConfigurationItems": [
+    {"ci": "PNB-deposit-CI-000", "class": "cmdb_ci_appl"},
+    {"ci": "PNB-deposit-CI-001", "class": "cmdb_ci_appl"},
+    {"ci": "PNB-deposit-CI-002", "class": "cmdb_ci_appl"},
+    {"ci": "PNB-deposit-CI-003", "class": "cmdb_ci_appl"},
+    {"ci": "PNB-deposit-CI-004", "class": "cmdb_ci_appl"},
+    {"ci": "PNB-deposit-CI-005", "class": "cmdb_ci_appl"},
+    {"ci": "PNB-deposit-CI-006", "class": "cmdb_ci_appl"},
+    {"ci": "PNB-deposit-CI-007", "class": "cmdb_ci_appl"}
+  ],
+  "approvals": [
+    {"role": "CAB", "approver": "approver0@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver1@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver2@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver3@pnb-acb.internal", "status": "approved"},
+    {"role": "CAB", "approver": "approver4@pnb-acb.internal", "status": "approved"}
+  ]
+}

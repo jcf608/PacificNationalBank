@@ -81,16 +81,25 @@ docker compose up --build
 | MuleSoft reconciliation | 8090 |
 | IMS sim (PNB / ACB) | 9998 / 9999 |
 
-## Code generators
+## Code generators & enterprise corpus (~3M lines)
 
-Bulk expansion (optional):
+The full suite targets **~3 million lines** including legacy/cloud code, **ITSM tickets**,
+**IPC integration tickets**, **architecture documentation**, runbooks, change records, and audit streams.
 
 ```bash
+make corpus          # generate until repo reaches ~3M lines (batched git commits)
+make corpus-stats    # breakdown by category
 python3 generators/generate_batch.py 1
 python3 generators/generate_supplemental.py
 ```
 
-Configure output paths in generator scripts before running at scale.
+| Artefact | Location |
+|----------|----------|
+| ITSM (INC/CHG/PRB/REQ) | `platform/operations/itsm/tickets/` |
+| IPC (merger integration) | `platform/operations/ipc/tickets/` |
+| Architecture specs | `docs/architecture/generated/` |
+| Runbooks | `docs/operations/runbooks/generated/` |
+| Generated COBOL/PL/I | `pnb/legacy/cobol/programs/generated/`, `acb/legacy/pli/programs/generated/` |
 
 ## Licence
 
