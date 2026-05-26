@@ -1,0 +1,67 @@
+-- ============================================================
+-- DDL for LOAN_HIST_16_0024
+-- Pacific National Bank — DB2 Schema
+-- ============================================================
+CREATE TABLE PNB.LOAN_HIST_16_0024 (
+    COL_000    DECIMAL(9,6) ,
+    COL_001    BIGINT NOT NULL,
+    COL_002    BIGINT NOT NULL,
+    COL_003    CHAR(1) NOT NULL,
+    COL_004    CHAR(1) ,
+    COL_005    VARCHAR(200) ,
+    COL_006    CHAR(1) ,
+    COL_007    TIMESTAMP NOT NULL,
+    COL_008    CHAR(3) ,
+    COL_009    CHAR(1) ,
+    COL_010    VARCHAR(200) ,
+    COL_011    DECIMAL(9,6) ,
+    COL_012    INTEGER NOT NULL,
+    COL_013    DATE ,
+    COL_014    INTEGER ,
+    COL_015    DATE NOT NULL,
+    COL_016    BIGINT ,
+    COL_017    TIMESTAMP ,
+    COL_018    TIMESTAMP ,
+    COL_019    DATE NOT NULL,
+    COL_020    DECIMAL(9,6) ,
+    COL_021    SMALLINT ,
+    COL_022    DECIMAL(15,2) ,
+    COL_023    CHAR(16) ,
+    COL_024    BIGINT NOT NULL,
+    COL_025    TIMESTAMP ,
+    COL_026    VARCHAR(200) ,
+    COL_027    BIGINT ,
+    COL_028    INTEGER NOT NULL,
+    COL_029    CHAR(1) ,
+    COL_030    CHAR(1) ,
+) IN PNBTS01;
+
+CREATE UNIQUE INDEX PNB.IX_LOAN_H160024_PK
+    ON PNB.LOAN_HIST_16_0024 (COL_000);
+
+CREATE OR REPLACE PROCEDURE PNB.SP_LOAN_H160024 (
+    IN p_key CHAR(16),
+    OUT p_result INTEGER
+)
+LANGUAGE SQL
+BEGIN
+    DECLARE v_00 DECIMAL(15,2);
+    DECLARE v_01 DECIMAL(15,2);
+    DECLARE v_02 DECIMAL(15,2);
+    DECLARE v_03 DECIMAL(15,2);
+    DECLARE v_04 DECIMAL(15,2);
+    DECLARE v_05 DECIMAL(15,2);
+    DECLARE v_06 DECIMAL(15,2);
+    DECLARE v_07 DECIMAL(15,2);
+    DECLARE v_08 DECIMAL(15,2);
+    DECLARE v_09 DECIMAL(15,2);
+    DECLARE v_10 DECIMAL(15,2);
+    DECLARE v_11 DECIMAL(15,2);
+    DECLARE v_12 DECIMAL(15,2);
+    DECLARE v_13 DECIMAL(15,2);
+    DECLARE v_14 DECIMAL(15,2);
+    SELECT COL_001 INTO v_00
+        FROM PNB.LOAN_HIST_16_0024
+        WHERE COL_000 = p_key;
+    SET p_result = 0;
+END;
