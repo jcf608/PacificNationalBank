@@ -1,0 +1,12 @@
+package com.pnb.generated;
+
+public class {{ entity.name }} {
+{% for field in entity.fields %}
+    private String {{ field.name }};
+{% endfor %}
+
+{% for field in entity.fields %}
+    public String get{{ field.name[0]|upper + field.name[1:] }}() { return {{ field.name }}; }
+    public void set{{ field.name[0]|upper + field.name[1:] }}(String {{ field.name }}) { this.{{ field.name }} = {{ field.name }}; }
+{% endfor %}
+}

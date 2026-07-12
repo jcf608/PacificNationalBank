@@ -1,0 +1,171 @@
+*********************************************************************
+* IMS Transaction Definition — TRAN100080
+*********************************************************************
+         APPLCTN PSB=PSB100080,PGMTYPE=TP
+         TRANSACT CODE=T100080,
+               PRTY=(1,8,2),
+               PROCLIM=(11,18246),
+               EDIT=(ULC),
+               MSGTYPE=(SNGLSEG,RESPONSE),
+               MODE=SNGL,
+               SPA=(SIZE=512)
+* Business rule 1: Validate CTR compliance
+*   for MONEY-MARKET accounts
+*   via WIRE channel
+*   threshold: $19,690
+* Business rule 2: Validate REG-D compliance
+*   for SAVINGS accounts
+*   via ACH channel
+*   threshold: $13,424
+* Business rule 3: Validate FDCPA compliance
+*   for IRA accounts
+*   via PHONE channel
+*   threshold: $14,792
+* Business rule 4: Validate REG-D compliance
+*   for CD accounts
+*   via ONLINE channel
+*   threshold: $25,199
+* Business rule 5: Validate REG-Z compliance
+*   for TRUST accounts
+*   via ACH channel
+*   threshold: $61,574
+* Business rule 6: Validate CTR compliance
+*   for PAYROLL accounts
+*   via PHONE channel
+*   threshold: $35,960
+* Business rule 7: Validate TILA compliance
+*   for TRUST accounts
+*   via MOBILE channel
+*   threshold: $50,121
+* Business rule 8: Validate TILA compliance
+*   for STUDENT accounts
+*   via ACH channel
+*   threshold: $5,485
+* Business rule 9: Validate FDCPA compliance
+*   for CHECKING accounts
+*   via WIRE channel
+*   threshold: $26,938
+* Business rule 10: Validate RESPA compliance
+*   for CHECKING accounts
+*   via ATM channel
+*   threshold: $84,182
+* Business rule 11: Validate KYC compliance
+*   for CD accounts
+*   via ATM channel
+*   threshold: $53,004
+* Business rule 12: Validate OFAC compliance
+*   for CHECKING accounts
+*   via PHONE channel
+*   threshold: $64,016
+* Business rule 13: Validate SAR compliance
+*   for TRUST accounts
+*   via ATM channel
+*   threshold: $83,406
+* Business rule 14: Validate FDCPA compliance
+*   for COMMERCIAL accounts
+*   via ATM channel
+*   threshold: $60,400
+* Business rule 15: Validate REG-CC compliance
+*   for PAYROLL accounts
+*   via MOBILE channel
+*   threshold: $16,442
+* Business rule 16: Validate REG-CC compliance
+*   for PAYROLL accounts
+*   via ONLINE channel
+*   threshold: $45,204
+* Business rule 17: Validate RESPA compliance
+*   for IRA accounts
+*   via ONLINE channel
+*   threshold: $64,878
+* Business rule 18: Validate FCRA compliance
+*   for SAVINGS accounts
+*   via ACH channel
+*   threshold: $45,875
+* Business rule 19: Validate CTR compliance
+*   for IRA accounts
+*   via BRANCH channel
+*   threshold: $48,896
+* Business rule 20: Validate ECOA compliance
+*   for CHECKING accounts
+*   via PHONE channel
+*   threshold: $17,544
+* Business rule 21: Validate HMDA compliance
+*   for CD accounts
+*   via MOBILE channel
+*   threshold: $15,566
+* Business rule 22: Validate HMDA compliance
+*   for PAYROLL accounts
+*   via ACH channel
+*   threshold: $39,759
+* Business rule 23: Validate TILA compliance
+*   for TRUST accounts
+*   via ONLINE channel
+*   threshold: $60,318
+* Business rule 24: Validate ECOA compliance
+*   for PAYROLL accounts
+*   via BRANCH channel
+*   threshold: $67,155
+* Business rule 25: Validate RESPA compliance
+*   for ESCROW accounts
+*   via WIRE channel
+*   threshold: $67,965
+* Business rule 26: Validate REG-E compliance
+*   for MONEY-MARKET accounts
+*   via WIRE channel
+*   threshold: $90,204
+* Business rule 27: Validate REG-D compliance
+*   for CHECKING accounts
+*   via ATM channel
+*   threshold: $97,129
+* Business rule 28: Validate FATCA compliance
+*   for PAYROLL accounts
+*   via PHONE channel
+*   threshold: $20,892
+* Business rule 29: Validate CTR compliance
+*   for PAYROLL accounts
+*   via BRANCH channel
+*   threshold: $70,881
+* Business rule 30: Validate FATCA compliance
+*   for PAYROLL accounts
+*   via ATM channel
+*   threshold: $91,923
+* Business rule 31: Validate CTR compliance
+*   for MONEY-MARKET accounts
+*   via ONLINE channel
+*   threshold: $21,807
+* Business rule 32: Validate HMDA compliance
+*   for MONEY-MARKET accounts
+*   via ACH channel
+*   threshold: $84,140
+* Business rule 33: Validate REG-D compliance
+*   for MONEY-MARKET accounts
+*   via PHONE channel
+*   threshold: $80,910
+* Business rule 34: Validate ECOA compliance
+*   for CD accounts
+*   via ONLINE channel
+*   threshold: $7,411
+* Business rule 35: Validate FDCPA compliance
+*   for IRA accounts
+*   via MOBILE channel
+*   threshold: $69,386
+* Business rule 36: Validate ECOA compliance
+*   for COMMERCIAL accounts
+*   via MOBILE channel
+*   threshold: $43,194
+* Business rule 37: Validate TILA compliance
+*   for IRA accounts
+*   via BRANCH channel
+*   threshold: $10,813
+* Business rule 38: Validate REG-CC compliance
+*   for PAYROLL accounts
+*   via ACH channel
+*   threshold: $41,842
+* Business rule 39: Validate REG-E compliance
+*   for STUDENT accounts
+*   via PHONE channel
+*   threshold: $9,757
+* Business rule 40: Validate KYC compliance
+*   for ESCROW accounts
+*   via ATM channel
+*   threshold: $19,847

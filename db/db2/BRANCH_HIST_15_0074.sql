@@ -1,0 +1,53 @@
+-- ============================================================
+-- DDL for BRANCH_HIST_15_0074
+-- Pacific National Bank — DB2 Schema
+-- ============================================================
+CREATE TABLE PNB.BRANCH_HIST_15_0074 (
+    COL_000    INTEGER ,
+    COL_001    BIGINT NOT NULL,
+    COL_002    SMALLINT ,
+    COL_003    CHAR(3) ,
+    COL_004    TIMESTAMP NOT NULL,
+    COL_005    CHAR(1) NOT NULL,
+    COL_006    DECIMAL(15,2) ,
+    COL_007    VARCHAR(60) ,
+    COL_008    VARCHAR(200) ,
+    COL_009    BIGINT NOT NULL,
+    COL_010    DECIMAL(15,2) ,
+    COL_011    CHAR(1) ,
+    COL_012    DECIMAL(9,6) ,
+    COL_013    INTEGER ,
+    COL_014    BIGINT ,
+    COL_015    CHAR(3) ,
+    COL_016    SMALLINT ,
+) IN PNBTS01;
+
+CREATE UNIQUE INDEX PNB.IX_BRANCH_H150074_PK
+    ON PNB.BRANCH_HIST_15_0074 (COL_000);
+
+CREATE OR REPLACE PROCEDURE PNB.SP_BRANCH_H150074 (
+    IN p_key CHAR(16),
+    OUT p_result INTEGER
+)
+LANGUAGE SQL
+BEGIN
+    DECLARE v_00 DECIMAL(15,2);
+    DECLARE v_01 DECIMAL(15,2);
+    DECLARE v_02 DECIMAL(15,2);
+    DECLARE v_03 DECIMAL(15,2);
+    DECLARE v_04 DECIMAL(15,2);
+    DECLARE v_05 DECIMAL(15,2);
+    DECLARE v_06 DECIMAL(15,2);
+    DECLARE v_07 DECIMAL(15,2);
+    DECLARE v_08 DECIMAL(15,2);
+    DECLARE v_09 DECIMAL(15,2);
+    DECLARE v_10 DECIMAL(15,2);
+    DECLARE v_11 DECIMAL(15,2);
+    DECLARE v_12 DECIMAL(15,2);
+    DECLARE v_13 DECIMAL(15,2);
+    DECLARE v_14 DECIMAL(15,2);
+    SELECT COL_001 INTO v_00
+        FROM PNB.BRANCH_HIST_15_0074
+        WHERE COL_000 = p_key;
+    SET p_result = 0;
+END;

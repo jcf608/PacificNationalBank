@@ -1,0 +1,40 @@
+*********************************************************************
+* PSB for PSBHOLDV12
+* Pacific National Bank — IMS/DB Program Specification
+*********************************************************************
+         PCB   TYPE=DB,DBDNAME=ACCTDBV00,
+               PROCOPT=GR,
+               KEYLEN=16,
+               POS=SINGLE
+         SENSEG NAME=SEG000,
+               PARENT=0,
+               PROCOPT=A
+         SENSEG NAME=SEG001,
+               PARENT=SEG000,
+               PROCOPT=A
+         SENSEG NAME=SEG002,
+               PARENT=SEG001,
+               PROCOPT=A
+         SENSEG NAME=SEG003,
+               PARENT=SEG002,
+               PROCOPT=A
+         PCB   TYPE=DB,DBDNAME=CUSTDBV01,
+               PROCOPT=G,
+               KEYLEN=20,
+               POS=SINGLE
+         SENSEG NAME=SEG000,
+               PARENT=0,
+               PROCOPT=A
+         SENSEG NAME=SEG001,
+               PARENT=SEG000,
+               PROCOPT=A
+         SENSEG NAME=SEG002,
+               PARENT=SEG001,
+               PROCOPT=A
+         SENSEG NAME=SEG003,
+               PARENT=SEG002,
+               PROCOPT=A
+*
+         PSBGEN LANG=COBOL,PSBNAME=PSBHOLDV12,
+               IOASIZE=4096
+         END

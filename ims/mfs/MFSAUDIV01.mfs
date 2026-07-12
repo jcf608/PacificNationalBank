@@ -1,0 +1,50 @@
+*********************************************************************
+* MFS for MFSAUDIV01
+* Pacific National Bank — IMS/TM Message Format
+*********************************************************************
+         PRINT NOGEN
+MFSAUDIV01M  MSG   TYPE=INPUT,SOR=(MFSAUDIV01I,IGNORE),
+               NXT=MFSAUDIV01O
+         SEG
+         MFLD  'FLD000',LTH=30,
+               JUST=L
+         MFLD  'FLD001',LTH=8,
+               JUST=L
+         MFLD  'FLD002',LTH=10,
+               JUST=L
+         MFLD  'FLD003',LTH=40,
+               JUST=R
+         MFLD  'FLD004',LTH=16,
+               JUST=R
+         MFLD  'FLD005',LTH=40,
+               JUST=L
+         MSGEND
+*
+MFSAUDIV01O  MSG   TYPE=OUTPUT,SOR=(MFSAUDIV01D,IGNORE),
+               NXT=MFSAUDIV01M
+         SEG
+         MFLD  'FLD000',LTH=30
+         MFLD  'FLD001',LTH=8
+         MFLD  'FLD002',LTH=10
+         MFLD  'FLD003',LTH=40
+         MFLD  'FLD004',LTH=16
+         MFLD  'FLD005',LTH=40
+         MSGEND
+*
+MFSAUDIV01I  FMT
+         DEV   TYPE=(3270,2),FEAT=(IGNORE),DSCA=X'0020'
+         DIV   TYPE=INOUT
+         DFLD  'FLD000',LTH=30,
+               POS=(1,1),ATTR=(PROT,NUM)
+         DFLD  'FLD001',LTH=8,
+               POS=(1,33),ATTR=(PROT,NUM)
+         DFLD  'FLD002',LTH=10,
+               POS=(1,43),ATTR=(PROT,NUM)
+         DFLD  'FLD003',LTH=40,
+               POS=(1,55),ATTR=(PROT,NUM)
+         DFLD  'FLD004',LTH=16,
+               POS=(2,17),ATTR=(PROT,NUM)
+         DFLD  'FLD005',LTH=40,
+               POS=(2,35),ATTR=(PROT,NUM)
+         FMTEND
+         END

@@ -1,0 +1,45 @@
+*********************************************************************
+* MFS for MFSALERV00
+* Pacific National Bank — IMS/TM Message Format
+*********************************************************************
+         PRINT NOGEN
+MFSALERV00M  MSG   TYPE=INPUT,SOR=(MFSALERV00I,IGNORE),
+               NXT=MFSALERV00O
+         SEG
+         MFLD  'FLD000',LTH=12,
+               JUST=L
+         MFLD  'FLD001',LTH=40,
+               JUST=L
+         MFLD  'FLD002',LTH=40,
+               JUST=L
+         MFLD  'FLD003',LTH=8,
+               JUST=R
+         MFLD  'FLD004',LTH=20,
+               JUST=R
+         MSGEND
+*
+MFSALERV00O  MSG   TYPE=OUTPUT,SOR=(MFSALERV00D,IGNORE),
+               NXT=MFSALERV00M
+         SEG
+         MFLD  'FLD000',LTH=12
+         MFLD  'FLD001',LTH=40
+         MFLD  'FLD002',LTH=40
+         MFLD  'FLD003',LTH=8
+         MFLD  'FLD004',LTH=20
+         MSGEND
+*
+MFSALERV00I  FMT
+         DEV   TYPE=(3270,2),FEAT=(IGNORE),DSCA=X'0020'
+         DIV   TYPE=INOUT
+         DFLD  'FLD000',LTH=12,
+               POS=(1,1),ATTR=(PROT,NUM)
+         DFLD  'FLD001',LTH=40,
+               POS=(1,15),ATTR=(PROT,NUM)
+         DFLD  'FLD002',LTH=40,
+               POS=(1,57),ATTR=(PROT,NUM)
+         DFLD  'FLD003',LTH=8,
+               POS=(2,19),ATTR=(PROT,NUM)
+         DFLD  'FLD004',LTH=20,
+               POS=(2,29),ATTR=(PROT,NUM)
+         FMTEND
+         END

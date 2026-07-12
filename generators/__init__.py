@@ -1,0 +1,1 @@
+"""PNB synthetic generator framework."""

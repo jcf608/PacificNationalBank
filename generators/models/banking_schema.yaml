@@ -1,0 +1,29 @@
+domain: RetailBanking
+version: 1.0
+entities:
+  - name: CustomerProfile
+    table: CUSTOMER_PROFILE
+    copybook: CPYCUSTPR
+    fields:
+      - {name: customer_id, type: CHAR, length: 12}
+      - {name: legal_name, type: VARCHAR, length: 80}
+      - {name: segment_code, type: CHAR, length: 4}
+      - {name: kyc_status, type: CHAR, length: 2}
+  - name: AccountLedger
+    table: ACCOUNT_LEDGER
+    copybook: CPYACCLG
+    fields:
+      - {name: account_id, type: CHAR, length: 14}
+      - {name: customer_id, type: CHAR, length: 12}
+      - {name: product_code, type: CHAR, length: 8}
+      - {name: currency, type: CHAR, length: 3}
+      - {name: available_balance, type: DECIMAL, length: 19}
+  - name: TransactionEvent
+    table: TRANSACTION_EVENT
+    copybook: CPYTXNEV
+    fields:
+      - {name: event_id, type: CHAR, length: 20}
+      - {name: account_id, type: CHAR, length: 14}
+      - {name: txn_type, type: CHAR, length: 16}
+      - {name: amount, type: DECIMAL, length: 19}
+      - {name: posting_date, type: DATE, length: 10}

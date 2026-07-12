@@ -1,0 +1,75 @@
+*********************************************************************
+* MFS for MFSAUDIV06
+* Pacific National Bank — IMS/TM Message Format
+*********************************************************************
+         PRINT NOGEN
+MFSAUDIV06M  MSG   TYPE=INPUT,SOR=(MFSAUDIV06I,IGNORE),
+               NXT=MFSAUDIV06O
+         SEG
+         MFLD  'FLD000',LTH=40,
+               JUST=L
+         MFLD  'FLD001',LTH=40,
+               JUST=L
+         MFLD  'FLD002',LTH=30,
+               JUST=R
+         MFLD  'FLD003',LTH=10,
+               JUST=R
+         MFLD  'FLD004',LTH=40,
+               JUST=L
+         MFLD  'FLD005',LTH=40,
+               JUST=L
+         MFLD  'FLD006',LTH=10,
+               JUST=R
+         MFLD  'FLD007',LTH=8,
+               JUST=L
+         MFLD  'FLD008',LTH=12,
+               JUST=L
+         MFLD  'FLD009',LTH=16,
+               JUST=R
+         MFLD  'FLD010',LTH=20,
+               JUST=R
+         MSGEND
+*
+MFSAUDIV06O  MSG   TYPE=OUTPUT,SOR=(MFSAUDIV06D,IGNORE),
+               NXT=MFSAUDIV06M
+         SEG
+         MFLD  'FLD000',LTH=40
+         MFLD  'FLD001',LTH=40
+         MFLD  'FLD002',LTH=30
+         MFLD  'FLD003',LTH=10
+         MFLD  'FLD004',LTH=40
+         MFLD  'FLD005',LTH=40
+         MFLD  'FLD006',LTH=10
+         MFLD  'FLD007',LTH=8
+         MFLD  'FLD008',LTH=12
+         MFLD  'FLD009',LTH=16
+         MFLD  'FLD010',LTH=20
+         MSGEND
+*
+MFSAUDIV06I  FMT
+         DEV   TYPE=(3270,2),FEAT=(IGNORE),DSCA=X'0020'
+         DIV   TYPE=INOUT
+         DFLD  'FLD000',LTH=40,
+               POS=(1,1),ATTR=(PROT,NUM)
+         DFLD  'FLD001',LTH=40,
+               POS=(1,43),ATTR=(PROT,NUM)
+         DFLD  'FLD002',LTH=30,
+               POS=(2,5),ATTR=(PROT,NUM)
+         DFLD  'FLD003',LTH=10,
+               POS=(2,37),ATTR=(PROT,NUM)
+         DFLD  'FLD004',LTH=40,
+               POS=(2,49),ATTR=(PROT,NUM)
+         DFLD  'FLD005',LTH=40,
+               POS=(3,11),ATTR=(PROT,NUM)
+         DFLD  'FLD006',LTH=10,
+               POS=(3,53),ATTR=(PROT,NUM)
+         DFLD  'FLD007',LTH=8,
+               POS=(3,65),ATTR=(PROT,NUM)
+         DFLD  'FLD008',LTH=12,
+               POS=(3,75),ATTR=(PROT,NUM)
+         DFLD  'FLD009',LTH=16,
+               POS=(4,9),ATTR=(PROT,NUM)
+         DFLD  'FLD010',LTH=20,
+               POS=(4,27),ATTR=(PROT,NUM)
+         FMTEND
+         END

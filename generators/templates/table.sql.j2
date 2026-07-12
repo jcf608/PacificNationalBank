@@ -1,0 +1,5 @@
+CREATE TABLE PNB.{{ entity.table }} (
+{% for field in entity.fields %}
+    {{ field.name|upper }} VARCHAR({{ field.length }}){% if not field.nullable %} NOT NULL{% endif %}{% if not loop.last %},{% endif %}
+{% endfor %}
+);

@@ -1,0 +1,240 @@
+/*********************************************************************/
+/* PLROPER03V03 — PL/I OPERATIONAL Risk Analytics V3                                    */
+/* Pacific National Bank — PL/I Transaction Processing              */
+/*********************************************************************/
+
+PLROPER03V03: PROCEDURE OPTIONS(MAIN);
+
+  /* Standard includes */
+  %INCLUDE PNBACCT;
+  %INCLUDE PNBCUST;
+  %INCLUDE PNBTXN;
+  %INCLUDE PNBERR;
+
+  /* Module declarations */
+  DCL program_name  CHAR(12) INIT('PLROPER03V03');
+  DCL return_code   FIXED BIN(31) INIT(0);
+  DCL error_msg     CHAR(80) INIT('');
+  DCL records_read  FIXED BIN(31) INIT(0);
+  DCL records_ok    FIXED BIN(31) INIT(0);
+  DCL records_err   FIXED BIN(31) INIT(0);
+  DCL eof_flag      BIT(1) INIT('0'B);
+  DCL (ADDR, LENGTH, SUBSTR, INDEX, VERIFY, TRANSLATE,
+       DATETIME, TRIM, HIGH, LOW) BUILTIN;
+
+  DCL input_buffer   CHAR(600);
+  DCL output_buffer  CHAR(600);
+  DCL INFILE         FILE RECORD INPUT;
+  DCL OUTFILE        FILE RECORD OUTPUT;
+  DCL ERRFILE        FILE RECORD OUTPUT;
+  DCL risk_score     FIXED DEC(5,2) INIT(0);
+  DCL threshold      FIXED DEC(5,2) INIT(75.00);
+  DCL exposure       FIXED DEC(17,2) INIT(0);
+  DCL max_exposure   FIXED DEC(17,2) INIT(0);
+  DCL probability    FLOAT DEC(16) INIT(0);
+  DCL loss_given_def FLOAT DEC(16) INIT(0);
+  DCL expected_loss  FIXED DEC(17,2) INIT(0);
+  DCL risk_factor_01 FLOAT DEC(16);
+  DCL risk_factor_02 FLOAT DEC(16);
+  DCL risk_factor_03 FLOAT DEC(16);
+  DCL risk_factor_04 FLOAT DEC(16);
+  DCL risk_factor_05 FLOAT DEC(16);
+  DCL batch_var_0006  FIXED DEC(15,2) INIT(0);
+  DCL batch_str_0006  CHAR(40) INIT('');
+  DCL batch_var_0007  FIXED DEC(15,2) INIT(0);
+  DCL batch_str_0007  CHAR(40) INIT('');
+  DCL batch_var_0008  FIXED DEC(15,2) INIT(0);
+  DCL batch_str_0008  CHAR(40) INIT('');
+  DCL batch_var_0009  FIXED DEC(15,2) INIT(0);
+  DCL batch_str_0009  CHAR(40) INIT('');
+  DCL batch_var_0010  FIXED DEC(15,2) INIT(0);
+  DCL batch_str_0010  CHAR(40) INIT('');
+  DCL batch_var_0011  FIXED DEC(15,2) INIT(0);
+  DCL batch_str_0011  CHAR(40) INIT('');
+
+  /* Main processing logic */
+  CALL init_processing;
+  DO WHILE (^eof_flag);
+    CALL process_record;
+  END;
+  CALL finalize_processing;
+
+  /*---------------------------------------------------------------*/
+  /* process_record                                                    */
+  /*---------------------------------------------------------------*/
+  process_record: PROCEDURE;
+    records_read = records_read + 1;
+    CALL parse_operational_data;
+    CALL calculate_operational_score;
+    IF risk_score > threshold THEN
+      CALL flag_high_risk;
+    CALL write_result;
+    records_ok = records_ok + 1;
+    READ FILE(INFILE) INTO(input_buffer);
+  END process_record;
+
+  /*---------------------------------------------------------------*/
+  /* parse_operational_data                                                    */
+  /*---------------------------------------------------------------*/
+  parse_operational_data: PROCEDURE;
+    /* Parse input record into risk fields */
+    exposure = 0;
+    probability = 0;
+    loss_given_def = 0;
+  END parse_operational_data;
+
+  /*---------------------------------------------------------------*/
+  /* calculate_operational_score                                                    */
+  /*---------------------------------------------------------------*/
+  calculate_operational_score: PROCEDURE;
+    /* OPERATIONAL risk scoring model */
+    expected_loss = exposure * probability * loss_given_def;
+    risk_score = (expected_loss / exposure) * 100;
+    IF risk_score > 100 THEN risk_score = 100;
+    IF risk_score < 0 THEN risk_score = 0;
+  END calculate_operational_score;
+
+  /*---------------------------------------------------------------*/
+  /* flag_high_risk                                                    */
+  /*---------------------------------------------------------------*/
+  flag_high_risk: PROCEDURE;
+    PUT SKIP LIST('HIGH RISK: score=' || risk_score
+      || ' exposure=' || exposure);
+  END flag_high_risk;
+
+  /*---------------------------------------------------------------*/
+  /* write_result                                                    */
+  /*---------------------------------------------------------------*/
+  write_result: PROCEDURE;
+    output_buffer = input_buffer;
+    WRITE FILE(OUTFILE) FROM(output_buffer);
+  END write_result;
+
+  /*---------------------------------------------------------------*/
+  /* variant_03_step_00                                                    */
+  /*---------------------------------------------------------------*/
+  variant_03_step_00: PROCEDURE;
+    /* Variant 3 processing step 0 */
+    batch_var_0006 = batch_var_0006 + 1;
+    IF batch_var_0006 > 1000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 2;
+    IF batch_var_0006 > 2000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 3;
+    IF batch_var_0006 > 3000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 4;
+    IF batch_var_0006 > 4000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 5;
+    IF batch_var_0006 > 5000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 6;
+    IF batch_var_0006 > 6000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 7;
+    IF batch_var_0006 > 7000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 8;
+    IF batch_var_0006 > 8000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 9;
+    IF batch_var_0006 > 9000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 10;
+    IF batch_var_0006 > 10000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 11;
+    IF batch_var_0006 > 11000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 12;
+    IF batch_var_0006 > 12000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 13;
+    IF batch_var_0006 > 13000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 14;
+    IF batch_var_0006 > 14000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 15;
+    IF batch_var_0006 > 15000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 16;
+    IF batch_var_0006 > 16000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 17;
+    IF batch_var_0006 > 17000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 18;
+    IF batch_var_0006 > 18000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 19;
+    IF batch_var_0006 > 19000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 20;
+    IF batch_var_0006 > 20000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 21;
+    IF batch_var_0006 > 21000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 22;
+    IF batch_var_0006 > 22000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 23;
+    IF batch_var_0006 > 23000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 24;
+    IF batch_var_0006 > 24000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+    batch_var_0006 = batch_var_0006 + 25;
+    IF batch_var_0006 > 25000 THEN DO;
+      PUT SKIP LIST('Threshold reached at ' || batch_var_0006);
+    END;
+  END variant_03_step_00;
+
+  init_processing: PROCEDURE;
+    PUT SKIP LIST(program_name || ' started at ' || DATETIME());
+    OPEN FILE(INFILE) INPUT;
+    OPEN FILE(OUTFILE) OUTPUT;
+    OPEN FILE(ERRFILE) OUTPUT;
+    ON ENDFILE(INFILE) eof_flag = '1'B;
+    READ FILE(INFILE) INTO(input_buffer);
+  END init_processing;
+
+  finalize_processing: PROCEDURE;
+    CLOSE FILE(INFILE);
+    CLOSE FILE(OUTFILE);
+    CLOSE FILE(ERRFILE);
+    PUT SKIP LIST(program_name || ' complete.');
+    PUT SKIP LIST('Records read:    ' || records_read);
+    PUT SKIP LIST('Records OK:      ' || records_ok);
+    PUT SKIP LIST('Records error:   ' || records_err);
+    IF records_err > 0 THEN return_code = 4;
+  END finalize_processing;
+
+END PLROPER03V03;
