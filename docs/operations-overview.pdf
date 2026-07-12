@@ -1,0 +1,98 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >> endobj
+4 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+5 0 obj << /Length 4701 >> stream
+BT
+/F1 10 Tf
+50 780 Td
+12 TL
+(Pacific National Bank operates a synthetic yet high-fidelity core banking estate designed to) Tj
+T* (emulate enterprise operating patterns used by large regulated financial institutions. The) Tj
+T* (environment is intentionally broad, spanning legacy transaction processing on COBOL and) Tj
+T* (PL/I, IMS hierarchical data access paths, and a modern Java service tier that supports) Tj
+T* (branch, ATM, mobile, and online channels. The primary objective of this dataset is to) Tj
+T* (provide a realistic software topology for architecture exercises, migration planning, and) Tj
+T* (operational rehearsal without exposing customer data or production secrets.) Tj
+T* () Tj
+T* () Tj
+T* () Tj
+T* (At the center of the estate is the account and customer domain. Customer records model legal) Tj
+T* (identity, household relationships, regulatory status, and lifecycle indicators such as) Tj
+T* (onboarding stage and KYC completion. Account records represent demand deposits, savings,) Tj
+T* (term instruments, and lending products, each with product controls, pricing metadata, and) Tj
+T* (posting constraints. Transaction events are recorded with both accounting and channel) Tj
+T* (semantics so that operations teams can reconcile branch-level movement, network settlement,) Tj
+T* (and ledger-level journal impact.) Tj
+T* () Tj
+T* () Tj
+T* () Tj
+T* (Nightly processing is represented by batch orchestration definitions. End-of-day sequences) Tj
+T* (include posting finalization, suspense clearing, statement composition, regulatory extracts,) Tj
+T* (and integrity checks. Recovery-oriented JCL examples include restart points and dependency) Tj
+T* (ordering to illustrate practical operations patterns in mixed criticality windows. In) Tj
+T* (addition, synthetic reconciliation files and balancing controls demonstrate how operational) Tj
+T* (accounting teams would verify cash positions and control totals before opening the next) Tj
+T* (business day.) Tj
+T* () Tj
+T* () Tj
+T* () Tj
+T* (The online processing stream models teller-assisted cash operations and self-service) Tj
+T* (transfers. Input messages carry transaction intent, account identifiers, amount values, and) Tj
+T* (override indicators. Validation layers enforce basic product limits, status checks, and) Tj
+T* (account ownership rules. Error paths intentionally include standardized return blocks and) Tj
+T* (trace identifiers to mimic service desk diagnostics and audit follow-up flows.) Tj
+T* () Tj
+T* () Tj
+T* () Tj
+T* (A generator framework in Python supports deterministic artifact expansion from YAML models.) Tj
+T* (It translates domain metadata into copybooks, include members, Java classes, SQL DDL, and) Tj
+T* (documentation stubs. The framework is intended to be maintainable rather than opaque: models) Tj
+T* (remain human-readable, templates stay modular, and output is reproducible for pipeline) Tj
+T* (execution.) Tj
+T* () Tj
+T* () Tj
+T* () Tj
+T* (Database assets include DB2 definitions for canonical entities and migration scripts that) Tj
+T* (model incremental schema evolution. IMS-aligned metadata captures segment relationships) Tj
+T* (required for transaction routing and program specification binding. The Java tier packages) Tj
+T* (core rules, channel APIs, and integration adapters that map external partner interactions) Tj
+T* (into internal contracts.) Tj
+T* () Tj
+T* () Tj
+T* () Tj
+T* (Finally, this repository emphasizes operational traceability. Scripts and workflows) Tj
+T* (demonstrate staged checks, targeted tests, and packaging controls suitable for enterprise) Tj
+T* (release governance. While synthetic, the codebase is intentionally coherent enough to) Tj
+T* (support design reviews, automation exercises, and training for teams working across hybrid) Tj
+T* (mainframe and cloud-native environments.) Tj
+T* () Tj
+T* () Tj
+T* () Tj
+T* () Tj
+T* () Tj
+T* (Operationally, service ownership is split across product-aligned teams with shared controls) Tj
+T* (for resilience engineering and incident response. Each release cycle includes synthetic) Tj
+T* (volume replay, exception queue validation, and dual-control approval for schema and) Tj
+T* (messaging changes. Channel services publish event metadata to downstream analytics streams) Tj
+T* (so fraud, treasury, and finance users can derive near-real-time posture views. Disaster) Tj
+T* (recovery drills assume partial regional outage, degraded network latency, and manual) Tj
+T* (fallback at branch operations. These scenarios are represented to encourage robust) Tj
+T* (observability, deterministic replay tooling, and pragmatic runbook design across blended) Tj
+T* (legacy and cloud deployment surfaces.) Tj
+T* () Tj
+ET
+endstream endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+5063
+%%EOF

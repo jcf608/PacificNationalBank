@@ -1,0 +1,7 @@
+      *****************************************************************
+      * {{ entity.name }} Copybook
+      *****************************************************************
+       01 {{ entity.copybook }}.
+{% for field in entity.fields %}
+           05 {{ field.name|upper }} PIC X({{ field.length }}).
+{% endfor %}

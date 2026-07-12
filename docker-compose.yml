@@ -22,8 +22,8 @@ services:
   # ---- WebSphere Liberty (Java services) ---------------------
   websphere:
     build:
-      context: java/pnb-websphere/docker
-      dockerfile: Dockerfile
+      context: java/pnb-websphere
+      dockerfile: docker/Dockerfile
     ports:
       - "9080:9080"
       - "9443:9443"

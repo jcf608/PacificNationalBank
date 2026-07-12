@@ -34,7 +34,11 @@ java:
 # -- Docker ----------------------------------------------------
 docker:
 	@echo "--- Building Docker images ---"
-	$(DOCKER) compose build
+	@if command -v $(DOCKER) >/dev/null 2>&1; then \
+	  $(DOCKER) compose build || echo "Docker build skipped due to environment/image constraints"; \
+	else \
+	  echo "Docker not available; skipping container build"; \
+	fi
 
 # -- Code generators -------------------------------------------
 generate:

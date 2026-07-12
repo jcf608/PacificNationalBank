@@ -1,0 +1,13 @@
+# {{ schema.domain }} schema (v{{ schema.version }})
+
+{% for entity in schema.entities %}
+## {{ entity.name }}
+- Table: `{{ entity.table }}`
+- Copybook: `{{ entity.copybook }}`
+
+| Field | Type | Length | Nullable |
+|---|---|---:|:---:|
+{% for field in entity.fields %}| {{ field.name }} | {{ field.type }} | {{ field.length }} | {{ "Y" if field.nullable else "N" }} |
+{% endfor %}
+
+{% endfor %}

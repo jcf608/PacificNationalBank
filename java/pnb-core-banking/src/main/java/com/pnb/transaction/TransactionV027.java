@@ -1,0 +1,154 @@
+package com.pnb.transaction;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Objects;
+import javax.persistence.*;
+import javax.validation.constraints.*;
+
+/**
+ * TransactionV027 — Pacific National Bank entity.
+ * Auto-generated domain object.
+ */
+@Entity
+@Table(name = "TRANSACTIONV027")
+public class TransactionV027 {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "TXN_ID", unique = true)
+    private String transactionId;
+
+    @Column(name = "TXN_TYPE")
+    private String transactionType;
+
+    @Column(name = "ACCT_NUM")
+    private String accountNumber;
+
+    @Column(name = "AMOUNT", precision = 15, scale = 2)
+    private BigDecimal amount;
+
+    @Column(name = "CURRENCY")
+    private String currency;
+
+    @Column(name = "STATUS")
+    private String status;
+
+    @Column(name = "DESCRIPTION")
+    private String description;
+
+    @Column(name = "CHANNEL")
+    private String channel;
+
+    @Column(name = "REF_NUM")
+    private String referenceNumber;
+
+    @Column(name = "FLD_027_00")
+    private String field027_00;
+
+    @Column(name = "FLD_027_01")
+    private Boolean field027_01;
+
+    @Column(name = "FLD_027_02")
+    private String field027_02;
+
+    @Column(name = "FLD_027_03")
+    private String field027_03;
+
+    @Column(name = "FLD_027_04")
+    private BigDecimal field027_04;
+
+    @Column(name = "FLD_027_05")
+    private LocalDate field027_05;
+
+    @Column(name = "CREATED_AT")
+    private LocalDateTime createdAt;
+
+    @Column(name = "UPDATED_AT")
+    private LocalDateTime updatedAt;
+
+    @Version
+    private Long version;
+
+    public TransactionV027() {}
+
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+
+    public String getTransactionId() { return transactionId; }
+    public void setTransactionId(String transactionId) { this.transactionId = transactionId; }
+
+    public String getTransactionType() { return transactionType; }
+    public void setTransactionType(String transactionType) { this.transactionType = transactionType; }
+
+    public String getAccountNumber() { return accountNumber; }
+    public void setAccountNumber(String accountNumber) { this.accountNumber = accountNumber; }
+
+    public BigDecimal getAmount() { return amount; }
+    public void setAmount(BigDecimal amount) { this.amount = amount; }
+
+    public String getCurrency() { return currency; }
+    public void setCurrency(String currency) { this.currency = currency; }
+
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
+
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
+
+    public String getChannel() { return channel; }
+    public void setChannel(String channel) { this.channel = channel; }
+
+    public String getReferenceNumber() { return referenceNumber; }
+    public void setReferenceNumber(String referenceNumber) { this.referenceNumber = referenceNumber; }
+
+    public String getField027_00() { return field027_00; }
+    public void setField027_00(String field027_00) { this.field027_00 = field027_00; }
+
+    public Boolean getField027_01() { return field027_01; }
+    public void setField027_01(Boolean field027_01) { this.field027_01 = field027_01; }
+
+    public String getField027_02() { return field027_02; }
+    public void setField027_02(String field027_02) { this.field027_02 = field027_02; }
+
+    public String getField027_03() { return field027_03; }
+    public void setField027_03(String field027_03) { this.field027_03 = field027_03; }
+
+    public BigDecimal getField027_04() { return field027_04; }
+    public void setField027_04(BigDecimal field027_04) { this.field027_04 = field027_04; }
+
+    public LocalDate getField027_05() { return field027_05; }
+    public void setField027_05(LocalDate field027_05) { this.field027_05 = field027_05; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+
+    public LocalDateTime getUpdatedAt() { return updatedAt; }
+    public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof TransactionV027)) return false;
+        TransactionV027 that = (TransactionV027) o;
+        return Objects.equals(id, that.id);
+    }
+
+    @Override
+    public int hashCode() { return Objects.hash(id); }
+
+    @Override
+    public String toString() {
+        return "TransactionV027{" +
+            "id=" + id +
+            ", transactionId=" + transactionId +
+            ", transactionType=" + transactionType +
+            ", accountNumber=" + accountNumber +
+            ", amount=" + amount +
+            ", currency=" + currency +
+            '}';
+    }
+}

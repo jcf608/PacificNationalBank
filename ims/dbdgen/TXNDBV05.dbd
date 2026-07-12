@@ -1,0 +1,125 @@
+*********************************************************************
+* DBD for TXNDBV05
+* Pacific National Bank — IMS/DB Database Definition
+*********************************************************************
+         DBD   NAME=TXNDBV05,ACCESS=HDAM,
+               RMNAME=(DFSHDC40,1,500,2048)
+         DATASET DD1=TXNDBV05A,DEVICE=3390,SIZE=(8192)
+         DATASET DD1=TXNDBV05B,DEVICE=3390,SIZE=(4096),
+               OVFLW=TXNDBV05C
+*
+         SEGM  NAME=SEG000,PARENT=0,
+               BYTES=200,
+               FREQ=10,
+               RULES=(LLL,LAST)
+         FIELD NAME=(FLD000K,SEQ,U),
+               BYTES=16,START=1,
+               TYPE=C
+         FIELD NAME=(FLD000N,SEQ,U),
+               BYTES=40,START=17,
+               TYPE=C
+         FIELD NAME=(FLD000A,SEQ,U),
+               BYTES=8,START=57,
+               TYPE=P
+*
+         SEGM  NAME=SEG001,PARENT=SEG000,
+               BYTES=250,
+               FREQ=9,
+               RULES=(LLL,LAST)
+         FIELD NAME=(FLD001K,SEQ,U),
+               BYTES=16,START=1,
+               TYPE=C
+         FIELD NAME=(FLD001N,SEQ,U),
+               BYTES=40,START=17,
+               TYPE=C
+         FIELD NAME=(FLD001A,SEQ,U),
+               BYTES=8,START=57,
+               TYPE=P
+*
+         SEGM  NAME=SEG002,PARENT=SEG001,
+               BYTES=300,
+               FREQ=8,
+               RULES=(LLL,LAST)
+         FIELD NAME=(FLD002K,SEQ,U),
+               BYTES=16,START=1,
+               TYPE=C
+         FIELD NAME=(FLD002N,SEQ,U),
+               BYTES=40,START=17,
+               TYPE=C
+         FIELD NAME=(FLD002A,SEQ,U),
+               BYTES=8,START=57,
+               TYPE=P
+*
+         SEGM  NAME=SEG003,PARENT=SEG002,
+               BYTES=350,
+               FREQ=7,
+               RULES=(LLL,LAST)
+         FIELD NAME=(FLD003K,SEQ,U),
+               BYTES=16,START=1,
+               TYPE=C
+         FIELD NAME=(FLD003N,SEQ,U),
+               BYTES=40,START=17,
+               TYPE=C
+         FIELD NAME=(FLD003A,SEQ,U),
+               BYTES=8,START=57,
+               TYPE=P
+*
+         SEGM  NAME=SEG004,PARENT=SEG003,
+               BYTES=400,
+               FREQ=6,
+               RULES=(LLL,LAST)
+         FIELD NAME=(FLD004K,SEQ,U),
+               BYTES=16,START=1,
+               TYPE=C
+         FIELD NAME=(FLD004N,SEQ,U),
+               BYTES=40,START=17,
+               TYPE=C
+         FIELD NAME=(FLD004A,SEQ,U),
+               BYTES=8,START=57,
+               TYPE=P
+*
+         SEGM  NAME=SEG005,PARENT=SEG004,
+               BYTES=450,
+               FREQ=5,
+               RULES=(LLL,LAST)
+         FIELD NAME=(FLD005K,SEQ,U),
+               BYTES=16,START=1,
+               TYPE=C
+         FIELD NAME=(FLD005N,SEQ,U),
+               BYTES=40,START=17,
+               TYPE=C
+         FIELD NAME=(FLD005A,SEQ,U),
+               BYTES=8,START=57,
+               TYPE=P
+*
+         SEGM  NAME=SEG006,PARENT=SEG005,
+               BYTES=500,
+               FREQ=4,
+               RULES=(LLL,LAST)
+         FIELD NAME=(FLD006K,SEQ,U),
+               BYTES=16,START=1,
+               TYPE=C
+         FIELD NAME=(FLD006N,SEQ,U),
+               BYTES=40,START=17,
+               TYPE=C
+         FIELD NAME=(FLD006A,SEQ,U),
+               BYTES=8,START=57,
+               TYPE=P
+*
+         SEGM  NAME=SEG007,PARENT=SEG006,
+               BYTES=550,
+               FREQ=3,
+               RULES=(LLL,LAST)
+         FIELD NAME=(FLD007K,SEQ,U),
+               BYTES=16,START=1,
+               TYPE=C
+         FIELD NAME=(FLD007N,SEQ,U),
+               BYTES=40,START=17,
+               TYPE=C
+         FIELD NAME=(FLD007A,SEQ,U),
+               BYTES=8,START=57,
+               TYPE=P
+*
+         DBDGEN
+         FINISH
+         END
